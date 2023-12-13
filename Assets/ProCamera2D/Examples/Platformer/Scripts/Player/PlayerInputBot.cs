@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Com.LuisPedroFonseca.ProCamera2D.Platformer
 {
-    [RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(UnityEngine.CharacterController))]
     public class PlayerInputBot : MonoBehaviour
     {
         public Transform Body;
@@ -22,11 +22,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D.Platformer
         bool _fakeInputJump;
         float _fakeInputHorizontalAxis;
 
-        CharacterController _characterController;
+        UnityEngine.CharacterController _characterController;
 
         void Start()
         {
-            _characterController = GetComponent<CharacterController>();
+            _characterController = GetComponent<UnityEngine.CharacterController>();
 
             StartCoroutine(RandomInputJump());
             StartCoroutine(RandomInputSpeed());

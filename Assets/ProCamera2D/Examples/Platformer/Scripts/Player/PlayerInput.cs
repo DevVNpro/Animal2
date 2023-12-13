@@ -18,11 +18,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D.Platformer
         private Vector3 amountToMove;
         int totalJumps;
 
-        CharacterController _characterController;
+        UnityEngine.CharacterController _characterController;
 
         void Start()
         {
-            _characterController = GetComponent<CharacterController>();
+            _characterController = GetComponent<UnityEngine.CharacterController>();
         }
 
         void Update()

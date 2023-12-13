@@ -2,7 +2,7 @@
 
 namespace Com.LuisPedroFonseca.ProCamera2D.TopDownShooter
 {
-    [RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(UnityEngine.CharacterController))]
     public class PlayerInput : MonoBehaviour
     {
         public float RunSpeed = 12;
@@ -13,13 +13,13 @@ namespace Com.LuisPedroFonseca.ProCamera2D.TopDownShooter
         Vector3 _amountToMove;
         int _totalJumps;
 
-        CharacterController _characterController;
+        UnityEngine.CharacterController _characterController;
 
         bool _movementAllowed = true;
 
         void Start()
         {
-            _characterController = GetComponent<CharacterController>();
+            _characterController = GetComponent<UnityEngine.CharacterController>();
 
             var cinematics = FindObjectsOfType<ProCamera2DCinematics>();
             for (int i = 0; i < cinematics.Length; i++)

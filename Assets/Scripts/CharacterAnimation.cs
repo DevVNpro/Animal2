@@ -1,18 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Spine.Unity;
 public class CharacterAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    
+    private SkeletonAnimation _skeletonAnimation;
+     [SerializeField]private string animName;
+    
+    private void Awake()
     {
-        
+        _skeletonAnimation = transform.GetComponent<SkeletonAnimation>();
     }
 
-    // Update is called once per frame
-    void Update()
+ 
+
+    public void PlayAnimation(AnimationReferenceAsset AnimationReferenceAsset, bool loop, float timeScale)
     {
+        if (animName == _skeletonAnimation.skeletonDataAsset.name) return;
+        Debug.Log("PlayAnim");
+        _skeletonAnimation.AnimationName = AnimationReferenceAsset.name;
+        _skeletonAnimation.loop = loop;
+        _skeletonAnimation.timeScale = timeScale;
+        animName = AnimationReferenceAsset.name;
         
     }
 }
