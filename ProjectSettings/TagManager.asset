@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -20,10 +21,10 @@ TagManager:
   - para3
   - para4
   - para5
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Box
+  - Crash
+  - Gach
   - 
   - 
   - 
@@ -46,4 +47,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2459401659
+    locked: 0
+  - name: Object
+    uniqueID: 237594267
+    locked: 0
+  - name: Crash
+    uniqueID: 1185117555
     locked: 0

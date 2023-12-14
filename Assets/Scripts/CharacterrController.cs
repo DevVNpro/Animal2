@@ -10,7 +10,6 @@ public class CharacterController : MonoBehaviour
 {
 
     [SerializeField] private CharacterAnimation _characterAnimation;
-
     [SerializeField] private CharacterMoverment _characterMoverment;
     public AnimationReferenceAsset[] AnimationReferenceAsset;
     int state;
@@ -76,19 +75,23 @@ public class CharacterController : MonoBehaviour
     {
         #region MoveAndIdle
         
-        if (_characterMoverment.rigidbody2d.velocity.x > 2f  )
+        if (_characterMoverment.rigidbody2d.velocity.x > 2f  && state != (int) MovermentState.falling  && state != (int) MovermentState.jumping  )
         {
             state = (int) MovermentState.running;
+
         }
-        else if (_characterMoverment.rigidbody2d.velocity.x <  -2f )
+        else if (_characterMoverment.rigidbody2d.velocity.x <  -2f && state != (int) MovermentState.falling&& state != (int) MovermentState.jumping)
         {
+
             state = (int) MovermentState.running;
+
         }
         else
         {
-            if (state != 4 && state != 5)
+            if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.2f)) 
             {
                 state = (int) MovermentState.idle;
+
             }
         }
         #endregion
@@ -98,12 +101,16 @@ public class CharacterController : MonoBehaviour
         {
             state = (int) MovermentState.jumping;
         }
-        else if(_characterMoverment.rigidbody2d.velocity.y < -.8f) {
+        else if(_characterMoverment.rigidbody2d.velocity.y < -1.2f) {
             state = (int) MovermentState.falling;
         }
         
         #endregion
 
+        #region PushBox
+        if (_characterMoverment.isPushBox && (_characterMoverment.rigidbody2d.velocity.x > 0.2f || _characterMoverment.rigidbody2d.velocity.x < 0.2f)) state = (int) MovermentState.PushBox;
+        #endregion
+        
         #region ActiveAnimation
         _characterAnimation.PlayAnimation(AnimationReferenceAsset[state], true, 1);
         #endregion
