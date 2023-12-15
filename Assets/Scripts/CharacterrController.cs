@@ -97,7 +97,7 @@ public class CharacterController : MonoBehaviour
         #endregion
 
         #region JumpAndFall
-        if(_characterMoverment.rigidbody2d.velocity.y > .8f)
+        if(_characterMoverment.rigidbody2d.velocity.y > 2f && !_characterMoverment.isBrige)
         {
             state = (int) MovermentState.jumping;
         }
@@ -113,7 +113,11 @@ public class CharacterController : MonoBehaviour
         
         #region ActiveAnimation
         _characterAnimation.PlayAnimation(AnimationReferenceAsset[state], true, 1);
-        #endregion
+        #endregion 
+        if((state == (int)MovermentState.falling || state == (int)MovermentState.idle) && _characterMoverment.isBrige)
+        {
+            state = (int)MovermentState.idle;
+        }
         
     }
 

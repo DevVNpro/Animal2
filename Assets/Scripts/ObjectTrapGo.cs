@@ -26,7 +26,7 @@ public class ObjectTrapGo : MonoBehaviour
     {
         
         active = false;
-        transform.DOMoveY(-2.5f, 2f);
+        transform.DOMoveY(0f, 2f);
         yield return  new WaitForSeconds(2f);
         transform.DOMoveY(_transform.y, 3f);
         yield return  new WaitForSeconds(3f);
