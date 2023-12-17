@@ -6,8 +6,6 @@ using UnityEngine;
 using UnityEngine.Apple;
 public class CharacterMoverment : MonoBehaviour
 {
-    [Header("Referent")]
-     public Rigidbody2D rigidbody2d;
     [Header("Properties")]
     [SerializeField] private float speedRun;
     [SerializeField] private float speedJump;
@@ -19,7 +17,10 @@ public class CharacterMoverment : MonoBehaviour
     public bool isPushBox;
     public bool isWall;
     public bool isBrige;
-    private float x;
+    public bool isDead;
+    public float x;
+    [Header("Referent")]
+    public Rigidbody2D rigidbody2d;
 
     private void Awake()
     {
@@ -34,6 +35,8 @@ public class CharacterMoverment : MonoBehaviour
         CheckWall();
         CheckBrige();
         x = Input.GetAxisRaw("Horizontal");
+
+
 
     }
 
@@ -53,19 +56,19 @@ public class CharacterMoverment : MonoBehaviour
 
     private void CheckWall()
     {
-        isWall = Physics2D.BoxCast(new Vector2(transform.position.x, transform.position.y + 1.5f), new Vector2(2f, 3f), 0f, Vector2.one, 0f, layerWall);
+        isWall = Physics2D.BoxCast(new Vector2(transform.position.x, transform.position.y + 1.7f), new Vector2(2f, 3f), 0f, Vector2.one, 0f, layerWall);
     }
 
     public void MoveLeft()
     {
-        if(isWall && (math.abs(rigidbody2d.velocity.y)>1f)) return;
+        if (!isGround && isWall) return;
         rigidbody2d.velocity = new Vector2(x*speedRun,rigidbody2d.velocity.y );
         transform.localScale = new Vector3(-1,1,1);
     }
 
     public void MoveRight()
     {
-        if(isWall && (math.abs(rigidbody2d.velocity.y)>1f)) return;
+        if (!isGround && isWall) return;
         rigidbody2d.velocity = new Vector2(x*speedRun,rigidbody2d.velocity.y );
         transform.localScale = new Vector3(1,1,1);
         
@@ -79,6 +82,21 @@ public class CharacterMoverment : MonoBehaviour
         }
         
         
+    }
+    public void AddForceTouch(Vector2 vectorFore,Vector2 vectorOrigin)
+    {
+        if (transform.position.x > vectorOrigin.x)
+        {
+            Debug.Log("AddForce");
+            rigidbody2d.AddForce(new Vector2(Math.Abs(vectorFore.x),vectorFore.y),ForceMode2D.Impulse);
+        }
+        else if(transform.position.x < vectorOrigin.x)
+        {
+            Debug.Log("AddForce");
+
+            rigidbody2d.AddForce(new Vector2(-Math.Abs(vectorFore.x), vectorFore.y), ForceMode2D.Impulse);
+
+        }
     }
     
 
@@ -112,18 +130,18 @@ public class CharacterMoverment : MonoBehaviour
             Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+1.3f), new Vector2(1.8f, 1.5f));
         }
         */
-        /*
+        
         if (isWall)
         {
             Gizmos.color = new Color(0.5f, 1, 0.5f, 0.5f);
-            Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+1.5f), new Vector2(2f, 3f)); 
+            Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+ 1.7f), new Vector2(2f, 3f)); 
         }
         else
         {
             Gizmos.color = new Color(1, 0, 0, 0.5f);
-            Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+1.5f), new Vector2(2f, 3f));
+            Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+ 1.7f), new Vector2(2f, 3f));
         }
-        */
+         
         
     }
     

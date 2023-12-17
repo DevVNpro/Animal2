@@ -30,7 +30,6 @@ public class ObjectTrapGo : MonoBehaviour
         yield return  new WaitForSeconds(2f);
         transform.DOMoveY(_transform.y, 3f);
         yield return  new WaitForSeconds(3f);
-        Debug.Log("BBBBBBBBBBBBBBBBBB");
         active = true;
     }
     

@@ -6,7 +6,7 @@ using Spine.Unity;
 public class CharacterAnimation : MonoBehaviour
 {
     
-    
+    [Header("Ref")]
     private SkeletonAnimation _skeletonAnimation;
      [SerializeField]private string animName;
     
@@ -20,7 +20,6 @@ public class CharacterAnimation : MonoBehaviour
     public void PlayAnimation(AnimationReferenceAsset AnimationReferenceAsset, bool loop, float timeScale)
     {
         if (animName == _skeletonAnimation.skeletonDataAsset.name) return;
-        Debug.Log("PlayAnim");
         _skeletonAnimation.AnimationName = AnimationReferenceAsset.name;
         _skeletonAnimation.loop = loop;
         _skeletonAnimation.timeScale = timeScale;

@@ -1,0 +1,37 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:d076e038458536ae4510a8f9d970c4f3:55ba849e1d239318a735c83cfd05b328:cb65a57a13a57cb222a973e39ea4b141$
+#
+:format=40300
+:texture=ingame-UI.png
+:size=512x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=KeepTransparentPixels
+
+atk;1;858;165;165; 0.5;0.5; 0;0;0;0
+back;116;449;106;110; 0.5;0.5; 0;0;0;0
+binh mau max;303;368;76;131; 0.5;0.5; 0;0;0;0
+bomb;334;613;133;115; 0.5;0.5; 0;0;0;0
+button green cong;268;648;44;43; 0.5;0.5; 0;0;0;0
+button red cong;268;603;43;43; 0.5;0.5; 0;0;0;0
+dongho;224;417;68;69; 0.5;0.5; 0;0;0;0
+drone;1;567;143;138; 0.5;0.5; 0;0;0;0
+heart;224;488;77;71; 0.5;0.5; 0;0;0;0
+hop dan max;334;730;135;127; 0.5;0.5; 0;0;0;0
+jump;168;859;164;164; 0.5;0.5; 0;0;0;0
+left;334;859;164;164; 0.5;0.5; 0;0;0;0
+mau1 do;100;356;66;91; 0.5;0.5; 0;0;0;0
+mau1 xam;1;285;66;91; 0.5;0.5; 0;0;0;0
+nam cham;1;378;97;104; 0.5;0.5; 0;0;0;0
+ngoisao nau;421;537;79;74; 0.5;0.5; 0;0;0;0
+ngoisaovang;421;461;79;74; 0.5;0.5; 0;0;0;0
+Pause;313;501;106;110; 0.5;0.5; 0;0;0;0
+right;168;693;164;164; 0.5;0.5; 0;0;0;0
+rocket;1;484;113;81; 0.5;0.5; 0;0;0;0
+shield;146;561;120;130; 0.5;0.5; 0;0;0;0
+vongtron nam cham;1;707;149;149; 0.5;0.5; 0;0;0;0

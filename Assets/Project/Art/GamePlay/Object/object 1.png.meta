@@ -1,0 +1,1378 @@
+fileFormatVersion: 2
+guid: 9c107cfdb9185014dbac8e4c4276ab59
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6643220099869562900
+    second: "B\u0103ng"
+  - first:
+      213: 545807397660660783
+    second: "B\u1EABy 4 chi\u1EC1u  kim lo\u1EA1i"
+  - first:
+      213: 7054915502862150777
+    second: "B\u1EABy 4 chi\u1EC1u g\u1ED7"
+  - first:
+      213: 617322167831777648
+    second: be
+  - first:
+      213: -7661143871076892520
+    second: be 1
+  - first:
+      213: 8851915163939983442
+    second: "B\u1EC7 g\u1ED7"
+  - first:
+      213: -350852810228900056
+    second: "B\xECnh m\xE1u"
+  - first:
+      213: 2238004737475093171
+    second: Block tai nguyen
+  - first:
+      213: -8304078948680380325
+    second: bong_nuoc_xanh
+  - first:
+      213: 6460960085569940230
+    second: cot do
+  - first:
+      213: 8983751594518392093
+    second: cotdo1
+  - first:
+      213: 5445570859197764020
+    second: "c\u01B0a tr\xF2n phi ti\xEAu"
+  - first:
+      213: -6465482689640385191
+    second: "\u0110\xE1 1"
+  - first:
+      213: -3425618992616553117
+    second: "\u0111\xE1 nham th\u1EA1ch"
+  - first:
+      213: 1388385094787075553
+    second: "\u0110\xE1 Tuy\u1EBFt"
+  - first:
+      213: 7729973587968255110
+    second: "\u0110\xE1 v\u1EE1 2"
+  - first:
+      213: 8324222444147990141
+    second: "\u0110\xE1 V\u1EE1 2 Tuy\u1EBFt"
+  - first:
+      213: 2609240090176725135
+    second: dau cau
+  - first:
+      213: 1793969770397413298
+    second: fan
+  - first:
+      213: -7985891183109277574
+    second: Gach 1
+  - first:
+      213: 5563196940855556442
+    second: Gach 1 tuyet
+  - first:
+      213: -4226175373378118020
+    second: Gem
+  - first:
+      213: -8411694617196797062
+    second: Heart
+  - first:
+      213: 8181545131920233599
+    second: "H\u1ED9p \u0111\u1EF1ng \u0111\u1EA1n"
+  - first:
+      213: 8269067377291585209
+    second: loxo1
+  - first:
+      213: -6802281252616286577
+    second: loxo2
+  - first:
+      213: -2818975243700084642
+    second: loxo3
+  - first:
+      213: 6065114106480347909
+    second: luoi cua tach le
+  - first:
+      213: -4923993375801435231
+    second: luoicua
+  - first:
+      213: 8652447233736731339
+    second: sau_bay
+  - first:
+      213: 5499845169743373932
+    second: Star
+  - first:
+      213: -5925403901324199034
+    second: thanh don
+  - first:
+      213: -8705310534903109705
+    second: thanh don 1
+  - first:
+      213: 4787370185243369950
+    second: "th\xF9ng g\u1ED7 Vu\xF4ng2 tuyet"
+  - first:
+      213: 3058393208253074488
+    second: "th\xF9ng g\u1ED71 tuyet"
+  - first:
+      213: 4564249627443968832
+    second: thung_go_vuong1
+  - first:
+      213: 9005589415754884058
+    second: thung_go_vuong2
+  - first:
+      213: 574133276364628270
+    second: thung_go1
+  - first:
+      213: 5481654428668411715
+    second: thung_go2
+  - first:
+      213: 661914807087327591
+    second: trap_go1
+  - first:
+      213: -2030966749311116511
+    second: trap_go2
+  - first:
+      213: -1531810847235397621
+    second: truc
+  - first:
+      213: -8257999514738709755
+    second: truc quay
+  - first:
+      213: -4732012706560434289
+    second: trucquay1
+  - first:
+      213: 7824645633637813426
+    second: "N\u1EA5m1"
+  - first:
+      213: -3285669071379544980
+    second: Nam2
+  - first:
+      213: -7722412804967303205
+    second: "B\xF3ng \u0111\u1ECF"
+  - first:
+      213: -2943260771336936913
+    second: Bong_tim
+  - first:
+      213: -5556444190006967295
+    second: bong_do
+  - first:
+      213: -1781770919384241035
+    second: be_go
+  - first:
+      213: 1182723003784942982
+    second: Block tai nguyen tim
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 48
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "B\u0103ng"
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 300
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce72a86348a8ec3a0800000000000000
+      internalID: -6643220099869562900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "B\u1EABy 4 chi\u1EC1u  kim lo\u1EA1i"
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1694
+        width: 353
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f241855bfe8139700800000000000000
+      internalID: 545807397660660783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "B\u1EABy 4 chi\u1EC1u g\u1ED7"
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 1337
+        width: 350
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cae74754818e160800000000000000
+      internalID: 7054915502862150777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: be
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 697
+        width: 280
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071569dad3b219800800000000000000
+      internalID: 617322167831777648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: be 1
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 280
+        width: 284
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8900d4f5d362ea590800000000000000
+      internalID: -7661143871076892520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: be_go
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1358
+        width: 132
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 3, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c2bfef9c0e547e0800000000000000
+      internalID: -1781770919384241035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "B\xECnh m\xE1u"
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 296
+        width: 56
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82fdbdd5a35812bf0800000000000000
+      internalID: -350852810228900056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Block tai nguyen
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 1098
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b228d6837dfe0f10800000000000000
+      internalID: 2238004737475093171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Block tai nguyen tim
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 1228
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 685d84c3e40e96010800000000000000
+      internalID: 1182723003784942982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bong_do
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1630
+        width: 144
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1040a50d27b83e2b0800000000000000
+      internalID: -5556444190006967295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bong_nuoc_xanh
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 582
+        width: 150
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b505b1d613cf1cc80800000000000000
+      internalID: -8304078948680380325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bong_tim
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 430
+        width: 144
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22ae1b2cef6727d0800000000000000
+      internalID: -2943260771336936913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cot do
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1220
+        width: 564
+        height: 827
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60baf5857f0f9a950800000000000000
+      internalID: 6460960085569940230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cotdo1
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 387
+        width: 535
+        height: 831
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d2e9d2a72bcac70800000000000000
+      internalID: 8983751594518392093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "c\u01B0a tr\xF2n phi ti\xEAu"
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 866
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b193b538dd829b40800000000000000
+      internalID: 5445570859197764020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0110\xE1 1"
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 131
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9553c86dfbdf546a0800000000000000
+      internalID: -6465482689640385191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0111\xE1 nham th\u1EA1ch"
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 121
+        width: 127
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36542490da1c570d0800000000000000
+      internalID: -3425618992616553117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0110\xE1 Tuy\u1EBFt"
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 1
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed0b3243e8844310800000000000000
+      internalID: 1388385094787075553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0110\xE1 v\u1EE1 2"
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 20
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684eff9e502664b60800000000000000
+      internalID: 7729973587968255110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0110\xE1 V\u1EE1 2 Tuy\u1EBFt"
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 150
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e56c69534958370800000000000000
+      internalID: 8324222444147990141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dau cau
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 1080
+        width: 328
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8021b4a902e53420800000000000000
+      internalID: 2609240090176725135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fan
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 414
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bfa356500675e810800000000000000
+      internalID: 1793969770397413298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gach 1
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 300
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78f8dfa74a6c2190800000000000000
+      internalID: -7985891183109277574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gach 1 tuyet
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 171
+        width: 128
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a593c338422743d40800000000000000
+      internalID: 5563196940855556442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gem
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 272
+        width: 80
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e1b4f93eb9955c0800000000000000
+      internalID: -4226175373378118020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 12
+        width: 77
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a736bee0058a34b80800000000000000
+      internalID: -8411694617196797062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "H\u1ED9p \u0111\u1EF1ng \u0111\u1EA1n"
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 85
+        width: 81
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f749ee523ffaa8170800000000000000
+      internalID: 8181545131920233599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loxo1
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 250
+        width: 156
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b66c3fd7f0a1c270800000000000000
+      internalID: 8269067377291585209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loxo2
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 163
+        width: 104
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ec183ad317991a0800000000000000
+      internalID: -6802281252616286577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loxo3
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 4
+        width: 148
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50e2a093fcf0e8d0800000000000000
+      internalID: -2818975243700084642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luoi cua tach le
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 261
+        width: 70
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50bc8fe352d9b2450800000000000000
+      internalID: 6065114106480347909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luoicua
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 261
+        width: 405
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab9af6fc167aabb0800000000000000
+      internalID: -4923993375801435231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "N\u1EA5m1"
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 31
+        width: 139
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc0b4e3fb9b69c60800000000000000
+      internalID: 7824645633637813426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nam2
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 642
+        width: 56
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c644fe64365f662d0800000000000000
+      internalID: -3285669071379544980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sau_bay
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 733
+        width: 210
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca60bc9aeaa31870800000000000000
+      internalID: 8652447233736731339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 579
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66a33eda00635c40800000000000000
+      internalID: 5499845169743373932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thanh don
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 212
+        width: 764
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b7bdebb8cb4cda0800000000000000
+      internalID: -5925403901324199034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thanh don 1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 274
+        width: 771
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b762a3f036803780800000000000000
+      internalID: -8705310534903109705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "th\xF9ng g\u1ED7 Vu\xF4ng2 tuyet"
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1
+        width: 263
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed12ab3a1d7207240800000000000000
+      internalID: 4787370185243369950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "th\xF9ng g\u1ED71 tuyet"
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1782
+        width: 182
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c44693b68917a20800000000000000
+      internalID: 3058393208253074488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thung_go_vuong1
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 821
+        width: 258
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bb10e8ad8775f30800000000000000
+      internalID: 4564249627443968832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thung_go_vuong2
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1
+        width: 261
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad366172cd74afc70800000000000000
+      internalID: 9005589415754884058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thung_go1
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 436
+        width: 186
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21e1774c2bb7f700800000000000000
+      internalID: 574133276364628270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thung_go2
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 401
+        width: 186
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f3a3ae8afb21c40800000000000000
+      internalID: 5481654428668411715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_go1
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 29
+        width: 417
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769e20492089f2900800000000000000
+      internalID: 661914807087327591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trap_go2
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 663
+        width: 79
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 535, z: 0, w: 9}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b5ea4808e80d3e0800000000000000
+      internalID: -2030966749311116511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: truc
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1492
+        width: 135
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08a17b762aedbae0800000000000000
+      internalID: -1531810847235397621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: truc quay
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1193
+        width: 887
+        height: 854
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50ba6a0b131b56d80800000000000000
+      internalID: -8257999514738709755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trucquay1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 337
+        width: 887
+        height: 854
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f94d0c383845eb0800000000000000
+      internalID: -4732012706560434289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 14ac6465e78288b41bce970dd0305b32
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Block tai nguyen: 2238004737475093171
+      Block tai nguyen tim: 1182723003784942982
+      Bong_tim: -2943260771336936913
+      "B\xECnh m\xE1u": -350852810228900056
+      "B\u0103ng": -6643220099869562900
+      "B\u1EABy 4 chi\u1EC1u  kim lo\u1EA1i": 545807397660660783
+      "B\u1EABy 4 chi\u1EC1u g\u1ED7": 7054915502862150777
+      Gach 1: -7985891183109277574
+      Gach 1 tuyet: 5563196940855556442
+      Gem: -4226175373378118020
+      Heart: -8411694617196797062
+      "H\u1ED9p \u0111\u1EF1ng \u0111\u1EA1n": 8181545131920233599
+      Nam2: -3285669071379544980
+      "N\u1EA5m1": 7824645633637813426
+      Star: 5499845169743373932
+      be: 617322167831777648
+      be 1: -7661143871076892520
+      be_go: -1781770919384241035
+      bong_do: -5556444190006967295
+      bong_nuoc_xanh: -8304078948680380325
+      cot do: 6460960085569940230
+      cotdo1: 8983751594518392093
+      "c\u01B0a tr\xF2n phi ti\xEAu": 5445570859197764020
+      dau cau: 2609240090176725135
+      fan: 1793969770397413298
+      loxo1: 8269067377291585209
+      loxo2: -6802281252616286577
+      loxo3: -2818975243700084642
+      luoi cua tach le: 6065114106480347909
+      luoicua: -4923993375801435231
+      sau_bay: 8652447233736731339
+      thanh don: -5925403901324199034
+      thanh don 1: -8705310534903109705
+      thung_go1: 574133276364628270
+      thung_go2: 5481654428668411715
+      thung_go_vuong1: 4564249627443968832
+      thung_go_vuong2: 9005589415754884058
+      "th\xF9ng g\u1ED7 Vu\xF4ng2 tuyet": 4787370185243369950
+      "th\xF9ng g\u1ED71 tuyet": 3058393208253074488
+      trap_go1: 661914807087327591
+      trap_go2: -2030966749311116511
+      truc: -1531810847235397621
+      truc quay: -8257999514738709755
+      trucquay1: -4732012706560434289
+      "\u0110\xE1 1": -6465482689640385191
+      "\u0110\xE1 Tuy\u1EBFt": 1388385094787075553
+      "\u0110\xE1 V\u1EE1 2 Tuy\u1EBFt": 8324222444147990141
+      "\u0110\xE1 v\u1EE1 2": 7729973587968255110
+      "\u0111\xE1 nham th\u1EA1ch": -3425618992616553117
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

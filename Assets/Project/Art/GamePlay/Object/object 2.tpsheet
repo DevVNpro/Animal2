@@ -1,0 +1,33 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:d46b7985c59003f602ee61ef29894367:581c895108d3008b61a4b40115596063:f639139dffa1cc60bc5d7070f310b964$
+#
+:format=40300
+:texture=object 2.png
+:size=1024x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=KeepTransparentPixels
+
+be do;1;1293;636;77; 0.5;0.5; 0;0;0;0
+be gat 1;820;1555;129;103; 0.5;0.5; 0;0;0;0
+be gat 2;820;1660;131;103; 0.5;0.5; 0;0;0;0
+be go;1;1210;635;81; 0.5;0.5; 0;0;0;0
+can gat1;951;1420;33;218; 0.5;0.5; 0;0;0;0
+can gat2;986;1420;33;218; 0.5;0.5; 0;0;0;0
+cannon1;639;1185;240;118; 0.5;0.5; 0;0;0;0
+daythung ngoai;953;1640;58;81; 0.5;0.5; 0;0;0;0
+daythung1;953;1723;66;22; 0.5;0.5; 0;0;0;0
+nap;820;1987;183;60; 0.5;0.5; 0;0;0;0
+nha village;1;1372;817;675; 0.5;0.5; 0;0;0;0
+nutxich;909;1521;32;32; 0.5;0.5; 0;0;0;0
+platform;639;1305;280;65; 0.5;0.5; 0;0;0;0
+post office;1;519;411;689; 0.5;0.5; 0;0;0;0
+rongroc kl;820;1466;87;87; 0.5;0.5; 0;0;0;0
+rongroc;820;1377;87;87; 0.5;0.5; 0;0;0;0
+thungrac;820;1765;179;220; 0.5;0.5; 0;0;0;0
+xich;953;1747;67;16; 0.5;0.5; 0;0;0;0
