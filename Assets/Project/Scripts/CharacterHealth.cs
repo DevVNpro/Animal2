@@ -1,0 +1,52 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+public class CharacterHealth : MonoBehaviour
+{
+    [Header("properties")]
+    [SerializeField] private int health;
+    [SerializeField] private int maxHealth;
+    [Header("Ref")]
+    [SerializeField] private CharacterController characterController;
+
+    private void Awake()
+    {
+        Rxmanager.DeDuctHpPlayer.Subscribe((a) =>
+        {
+            Debug.Log("DeDuct 1 hp");
+        }).AddTo(this);
+    }
+
+    private void Dead()
+    {
+        characterController._characterMoverment.isDead = true;
+        //using UniRx;
+
+
+    }
+
+    public int  GetHealth()
+    {
+        return health;
+    }
+
+
+    public void DeductHealth()
+    {
+        if(health == 1)
+        {
+            health -= 1;
+            Dead();
+            return;
+        }
+        health -= 1;
+
+    }
+    public void AddHealth()
+    {
+        if (health == maxHealth) return;
+        health += 1;
+    }
+}
