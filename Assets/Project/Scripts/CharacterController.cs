@@ -115,56 +115,65 @@ public class CharacterController : MonoBehaviour
     {
         if (!isDead)
         {
-            #region MoveAndIdle
-
-            if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
+            if (!_characterMoverment.isSwing)
             {
-                state = (int) MovermentState.running;
+                #region MoveAndIdle
 
-            }
-            else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
-            {
-
-                state = (int) MovermentState.running;
-
-            }
-            else
-            {
-                if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f))
+                if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
                 {
-                    if (!_characterMoverment.isGround) return;
+                    state = (int) MovermentState.running;
+
+                }
+                else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
+                {
+
+                    state = (int) MovermentState.running;
+
+                }
+                else
+                {
+                    if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f))
+                    {
+                        if (!_characterMoverment.isGround) return;
+                        state = (int) MovermentState.idle;
+
+                    }
+                }
+
+                #endregion
+
+                #region JumpAndFall
+
+                if (_characterMoverment.rigidbody2d.velocity.y > 0.5f && !_characterMoverment.isBrige)
+                {
+                    state = (int) MovermentState.jumping;
+                }
+                else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige)
+                {
+
+                    state = (int) MovermentState.falling;
+                }
+
+                if ((state == (int) MovermentState.jumping || state == (int) MovermentState.falling) &&
+                    _characterMoverment.isBrige && Math.Abs(_characterMoverment.rigidbody2d.velocity.x) < 2f)
+                {
                     state = (int) MovermentState.idle;
 
                 }
+
+                #endregion
+
+                #region PushBox
+
+                if (_characterMoverment.isPushBox && (Math.Abs(_characterMoverment.rigidbody2d.velocity.x) > 0.5f))
+                    state = (int) MovermentState.PushBox;
+
+                #endregion
             }
-
-            #endregion
-            #region JumpAndFall
-
-            if (_characterMoverment.rigidbody2d.velocity.y > 0.5f && !_characterMoverment.isBrige)
+            else
             {
-                state = (int) MovermentState.jumping;
+                state = (int) MovermentState.swing;
             }
-            else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige)
-            {
-
-                state = (int) MovermentState.falling;
-            }
-
-            if ((state == (int) MovermentState.jumping || state == (int) MovermentState.falling) &&
-                _characterMoverment.isBrige && Math.Abs(_characterMoverment.rigidbody2d.velocity.x) < 2f)
-            {
-                state = (int) MovermentState.idle;
-
-            }
-
-            #endregion
-            #region PushBox
-
-            if (_characterMoverment.isPushBox && (Math.Abs(_characterMoverment.rigidbody2d.velocity.x) > 0.5f))
-                state = (int) MovermentState.PushBox;
-
-            #endregion
         }
         else
         {
@@ -225,4 +234,4 @@ public class CharacterController : MonoBehaviour
         }
     }
 }
-public enum MovermentState { idle, running, jumping, falling, Wait1, Wait2, PushBox,dead }
+public enum MovermentState { idle, running, jumping, falling, Wait1, Wait2, PushBox,dead,swing }

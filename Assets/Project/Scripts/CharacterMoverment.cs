@@ -23,8 +23,9 @@ public class CharacterMoverment : MonoBehaviour
     public bool isPushBox;
     public bool isWall;
     public bool isBrige;
+    public bool isSwing;
     public bool effectMoveByForce;
-    private float x;
+    public float x;
     [Header("Referent")]
     public Rigidbody2D rigidbody2d;
 
@@ -51,6 +52,17 @@ public class CharacterMoverment : MonoBehaviour
     private void CheckBufferTime()
     {
         if (Input.GetKeyDown(KeyCode.W))
+        {
+            bufferJumpTimeCouter = bufferJumpTime;
+        }
+        else
+        {
+            bufferJumpTimeCouter -= Time.deltaTime;
+        }
+    }
+    public void CheckBufferTimeButton(bool Active)
+    {
+        if (Active)
         {
             bufferJumpTimeCouter = bufferJumpTime;
         }
@@ -133,7 +145,7 @@ public class CharacterMoverment : MonoBehaviour
         }
         else
         {
-            if ( coyoteTimeCounter >0f && bufferJumpTimeCouter >0f )
+            if ( coyoteTimeCounter >0f  )
             {
                 rigidbody2d.velocity = (new Vector2(0, speedJump));
 

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 649790336371920870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.12, y: 3.2, z: 0.16399233}
+  m_LocalPosition: {x: -1.39, y: 5.98, z: 0.16399233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -101,12 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470ddc8b702757944b9ca0887cb84bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveTime: 1
+  flagMove: 0
   listPoint:
   - {fileID: 3655292648412295891}
   - {fileID: 1339441865544773484}
   - {fileID: 4202475903850383352}
   - {fileID: 1153949926248048999}
-  flagMove: 0
 --- !u!1 &806673766683906149
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1732535626138095738}
   - component: {fileID: 8688133806072464869}
-  - component: {fileID: 8743287800970744574}
+  - component: {fileID: 2824214955050454316}
   m_Layer: 7
   m_Name: TouchDamge
   m_TagString: Untagged
@@ -185,7 +186,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9736328, y: 0.31567526}
   m_EdgeRadius: 0
---- !u!114 &8743287800970744574
+--- !u!114 &2824214955050454316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,19 +195,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 806673766683906149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48185b1a9e6f3e344bede3dffc680283, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ca143500425694cb034c79902b5697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertorForce: {x: 10, y: 0}
+  vertorForce: {x: 13, y: 4}
   vectorOrigin: {fileID: 649790336371920870}
-  timeDelay: 3
+  timeDelay: 1.5
   countTime: 0
-  characterController: {fileID: 0}
   ontouchDamges:
-  - {fileID: 6269594717414263696}
-  - {fileID: 4021673301572445824}
-  - {fileID: 7932176772335127799}
-  - {fileID: 8743287800970744574}
+  - {fileID: 8340105156828400415}
+  - {fileID: 2319364444618824401}
+  - {fileID: 115728538160379041}
+  - {fileID: 2824214955050454316}
 --- !u!1 &1153949926248048999
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6054353629553724079}
   - component: {fileID: 308447943246742974}
-  - component: {fileID: 6269594717414263696}
+  - component: {fileID: 8340105156828400415}
   m_Layer: 7
   m_Name: TouchDamge
   m_TagString: Untagged
@@ -347,7 +347,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9736328, y: 0.31567526}
   m_EdgeRadius: 0
---- !u!114 &6269594717414263696
+--- !u!114 &8340105156828400415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,19 +356,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2435298292231196978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48185b1a9e6f3e344bede3dffc680283, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ca143500425694cb034c79902b5697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertorForce: {x: 10, y: 0}
+  vertorForce: {x: 13, y: 4}
   vectorOrigin: {fileID: 649790336371920870}
-  timeDelay: 3
+  timeDelay: 1.5
   countTime: 0
-  characterController: {fileID: 0}
   ontouchDamges:
-  - {fileID: 6269594717414263696}
-  - {fileID: 4021673301572445824}
-  - {fileID: 7932176772335127799}
-  - {fileID: 8743287800970744574}
+  - {fileID: 8340105156828400415}
+  - {fileID: 2319364444618824401}
+  - {fileID: 115728538160379041}
+  - {fileID: 2824214955050454316}
 --- !u!1 &3655292648412295891
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3788200763550794127}
   - component: {fileID: 1712038307365272150}
-  - component: {fileID: 4021673301572445824}
+  - component: {fileID: 2319364444618824401}
   m_Layer: 7
   m_Name: TouchDamge
   m_TagString: Untagged
@@ -545,7 +544,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9736328, y: 0.31567526}
   m_EdgeRadius: 0
---- !u!114 &4021673301572445824
+--- !u!114 &2319364444618824401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -554,19 +553,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4271586775883745961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48185b1a9e6f3e344bede3dffc680283, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ca143500425694cb034c79902b5697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertorForce: {x: 10, y: 0}
+  vertorForce: {x: 13, y: 4}
   vectorOrigin: {fileID: 649790336371920870}
-  timeDelay: 3
+  timeDelay: 1.5
   countTime: 0
-  characterController: {fileID: 0}
   ontouchDamges:
-  - {fileID: 6269594717414263696}
-  - {fileID: 4021673301572445824}
-  - {fileID: 7932176772335127799}
-  - {fileID: 8743287800970744574}
+  - {fileID: 8340105156828400415}
+  - {fileID: 2319364444618824401}
+  - {fileID: 115728538160379041}
+  - {fileID: 2824214955050454316}
 --- !u!1 &6497965083069539657
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8219855524514161192}
   - component: {fileID: 3668306579565453407}
-  - component: {fileID: 7932176772335127799}
+  - component: {fileID: 115728538160379041}
   m_Layer: 7
   m_Name: TouchDamge
   m_TagString: Untagged
@@ -645,7 +643,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9736328, y: 0.31567526}
   m_EdgeRadius: 0
---- !u!114 &7932176772335127799
+--- !u!114 &115728538160379041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -654,16 +652,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6497965083069539657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48185b1a9e6f3e344bede3dffc680283, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ca143500425694cb034c79902b5697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertorForce: {x: 10, y: 0}
+  vertorForce: {x: 13, y: 4}
   vectorOrigin: {fileID: 649790336371920870}
-  timeDelay: 3
+  timeDelay: 1.5
   countTime: 0
-  characterController: {fileID: 0}
   ontouchDamges:
-  - {fileID: 6269594717414263696}
-  - {fileID: 4021673301572445824}
-  - {fileID: 7932176772335127799}
-  - {fileID: 8743287800970744574}
+  - {fileID: 8340105156828400415}
+  - {fileID: 2319364444618824401}
+  - {fileID: 115728538160379041}
+  - {fileID: 2824214955050454316}
