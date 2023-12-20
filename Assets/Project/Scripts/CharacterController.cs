@@ -9,14 +9,13 @@ using Random = UnityEngine.Random;
 public class CharacterController : MonoBehaviour
 {
 
-    [Header("Properties")]
-    public float timeRelaxState;
+    [Header("Properties")] public float timeRelaxState;
     public int state;
     public bool holdButtonRight, holdButtonLeft;
+    private bool isDead;
 
 
-    [Header("Ref")]
-    public CharacterAnimation _characterAnimation;
+    [Header("Ref")] public CharacterAnimation _characterAnimation;
     public CharacterMoverment _characterMoverment;
     public CharacterHealth characterHealth;
     public AnimationReferenceAsset[] AnimationReferenceAsset;
@@ -28,7 +27,7 @@ public class CharacterController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_characterMoverment.effectMoveByForce)
+        if (!_characterMoverment.effectMoveByForce && !isDead)
         {
             Move();
         }
@@ -59,7 +58,7 @@ public class CharacterController : MonoBehaviour
         }
         if (holdButtonLeft)
         {
-            _characterMoverment.x =-1;
+            _characterMoverment.x = -1;
             _characterMoverment.MoveLeft();
 
         }
@@ -69,6 +68,7 @@ public class CharacterController : MonoBehaviour
         }
 #endif
     }
+
     private void Update()
     {
 #if UNITY_EDITOR
@@ -80,15 +80,21 @@ public class CharacterController : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             _characterMoverment.Jump();
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            _characterMoverment.Jump(true );
+
         }
     }
 
     private void RandomAnimIdle()
     {
-        if (state == (int)MovermentState.idle)
+        if (state == (int) MovermentState.idle)
         {
             timeRelaxState += Time.deltaTime;
         }
@@ -96,6 +102,7 @@ public class CharacterController : MonoBehaviour
         {
             timeRelaxState = 0;
         }
+
         if (timeRelaxState >= 10)
         {
             state = Random.Range(4, 6);
@@ -106,89 +113,91 @@ public class CharacterController : MonoBehaviour
 
     private void UpdateAnimation()
     {
-        if (!_characterMoverment.isDead) { 
-#region MoveAndIdle
-
-        if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
+        if (!isDead)
         {
-            state = (int)MovermentState.running;
+            #region MoveAndIdle
 
-        }
-        else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
-        {
-
-            state = (int)MovermentState.running;
-
-        }
-        else
-        {
-            if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f))
+            if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
             {
-                if (!_characterMoverment.isGround) return;
-                state = (int)MovermentState.idle;
+                state = (int) MovermentState.running;
 
             }
-        }
-#endregion
+            else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
+            {
 
+                state = (int) MovermentState.running;
 
-#region JumpAndFall
+            }
+            else
+            {
+                if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f))
+                {
+                    if (!_characterMoverment.isGround) return;
+                    state = (int) MovermentState.idle;
 
-        if (_characterMoverment.rigidbody2d.velocity.y > 0.5f&&!_characterMoverment.isBrige ) 
-        {
-            state = (int)MovermentState.jumping;
-        }
-        else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige)
-        {
+                }
+            }
 
-            state = (int)MovermentState.falling;
-        }
-        if((state == (int)MovermentState.jumping || state == (int)MovermentState.falling) && _characterMoverment.isBrige &&Math.Abs( _characterMoverment.rigidbody2d.velocity.x) < 2f)
-        {
-            state = (int)MovermentState.idle;
+            #endregion
+            #region JumpAndFall
 
-        }
-#endregion
+            if (_characterMoverment.rigidbody2d.velocity.y > 0.5f && !_characterMoverment.isBrige)
+            {
+                state = (int) MovermentState.jumping;
+            }
+            else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige)
+            {
 
-#region PushBox
-        if (_characterMoverment.isPushBox && (Math.Abs(_characterMoverment.rigidbody2d.velocity.x) > 0.5f )) state = (int)MovermentState.PushBox;
-#endregion
-        
+                state = (int) MovermentState.falling;
+            }
+
+            if ((state == (int) MovermentState.jumping || state == (int) MovermentState.falling) &&
+                _characterMoverment.isBrige && Math.Abs(_characterMoverment.rigidbody2d.velocity.x) < 2f)
+            {
+                state = (int) MovermentState.idle;
+
+            }
+
+            #endregion
+            #region PushBox
+
+            if (_characterMoverment.isPushBox && (Math.Abs(_characterMoverment.rigidbody2d.velocity.x) > 0.5f))
+                state = (int) MovermentState.PushBox;
+
+            #endregion
         }
         else
         {
-            state = (int)MovermentState.dead;
+            state = (int) MovermentState.dead;
         }
 
-#region ActiveAnimation
+        #region ActiveAnimation
+
         _characterAnimation.PlayAnimation(AnimationReferenceAsset[state], true, 1);
-#endregion
 
-
+        #endregion
+        
     }
-
-#region Force
-
-    public void AddForce(Vector2 vecterForce,Vector2 vectorOrigin)
+    #region Force
+    public void AddForce(Vector2 vecterForce, Vector2 vectorOrigin)
     {
         _characterMoverment.AddForceTouch(vecterForce, vectorOrigin);
     }
-#region
 
+    public void StopPhysics()
+    {
+        isDead = true;
+        Debug.Log("isdeadtrue");
+        transform.GetComponent<CapsuleCollider2D>().enabled = false;
+    }
+    #endregion
+    
 #region health
     public void DeductHelth()
     {
         characterHealth.DeductHealth();
-    }    
-
-#endregion
-
-#endregion
-
-
-#endregion
-
-
+    }
+    #endregion
 
 #region Control
 

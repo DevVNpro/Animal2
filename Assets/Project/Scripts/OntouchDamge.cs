@@ -32,6 +32,7 @@ public class OntouchDamge : MonoBehaviour
             {
                 characterController = other.gameObject.GetComponent<CharacterController>();
                 characterController.AddForce(vertorForce, new Vector2(vectorOrigin.transform.position.x, vectorOrigin.transform.position.y));
+                characterController.DeductHelth();
                 Rxmanager.DeDuctHpPlayer.OnNext(true);
                 if (ontouchDamges.Count > 0)
                 {

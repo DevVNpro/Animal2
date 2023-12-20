@@ -13,16 +13,15 @@ public class CharacterHealth : MonoBehaviour
 
     private void Awake()
     {
-        Rxmanager.DeDuctHpPlayer.Subscribe((a) =>
+        Rxmanager.PlayerDie.Subscribe(action =>
         {
-            Debug.Log("DeDuct 1 hp");
+            characterController.StopPhysics();
         }).AddTo(this);
     }
 
     private void Dead()
     {
-        characterController._characterMoverment.isDead = true;
-        //using UniRx;
+        Rxmanager.PlayerDie.OnNext(delegate { });
 
 
     }

@@ -6,12 +6,15 @@ using UnityEngine;
 using UnityEngine.Apple;
 public class CharacterMoverment : MonoBehaviour
 {
-    [Header("Properties")] 
-     public float timeEffectByForce;
-     private float timeCount;
-
+    [Header("Properties")]
     [SerializeField] private float speedRun;
     [SerializeField] private float speedJump;
+    public  float coyoteJumpTime;
+    public float coyoteTimeCounter;
+    public float bufferJumpTime;
+    public float bufferJumpTimeCouter;
+    [SerializeField] private float timeEffectByForce;
+    public float timeEffectByForceCount;
     [SerializeField] private LayerMask layerJump;
     [SerializeField] private LayerMask layerBox;
     [SerializeField] private LayerMask layerWall;
@@ -20,20 +23,21 @@ public class CharacterMoverment : MonoBehaviour
     public bool isPushBox;
     public bool isWall;
     public bool isBrige;
-    public bool isDead;
     public bool effectMoveByForce;
-    public float x;
+    private float x;
     [Header("Referent")]
     public Rigidbody2D rigidbody2d;
 
     private void Awake()
     {
-        timeCount = timeEffectByForce;
+        timeEffectByForceCount = timeEffectByForce;
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
+        CheckBufferTime();
+        CheckCoyoteTime();
         CheckGround();
         CheckBox();
         CheckWall();
@@ -44,14 +48,36 @@ public class CharacterMoverment : MonoBehaviour
 #endif
     }
 
+    private void CheckBufferTime()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            bufferJumpTimeCouter = bufferJumpTime;
+        }
+        else
+        {
+            bufferJumpTimeCouter -= Time.deltaTime;
+        }
+    }
+    private void CheckCoyoteTime()
+    {
+        if (isGround)
+        {
+            coyoteTimeCounter = coyoteJumpTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+    }
     public void ReseteffectMoveByforce()
     {
         if (effectMoveByForce)
         {
-            timeCount -= Time.deltaTime;
-            if (timeCount <= 0)
+            timeEffectByForceCount -= Time.deltaTime;
+            if (timeEffectByForceCount <= 0)
             {
-                timeCount = timeEffectByForce;
+                timeEffectByForceCount = timeEffectByForce;
                 effectMoveByForce = false;
             }
         }
@@ -99,13 +125,21 @@ public class CharacterMoverment : MonoBehaviour
         
     }
 
-    public void Jump()
+    public void Jump(bool active = false)
     {
-        if (isGround )
+        if (active)
         {
-            rigidbody2d.velocity = (new Vector2(0, speedJump));
+            coyoteTimeCounter = 0;
         }
-        
+        else
+        {
+            if ( coyoteTimeCounter >0f && bufferJumpTimeCouter >0f )
+            {
+                rigidbody2d.velocity = (new Vector2(0, speedJump));
+
+            }
+
+        }
         
     }
     public void AddForceTouch(Vector2 vectorFore,Vector2 vectorOrigin)

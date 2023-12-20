@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 using  DG.Tweening;
+using UniRx;
 
 public class ObjectGach : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class ObjectGach : MonoBehaviour
                 rigidbody2D.velocity = (new Vector2(randomNumberx, randomNumbery));
 
             }
-
+            Rxmanager.ShakeCameraBrick.OnNext(true);
             transform.GetComponent<Collider2D>().enabled = false;
             transform.GetComponent<SpriteRenderer>().enabled = false;
             StartCoroutine(Disableobject());
