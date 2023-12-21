@@ -23,17 +23,23 @@ public class OntouchDamge : MonoBehaviour
         countTime += Time.deltaTime;
     }
 
-    protected virtual void TakeDameOnTouch(GameObject other)
+     public virtual void TakeDameOnTouch(GameObject other,int damage)
     {
 
+        if (other.transform.Find("ShieldSoftBlue").gameObject.activeSelf)
+        {
+            transform.GetComponent<Collider2D>().isTrigger = true;
+            return;
+        }
+        
         if (countTime >= timeDelay)
         {
             if (other.gameObject.CompareTag("Player"))
             {
                 characterController = other.gameObject.GetComponent<CharacterController>();
                 characterController.AddForce(vertorForce, new Vector2(vectorOrigin.transform.position.x, vectorOrigin.transform.position.y));
-                characterController.DeductHelth();
-                Rxmanager.DeDuctHpPlayer.OnNext(true);
+                characterController.DeductHelth(damage);
+                Rxmanager.DeDuctHpPlayer.OnNext(damage);
                 if (ontouchDamges.Count > 0)
                 {
                     foreach (var onTouchDamage in ontouchDamges)

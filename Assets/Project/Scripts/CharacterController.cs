@@ -13,11 +13,12 @@ public class CharacterController : MonoBehaviour
     public int state;
     public bool holdButtonRight, holdButtonLeft;
     private bool isDead;
-
+    public int CharaterDirection;
 
     [Header("Ref")] public CharacterAnimation _characterAnimation;
     public CharacterMoverment _characterMoverment;
     public CharacterHealth characterHealth;
+    public BulletSpawner BulletSpawner;
     public AnimationReferenceAsset[] AnimationReferenceAsset;
 
     void Start()
@@ -49,22 +50,22 @@ public class CharacterController : MonoBehaviour
 #if !UNITY_EDITOR
                 if (holdButtonRight)
         {
-            _characterMoverment.x = 1;
+            _characterMoverment.xValue = 1;
             _characterMoverment.MoveRight(); 
         }
         else
         {
-            _characterMoverment.x = 0;
+            _characterMoverment.xValue = 0;
         }
         if (holdButtonLeft)
         {
-            _characterMoverment.x = -1;
+            _characterMoverment.xValue = -1;
             _characterMoverment.MoveLeft();
 
         }
         else
         {
-            _characterMoverment.x = 0;
+            _characterMoverment.xValue = 0;
         }
 #endif
     }
@@ -76,6 +77,22 @@ public class CharacterController : MonoBehaviour
 #endif
         RandomAnimIdle();
         UpdateAnimation();
+        CheckDirection();
+    }
+
+    public void CheckDirection()
+    {
+        if (transform.localScale.x == 1)
+        {
+            CharaterDirection = (int) CharacterDirection.Right;
+            Debug.Log("Phai");
+        }
+        else if (transform.localScale.x == -1)
+        {
+            CharaterDirection = (int)CharacterDirection.Left;
+            Debug.Log("Trai");
+
+        }
     }
 
     private void Jump()
@@ -115,60 +132,66 @@ public class CharacterController : MonoBehaviour
     {
         if (!isDead)
         {
+          
             if (!_characterMoverment.isSwing)
             {
-                #region MoveAndIdle
 
-                if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
-                {
-                    state = (int) MovermentState.running;
 
-                }
-                else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
-                {
+                    #region MoveAndIdle
 
-                    state = (int) MovermentState.running;
-
-                }
-                else
-                {
-                    if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f))
+                    if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
                     {
-                        if (!_characterMoverment.isGround) return;
+                        state = (int) MovermentState.running;
+
+                    }
+                    else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
+                    {
+
+                        state = (int) MovermentState.running;
+
+                    }
+                    else
+                    {
+                        if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f))
+                        {
+                            if (!_characterMoverment.isGround) return;
+                            state = (int) MovermentState.idle;
+
+                        }
+                    }
+
+                    #endregion
+
+                    #region JumpAndFall
+
+                    if (_characterMoverment.rigidbody2d.velocity.y > 0.5f && !_characterMoverment.isBrige)
+                    {
+                        state = (int) MovermentState.jumping;
+                    }
+                    else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige)
+                    {
+
+                        state = (int) MovermentState.falling;
+                    }
+
+                    if ((state == (int) MovermentState.jumping || state == (int) MovermentState.falling) &&
+                        _characterMoverment.isBrige && Math.Abs(_characterMoverment.rigidbody2d.velocity.x) < 2f)
+                    {
                         state = (int) MovermentState.idle;
 
                     }
-                }
 
-                #endregion
 
-                #region JumpAndFall
+                    #endregion
 
-                if (_characterMoverment.rigidbody2d.velocity.y > 0.5f && !_characterMoverment.isBrige)
-                {
-                    state = (int) MovermentState.jumping;
-                }
-                else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige)
-                {
+                    #region PushBox
 
-                    state = (int) MovermentState.falling;
-                }
+                    if (_characterMoverment.isPushBox &&
+                        (Math.Abs(_characterMoverment.rigidbody2d.velocity.x) > 0.5f) && _characterMoverment.isGround)
+                        state = (int) MovermentState.PushBox;
 
-                if ((state == (int) MovermentState.jumping || state == (int) MovermentState.falling) &&
-                    _characterMoverment.isBrige && Math.Abs(_characterMoverment.rigidbody2d.velocity.x) < 2f)
-                {
-                    state = (int) MovermentState.idle;
-
-                }
-
-                #endregion
-
-                #region PushBox
-
-                if (_characterMoverment.isPushBox && (Math.Abs(_characterMoverment.rigidbody2d.velocity.x) > 0.5f))
-                    state = (int) MovermentState.PushBox;
-
-                #endregion
+                    #endregion
+                
             }
             else
             {
@@ -196,21 +219,20 @@ public class CharacterController : MonoBehaviour
     public void StopPhysics()
     {
         isDead = true;
-        Debug.Log("isdeadtrue");
         transform.GetComponent<CapsuleCollider2D>().enabled = false;
     }
     #endregion
     
 #region health
-    public void DeductHelth()
+    public void DeductHelth(int Damage)
     {
-        characterHealth.DeductHealth();
+        characterHealth.DeductHealth(Damage);
     }
     #endregion
 
 #region Control
 
-#endregion
+
     public void Right(bool hold= false)
     {
         if (hold) {
@@ -233,5 +255,7 @@ public class CharacterController : MonoBehaviour
             holdButtonLeft = false;
         }
     }
+#endregion
 }
-public enum MovermentState { idle, running, jumping, falling, Wait1, Wait2, PushBox,dead,swing }
+public enum MovermentState { idle, running, jumping, falling, Wait1, Wait2, PushBox,dead,swing,attack }
+public enum CharacterDirection {Left =-1,Right=1}

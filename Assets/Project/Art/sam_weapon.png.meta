@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c54a0ae37fdcce4a887fd45127f6fb7
+guid: d343a02c9153a674a861bc71a731ac2f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: manh thung go vo_0
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 179
-        width: 47
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f55f801c3ca0f2e4b8e133db8d34d288
-      internalID: 411574599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: manh thung go vo_1
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 106
-        width: 57
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61863b4f6550f3c4ea131f6720202bcb
-      internalID: 1447613004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: manh thung go vo_2
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 0
-        width: 96
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 210e99f0c069fde41afdcdbee3871e44
-      internalID: 375511421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: manh thung go vo_3
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 26
-        width: 64
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8b32cec8e7fcc64ca70c94590941b4c
-      internalID: 896116971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,11 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      manh thung go vo_0: 411574599
-      manh thung go vo_1: 1447613004
-      manh thung go vo_2: 375511421
-      manh thung go vo_3: 896116971
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

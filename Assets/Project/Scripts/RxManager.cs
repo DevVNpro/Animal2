@@ -15,7 +15,7 @@ public abstract class Rxmanager
     public  static  readonly  Subject<bool> UseShield = new Subject<bool>();
     #endregion
     #region UI
-    public static readonly Subject<bool> DeDuctHpPlayer = new Subject<bool>();
+    public static readonly Subject<int> DeDuctHpPlayer = new Subject<int>();
     public  static  readonly  Subject<Action> PlayerDie = new Subject<Action>();
     public  static  readonly  Subject<Action> PlayWin = new Subject<Action>();
     public  static  readonly  Subject<Vector3> PickStar = new Subject<Vector3>();

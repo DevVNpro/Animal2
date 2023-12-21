@@ -25,14 +25,17 @@ public class CharacterMoverment : MonoBehaviour
     public bool isBrige;
     public bool isSwing;
     public bool effectMoveByForce;
-    public float x;
+    public float xValue;
     [Header("Referent")]
     public Rigidbody2D rigidbody2d;
+
+    public CharacterController CharacterController;
 
     private void Awake()
     {
         timeEffectByForceCount = timeEffectByForce;
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
+        CharacterController = transform.GetComponent<CharacterController>();
     }
 
     void Update()
@@ -45,7 +48,7 @@ public class CharacterMoverment : MonoBehaviour
         CheckBrige();
         ReseteffectMoveByforce();
 #if UNITY_EDITOR
-        x = Input.GetAxisRaw("Horizontal");
+        xValue = Input.GetAxisRaw("Horizontal");
 #endif
     }
 
@@ -125,14 +128,14 @@ public class CharacterMoverment : MonoBehaviour
         public void MoveLeft()
     {
         if (!isGround && isWall) return;
-        rigidbody2d.velocity = new Vector2(x*speedRun,rigidbody2d.velocity.y );
+        rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
         transform.localScale = new Vector3(-1,1,1);
     }
 
     public void MoveRight()
     {
-        if (!isGround && isWall) return;
-        rigidbody2d.velocity = new Vector2(x*speedRun,rigidbody2d.velocity.y );
+        if ((!isGround && isWall)||(isWall&& CharacterController.CharaterDirection ==1)) return;
+        rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
         transform.localScale = new Vector3(1,1,1);
         
     }
@@ -156,6 +159,7 @@ public class CharacterMoverment : MonoBehaviour
     }
     public void AddForceTouch(Vector2 vectorFore,Vector2 vectorOrigin)
     {
+        rigidbody2d.velocity= new Vector2(0f,0f);
         if (transform.position.x >= vectorOrigin.x)
         {
             effectMoveByForce = true;

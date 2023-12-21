@@ -32,15 +32,13 @@ public class CharacterHealth : MonoBehaviour
     }
 
 
-    public void DeductHealth()
+    public void DeductHealth(int damage)
     {
-        if(health == 1)
+        health -= damage;
+        if (health <= 0)
         {
-            health -= 1;
             Dead();
-            return;
         }
-        health -= 1;
 
     }
     public void AddHealth()
