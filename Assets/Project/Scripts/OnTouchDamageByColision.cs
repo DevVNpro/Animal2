@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
 public class OnTouchDamageByColision : OntouchDamge
 {
@@ -14,7 +15,22 @@ public class OnTouchDamageByColision : OntouchDamge
         }
     }
 
-    
+    private void Awake()
+    {
+        Rxmanager.UseShield.Subscribe((b) =>
+        {
+            transform.GetComponent<Collider2D>().isTrigger = true;
+        }).AddTo(this);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("Player"))
+        {
+            TakeDameOnTouch(other.gameObject, damage);
+        }
+    }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {

@@ -31,7 +31,6 @@ public class OntouchDamge : MonoBehaviour
             transform.GetComponent<Collider2D>().isTrigger = true;
             return;
         }
-        
         if (countTime >= timeDelay)
         {
             if (other.gameObject.CompareTag("Player"))

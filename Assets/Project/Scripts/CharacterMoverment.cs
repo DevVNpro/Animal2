@@ -26,6 +26,11 @@ public class CharacterMoverment : MonoBehaviour
     public bool isSwing;
     public bool effectMoveByForce;
     public float xValue;
+    private bool isBlockMoverMent1;
+    private bool isBlockMoverMent2;
+    private bool isBlockMoverMent3;
+    private bool isBlockMoverMent4;
+
     [Header("Referent")]
     public Rigidbody2D rigidbody2d;
 
@@ -46,9 +51,24 @@ public class CharacterMoverment : MonoBehaviour
         CheckBox();
         CheckWall();
         CheckBrige();
+        DebuRayJump();
         ReseteffectMoveByforce();
 #if UNITY_EDITOR
         xValue = Input.GetAxisRaw("Horizontal");
+        if (xValue == 1)
+        {
+            CharacterController.holdButtonRight = true;
+        }
+        else if (xValue == -1)
+        {
+            CharacterController.holdButtonLeft = true;
+        }
+        else
+        {
+            CharacterController.holdButtonLeft = false;
+            CharacterController.holdButtonRight = false;
+
+        }
 #endif
     }
 
@@ -111,13 +131,19 @@ public class CharacterMoverment : MonoBehaviour
     private void CheckBox()
     {
         var position = transform.position;
-        isPushBox = Physics2D.BoxCast(new Vector2(position.x,position.y+1.3f), new Vector2(2f, 1.5f), 0f, Vector2.one,0f,layerBox);
+        isPushBox = Physics2D.Raycast(new Vector2(position.x, position.y + 1.1f),
+            Vector2.right * CharacterController.CharaterDirection, 1, layerBox);
     }
 
     private void CheckWall()
     {
         var position = transform.position;
-        isWall = Physics2D.BoxCast(new Vector2(position.x, position.y + 1.7f), new Vector2(2f, 3f), 0f, Vector2.one, 0f, layerWall);
+        isBlockMoverMent1 = Physics2D.Raycast(new Vector2(position.x, position.y+2f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
+        isBlockMoverMent2 = Physics2D.Raycast(new Vector2(position.x, position.y+1.5f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
+        isBlockMoverMent3 = Physics2D.Raycast(new Vector2(position.x, position.y+1f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
+        isBlockMoverMent4 = Physics2D.Raycast(new Vector2(position.x, position.y+0.1f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
+        isWall = (isBlockMoverMent1 || isBlockMoverMent2 || isBlockMoverMent3 || isBlockMoverMent4);
+        //    BoxCast(new Vector2(position.x, position.y + 1.7f), new Vector2(2f, 3f), 0f, Vector2.one, 0f, layerWall);
     }
     
 
@@ -127,16 +153,18 @@ public class CharacterMoverment : MonoBehaviour
 
         public void MoveLeft()
     {
-        if (!isGround && isWall) return;
-        rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
         transform.localScale = new Vector3(-1,1,1);
+        if ((!isGround && isWall)||(isWall&& CharacterController.holdButtonLeft&&!isPushBox)) return;
+        rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
+
     }
 
     public void MoveRight()
     {
-        if ((!isGround && isWall)||(isWall&& CharacterController.CharaterDirection ==1)) return;
-        rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
         transform.localScale = new Vector3(1,1,1);
+        if ((!isGround && isWall)||(isWall&& CharacterController.holdButtonRight&&!isPushBox)) return;
+        rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
+
         
     }
 
@@ -207,20 +235,40 @@ public class CharacterMoverment : MonoBehaviour
         }
         
         
+      //  if (isWall)
+       // {
+     //       Gizmos.color = new Color(0.5f, 1, 0.5f, 0.5f);
+     //       Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+ 1.7f), new Vector2(2f, 3f)); 
+     //   }
+     //   else
+    //    {
+      //      Gizmos.color = new Color(1, 0, 0, 0.5f);
+     //       Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+ 1.7f), new Vector2(2f, 3f));
+      //  }
+     
+    }
+
+    private void DebuRayJump()
+    {
         if (isWall)
         {
-            Gizmos.color = new Color(0.5f, 1, 0.5f, 0.5f);
-            Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+ 1.7f), new Vector2(2f, 3f)); 
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+2f),Vector2.right *CharacterController.CharaterDirection,Color.black);
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1.5f),Vector2.right *CharacterController.CharaterDirection,Color.black);
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1f),Vector2.right *CharacterController.CharaterDirection,Color.black);
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+0.1f),Vector2.right*CharacterController.CharaterDirection,Color.black);
+
+
         }
         else
         {
-            Gizmos.color = new Color(1, 0, 0, 0.5f);
-            Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+ 1.7f), new Vector2(2f, 3f));
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+2f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1.5f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+0.1f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
+
         }
-     
     }
     
-
     #endregion
 
     #region OtherPhysic2d

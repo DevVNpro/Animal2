@@ -152,7 +152,7 @@ public class CharacterController : MonoBehaviour
                     }
                     else
                     {
-                        if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f))
+                        if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f) && Mathf.Abs( _characterMoverment.rigidbody2d.velocity.x) >1f)
                         {
                             if (!_characterMoverment.isGround) return;
                             state = (int) MovermentState.idle;
@@ -213,6 +213,7 @@ public class CharacterController : MonoBehaviour
     #region Force
     public void AddForce(Vector2 vecterForce, Vector2 vectorOrigin)
     {
+        Debug.Log("AddLuc");
         _characterMoverment.AddForceTouch(vecterForce, vectorOrigin);
     }
 
