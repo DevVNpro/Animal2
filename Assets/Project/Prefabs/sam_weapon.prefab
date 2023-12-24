@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7328569034163721163}
   - component: {fileID: 2738097654222163104}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 17904699704544585}
   - component: {fileID: 8444704429629311406}
   - component: {fileID: 3250334490250909776}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: sam_weapon
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,7 +189,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 2
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0

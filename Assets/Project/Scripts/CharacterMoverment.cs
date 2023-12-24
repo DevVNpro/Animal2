@@ -24,6 +24,7 @@ public class CharacterMoverment : MonoBehaviour
     public bool isWall;
     public bool isBrige;
     public bool isSwing;
+    public bool CanShot;
     public bool effectMoveByForce;
     public float xValue;
     private bool isBlockMoverMent1;
@@ -133,6 +134,14 @@ public class CharacterMoverment : MonoBehaviour
         var position = transform.position;
         isPushBox = Physics2D.Raycast(new Vector2(position.x, position.y + 1.1f),
             Vector2.right * CharacterController.CharaterDirection, 1, layerBox);
+        if (isPushBox)
+        {
+            CanShot = false;
+        }
+        else
+        {
+            CanShot = true;
+        }
     }
 
     private void CheckWall()
@@ -176,7 +185,7 @@ public class CharacterMoverment : MonoBehaviour
         }
         else
         {
-            if ( coyoteTimeCounter >0f  )
+            if ( coyoteTimeCounter > 0f && !effectMoveByForce && !CharacterController.isDead && !CharacterController.isWin)
             {
                 rigidbody2d.velocity = (new Vector2(0, speedJump));
 

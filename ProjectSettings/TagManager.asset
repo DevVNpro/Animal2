@@ -7,6 +7,12 @@ TagManager:
   - Box
   - swing
   - Shield
+  - Bullet
+  - Enemy
+  - Ground
+  - Wall
+  - Coin
+  - Crash
   layers:
   - Default
   - TransparentFX
@@ -28,8 +34,8 @@ TagManager:
   - Crash
   - Gach
   - Brige
-  - 
-  - 
+  - Bullet
+  - FireBall
   - 
   - 
   - 
@@ -55,4 +61,7 @@ TagManager:
     locked: 0
   - name: Crash
     uniqueID: 1185117555
+    locked: 0
+  - name: Ui
+    uniqueID: 1989048483
     locked: 0

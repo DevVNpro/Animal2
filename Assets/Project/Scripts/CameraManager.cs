@@ -13,9 +13,8 @@ public class CameraManager : MonoBehaviour
     private void Awake()
     {
 
-        Rxmanager.PlayerDie.Subscribe(delegate(Action action)
+        Rxmanager.PlayerDie.Subscribe((tmp)=>
         {
-            action?.Invoke();
             LockCamera();
         }).AddTo(this);
         Rxmanager.ShakeCameraBrick.Subscribe((b =>
@@ -25,10 +24,6 @@ public class CameraManager : MonoBehaviour
             ).AddTo(this);
 
 
-        /* Rxmanager.ShakeCameraBrick.Subscribe((delegate(bool b)
-          {
-              ShakeCamera();
-          })).AddTo(this);*/
     }
 
     public void LockCamera()

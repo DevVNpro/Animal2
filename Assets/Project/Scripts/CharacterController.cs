@@ -5,14 +5,15 @@ using Spine.Unity;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+using UniRx;
 public class CharacterController : MonoBehaviour
 {
 
     [Header("Properties")] public float timeRelaxState;
     public int state;
     public bool holdButtonRight, holdButtonLeft;
-    private bool isDead;
+    public bool isDead;
+    public bool isWin;
     public int CharaterDirection;
 
     [Header("Ref")] public CharacterAnimation _characterAnimation;
@@ -20,15 +21,20 @@ public class CharacterController : MonoBehaviour
     public CharacterHealth characterHealth;
     public BulletSpawner BulletSpawner;
     public AnimationReferenceAsset[] AnimationReferenceAsset;
-
-    void Start()
+    private void Awake()
     {
+        Rxmanager.PlayWin.Subscribe((value)=>
+        {
+            isWin = value;
+        }).AddTo(this);
         timeRelaxState = 0;
     }
 
+
+
     void FixedUpdate()
     {
-        if (!_characterMoverment.effectMoveByForce && !isDead)
+        if (!_characterMoverment.effectMoveByForce && !isDead&&!isWin)
         {
             Move();
         }
@@ -130,32 +136,34 @@ public class CharacterController : MonoBehaviour
 
     private void UpdateAnimation()
     {
-        if (!isDead)
+        if (!isWin)
         {
-          
-            if (!_characterMoverment.isSwing)
+            if (!isDead)
             {
+
+                if (!_characterMoverment.isSwing)
+                {
 
 
                     #region MoveAndIdle
 
                     if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
                     {
-                        state = (int) MovermentState.running;
+                        state = (int)MovermentState.running;
 
                     }
                     else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
                     {
 
-                        state = (int) MovermentState.running;
+                        state = (int)MovermentState.running;
 
                     }
                     else
                     {
-                        if (state != 4 && state != 5 && (Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.5f) && Mathf.Abs( _characterMoverment.rigidbody2d.velocity.x) >1f)
+                        if (state != 4 && state != 5 && ((Math.Abs(_characterMoverment.rigidbody2d.velocity.y) < 0.2f && Mathf.Abs(_characterMoverment.rigidbody2d.velocity.x) < 1.8f)|| _characterMoverment.isBrige))
                         {
                             if (!_characterMoverment.isGround) return;
-                            state = (int) MovermentState.idle;
+                            state = (int)MovermentState.idle;
 
                         }
                     }
@@ -166,18 +174,18 @@ public class CharacterController : MonoBehaviour
 
                     if (_characterMoverment.rigidbody2d.velocity.y > 0.5f && !_characterMoverment.isBrige)
                     {
-                        state = (int) MovermentState.jumping;
+                        state = (int)MovermentState.jumping;
                     }
                     else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige)
                     {
 
-                        state = (int) MovermentState.falling;
+                        state = (int)MovermentState.falling;
                     }
 
-                    if ((state == (int) MovermentState.jumping || state == (int) MovermentState.falling) &&
+                    if ((state == (int)MovermentState.jumping || state == (int)MovermentState.falling) &&
                         _characterMoverment.isBrige && Math.Abs(_characterMoverment.rigidbody2d.velocity.x) < 2f)
                     {
-                        state = (int) MovermentState.idle;
+                        state = (int)MovermentState.idle;
 
                     }
 
@@ -188,24 +196,29 @@ public class CharacterController : MonoBehaviour
 
                     if (_characterMoverment.isPushBox &&
                         (Math.Abs(_characterMoverment.rigidbody2d.velocity.x) > 0.5f) && _characterMoverment.isGround)
-                        state = (int) MovermentState.PushBox;
+                        state = (int)MovermentState.PushBox;
 
                     #endregion
-                
+
+                }
+                else
+                {
+                    state = (int)MovermentState.swing;
+                }
             }
+        
             else
-            {
-                state = (int) MovermentState.swing;
-            }
+        {
+            state = (int)MovermentState.dead;
+        }
         }
         else
         {
-            state = (int) MovermentState.dead;
+            state = (int)MovermentState.Win;
         }
+    #region ActiveAnimation
 
-        #region ActiveAnimation
-
-        _characterAnimation.PlayAnimation(AnimationReferenceAsset[state], true, 1);
+    _characterAnimation.PlayAnimation(AnimationReferenceAsset[state], true, 1);
 
         #endregion
         
@@ -258,5 +271,5 @@ public class CharacterController : MonoBehaviour
     }
 #endregion
 }
-public enum MovermentState { idle, running, jumping, falling, Wait1, Wait2, PushBox,dead,swing,attack }
+public enum MovermentState { idle, running, jumping, falling, Wait1, Wait2, PushBox,dead,swing,attack,Win }
 public enum CharacterDirection {Left =-1,Right=1}

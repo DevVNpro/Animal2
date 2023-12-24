@@ -43,7 +43,7 @@ public class BulletSpawner : MonoBehaviour
 
     public void Shoot()
     {
-        if (!isShot)
+        if (!isShot && transform.parent.GetComponent<CharacterMoverment>().CanShot == true)
         {
             _pool.Get();
             isShot = true;

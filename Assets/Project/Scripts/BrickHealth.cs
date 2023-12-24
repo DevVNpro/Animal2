@@ -7,6 +7,7 @@ public class BrickHealth : MonoBehaviour
 {
    public int health;
    public List<GameObject> cracks;
+    public Vector3 vector3; 
    public void DeductBrickHealth(int damage)
    {
       health -= damage;
@@ -43,5 +44,13 @@ public class BrickHealth : MonoBehaviour
          });
       }
    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            DeductBrickHealth(1);
+            transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(25 * vector3.x, 0), ForceMode2D.Impulse);
+        }
+    }
 
 }

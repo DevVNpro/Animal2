@@ -40,12 +40,15 @@ public class ObjectGach : MonoBehaviour
         yield return  new WaitForSeconds(1f);
         foreach (var crack in cracks)
         {
-            yield return  new WaitForSeconds(0.1f);
-            float initfloat = 1;
-            DOVirtual.Float(initfloat, 0f, 2f, (values) =>
+            if (crack.CompareTag("Crash"))
             {
-                crack.transform.gameObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,values);
-            });
+                yield return new WaitForSeconds(0.1f);
+                float initfloat = 1;
+                DOVirtual.Float(initfloat, 0f, 2f, (values) =>
+                {
+                    crack.transform.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, values);
+                });
+            }
         }
     }
 }

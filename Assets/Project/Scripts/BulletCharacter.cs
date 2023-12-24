@@ -34,16 +34,15 @@ public class BulletCharacter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Box"))
+       if (other.CompareTag("Box"))
         {
-            if (other.GetComponent<BrickHealth>() != null)
-            {    
-                other.GetComponent<BrickHealth>().DeductBrickHealth(1);
-            }
-            Vector3 vector3 = transform.localScale;
-            other.GetComponent<Rigidbody2D>().AddForce(new Vector2(25*vector3.x,0),ForceMode2D.Impulse);    
+            other.GetComponent<Rigidbody2D>().AddForce(new Vector2(25, 0), ForceMode2D.Impulse);
         }
-        _pool.Release(this);
+        if (other.CompareTag("Ground")|| other.CompareTag("Box")|| other.CompareTag("Enemy")|| other.CompareTag("Wall"))
+        {
+            _pool.Release(this);
+        }
+
     }
 
     public void SetPool(ObjectPool<BulletCharacter> pool)

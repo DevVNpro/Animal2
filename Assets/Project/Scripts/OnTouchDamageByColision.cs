@@ -15,13 +15,6 @@ public class OnTouchDamageByColision : OntouchDamge
         }
     }
 
-    private void Awake()
-    {
-        Rxmanager.UseShield.Subscribe((b) =>
-        {
-            transform.GetComponent<Collider2D>().isTrigger = true;
-        }).AddTo(this);
-    }
 
     private void OnTriggerEnter(Collider other)
     {

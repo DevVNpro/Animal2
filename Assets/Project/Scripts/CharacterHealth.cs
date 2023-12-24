@@ -13,7 +13,7 @@ public class CharacterHealth : MonoBehaviour
 
     private void Awake()
     {
-        Rxmanager.PlayerDie.Subscribe(action =>
+        Rxmanager.PlayerDie.Subscribe(tmp =>
         {
             characterController.StopPhysics();
         }).AddTo(this);
@@ -21,7 +21,7 @@ public class CharacterHealth : MonoBehaviour
 
     private void Dead()
     {
-        Rxmanager.PlayerDie.OnNext(delegate { });
+        Rxmanager.PlayerDie.OnNext(true);
 
 
     }

@@ -11,6 +11,9 @@ using UnityEngine.UI;
 public class GamePlayPanel : MonoBehaviour
 { [Header("HpPlayerUI")]
     [SerializeField] private List<GameObject> hpImage;
+    [SerializeField] private List<RectTransform> starImage;
+    [SerializeField] private GameObject star;
+    [SerializeField] private GameObject parentStar;
 
     [SerializeField] private Button shieldButton;
     [SerializeField] private Button hpButton;
@@ -20,20 +23,29 @@ public class GamePlayPanel : MonoBehaviour
     
 
     [SerializeField] private TextMeshProUGUI timeCount;
-    private float countTime = 180;
+    private float countTime = 200;
     private void Awake()
     {
+        //AddEvent
         shieldButton.onClick.AddListener(UseShieldButton);
         hpButton.onClick.AddListener(UseHpButton);
+        bomButton.onClick.AddListener(UseBom);
+
+        //RX
         Rxmanager.DeDuctHpPlayer.Subscribe((deduct) =>
         {
             DeductUiHp(deduct);
+        }).AddTo(this);
+        Rxmanager.PickStar.Subscribe((Vector3 vector) =>
+        {
+            MoveStarToUI(vector);
         }).AddTo(this);
     }
 
     #region CountDownTime
     private void Update()
     {
+        Debug.Log(starImage[0].anchoredPosition);
         CountDownTime();
     }
 
@@ -46,18 +58,18 @@ public class GamePlayPanel : MonoBehaviour
         }
         else
         {
-            Rxmanager.PlayerDie.OnNext(delegate { });
+            Rxmanager.PlayerDie.OnNext(true);
 
         }
     }
-    
+
 
     #endregion
-    
-     private void DeductUiHp(int deduct)
-     {
-         int cnt = 0;
-        for (int i = 2; i>=0; i--)
+    #region Hp
+    private void DeductUiHp(int deduct)
+    {
+        int cnt = 0;
+        for (int i = 2; i >= 0; i--)
         {
             if (hpImage[i].activeSelf)
             {
@@ -65,17 +77,17 @@ public class GamePlayPanel : MonoBehaviour
                 cnt++;
             }
 
-            if (cnt == deduct) return; 
+            if (cnt == deduct) return;
         }
-     }
+    }
 
-     private void UseHpButton()
-     {
-         Rxmanager.UseHealth.OnNext(true);
-         AddUiHp();
-         
-     }
-     private void AddUiHp()
+    private void UseHpButton()
+    {
+        Rxmanager.UseHealth.OnNext(true);
+        AddUiHp();
+
+    }
+    private void AddUiHp()
      {
          if(hpImage[2].activeSelf) return;
          for (int i = 0; i <= 2; i++)
@@ -87,8 +99,9 @@ public class GamePlayPanel : MonoBehaviour
              }
          }
      }
-
-     private void UseShieldButton()
+    #endregion
+    #region Shield
+    private void UseShieldButton()
      {
          Rxmanager.UseShield.OnNext(true);
          StartCoroutine(AnimShieldUI());
@@ -96,7 +109,7 @@ public class GamePlayPanel : MonoBehaviour
 
      private IEnumerator AnimShieldUI()
      {
-         shieldButton.gameObject.GetComponent<Image>().color = new Color(0.5f,0.5f,0.5f);
+         shieldButton.gameObject.GetComponent<Image>().color = new Color(0.8f,0.8f,0.8f);
          shieldButton.interactable = false;
         yield return  new WaitForSeconds(7f);
         shieldButton.gameObject.GetComponent<Image>().color = new Color(1f,1f,1f);
@@ -104,5 +117,43 @@ public class GamePlayPanel : MonoBehaviour
 
          
      }
+    #endregion
+    #region Star
+    private void MoveStarToUI(Vector2 vector)
+    {
+        for(int i = 0; i<= 2; i++)
+        {
+            if (starImage[i].gameObject.activeSelf)
+            {
+                GameObject starUI = Instantiate(star, vector, transform.rotation, parentStar.transform);
+                RectTransform starUIRectTransform = starUI.GetComponent<RectTransform>();
+                starUIRectTransform.DOAnchorPos(new Vector2(starImage[i].anchoredPosition.x, starImage[i].anchoredPosition.y), 1f).SetEase(Ease.Linear).OnComplete(()=>
+                {
+                    starImage[i].gameObject.SetActive(false);
+                 });
+                break;
+            }
+        }
 
+    }
+
+    #endregion
+    #region Bom
+    private void UseBom()
+    {
+        Rxmanager.UseBom.OnNext(true);
+        StartCoroutine(AnimBomUI());
+    }
+    private IEnumerator AnimBomUI()
+    {
+        bomButton.gameObject.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
+        bomButton.interactable = false;
+        yield return new WaitForSeconds(7f);
+        bomButton.gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f);
+        bomButton.interactable = true;
+
+
+    }
+
+    #endregion
 }

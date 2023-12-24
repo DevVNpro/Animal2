@@ -29,6 +29,9 @@ public class BoosterManager : MonoBehaviour
         {
             StartCoroutine(ActiveHp());
         }).AddTo(this);
+        Rxmanager.UseBom.Subscribe((tmp) => {
+            StartCoroutine(ActiveBom());
+        }).AddTo(this);
     }
 
     IEnumerator ActiveShield()
@@ -43,6 +46,11 @@ public class BoosterManager : MonoBehaviour
         _characterHealth.AddHealth();
         yield return  new WaitForSeconds(0.1f);
     }
-    
+    IEnumerator ActiveBom()
+    {
+        bomBooster.gameObject.SetActive(true);
+        yield return new WaitForSeconds(timeUseBom);
+        bomBooster.gameObject.SetActive(false);
+    }    
     
 }
