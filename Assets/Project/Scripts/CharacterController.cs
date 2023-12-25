@@ -91,12 +91,10 @@ public class CharacterController : MonoBehaviour
         if (transform.localScale.x == 1)
         {
             CharaterDirection = (int) CharacterDirection.Right;
-            Debug.Log("Phai");
         }
         else if (transform.localScale.x == -1)
         {
             CharaterDirection = (int)CharacterDirection.Left;
-            Debug.Log("Trai");
 
         }
     }
@@ -149,14 +147,30 @@ public class CharacterController : MonoBehaviour
 
                     if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
                     {
-                        state = (int)MovermentState.running;
+                        if (_characterMoverment.isBrige)
+                        {
+                            state = (int)MovermentState.running;
 
+                        }
+                        else if (Mathf.Abs(_characterMoverment.rigidbody2d.velocity.y) < 3f)
+                        {
+                            state = (int)MovermentState.running;
+
+                        }
                     }
                     else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
                     {
+         
+                        if (_characterMoverment.isBrige)
+                        {
+                            state = (int)MovermentState.running;
 
-                        state = (int)MovermentState.running;
+                        }
+                        else if (Mathf.Abs(_characterMoverment.rigidbody2d.velocity.y) < 3f)
+                        {
+                            state = (int)MovermentState.running;
 
+                        }
                     }
                     else
                     {
@@ -176,7 +190,7 @@ public class CharacterController : MonoBehaviour
                     {
                         state = (int)MovermentState.jumping;
                     }
-                    else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige)
+                    else if (_characterMoverment.rigidbody2d.velocity.y < -0.2f && !_characterMoverment.isBrige && !_characterMoverment.isGround)
                     {
 
                         state = (int)MovermentState.falling;
@@ -208,17 +222,17 @@ public class CharacterController : MonoBehaviour
             }
         
             else
-        {
-            state = (int)MovermentState.dead;
-        }
+            {
+                state = (int)MovermentState.dead;
+            }
         }
         else
         {
             state = (int)MovermentState.Win;
         }
-    #region ActiveAnimation
+        #region ActiveAnimation
 
-    _characterAnimation.PlayAnimation(AnimationReferenceAsset[state], true, 1);
+        _characterAnimation.PlayAnimation(AnimationReferenceAsset[state], true, 1);
 
         #endregion
         
@@ -267,6 +281,16 @@ public class CharacterController : MonoBehaviour
         else
         {
             holdButtonLeft = false;
+        }
+    }
+
+    public void Shoot()
+    {
+        if (_characterMoverment.CanShot && !BulletSpawner.isShot)
+        {
+         //   _characterAnimation.PlayAnimationShot(AnimationReferenceAsset[9],false);
+            BulletSpawner.Shoot();
+
         }
     }
 #endregion

@@ -26,7 +26,7 @@ public class ObjectTrapGo : MonoBehaviour
     {
         
         active = false;
-        transform.DOMoveY(0f, 2f);
+        transform.DOMoveY(3f, 2f);
         yield return  new WaitForSeconds(2f);
         transform.DOMoveY(_transform.y, 3f);
         yield return  new WaitForSeconds(3f);
@@ -34,22 +34,7 @@ public class ObjectTrapGo : MonoBehaviour
     }
     
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (!other.transform.CompareTag("Player"))
-        {
-            StopCoroutine(StartAnim());
-            StartCoroutine(ResetAnim());
 
-        }
-
-    }
-    IEnumerator ResetAnim()
-    {
-        transform.DOMoveY(_transform.y, 3f);
-        yield return  new WaitForSeconds(3f);
-        active = true;
-    }
     
     
 }

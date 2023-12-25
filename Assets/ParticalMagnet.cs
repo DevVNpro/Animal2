@@ -14,7 +14,7 @@ public class ParticalMagnet : MonoBehaviour
     {
         if (collision.CompareTag("Coin"))
         {
-            collision.transform.DOMove(transform.position, 0.5f);
+            collision.transform.DOMove(transform.position, 0.2f);
         }
     }
     IEnumerator CoundDownTimeMagnet()

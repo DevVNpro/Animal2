@@ -27,6 +27,7 @@ public class CharacterMoverment : MonoBehaviour
     public bool CanShot;
     public bool effectMoveByForce;
     public float xValue;
+    private bool isBlockMoverMent0;
     private bool isBlockMoverMent1;
     private bool isBlockMoverMent2;
     private bool isBlockMoverMent3;
@@ -147,11 +148,12 @@ public class CharacterMoverment : MonoBehaviour
     private void CheckWall()
     {
         var position = transform.position;
+        isBlockMoverMent0 =  Physics2D.Raycast(new Vector2(position.x, position.y+2.5f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
         isBlockMoverMent1 = Physics2D.Raycast(new Vector2(position.x, position.y+2f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
         isBlockMoverMent2 = Physics2D.Raycast(new Vector2(position.x, position.y+1.5f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
         isBlockMoverMent3 = Physics2D.Raycast(new Vector2(position.x, position.y+1f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
         isBlockMoverMent4 = Physics2D.Raycast(new Vector2(position.x, position.y+0.1f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
-        isWall = (isBlockMoverMent1 || isBlockMoverMent2 || isBlockMoverMent3 || isBlockMoverMent4);
+        isWall = (isBlockMoverMent0||isBlockMoverMent1 || isBlockMoverMent2 || isBlockMoverMent3 || isBlockMoverMent4);
         //    BoxCast(new Vector2(position.x, position.y + 1.7f), new Vector2(2f, 3f), 0f, Vector2.one, 0f, layerWall);
     }
     
@@ -261,6 +263,7 @@ public class CharacterMoverment : MonoBehaviour
     {
         if (isWall)
         {
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+2.5f),Vector2.right*CharacterController.CharaterDirection,Color.black);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+2f),Vector2.right *CharacterController.CharaterDirection,Color.black);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1.5f),Vector2.right *CharacterController.CharaterDirection,Color.black);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1f),Vector2.right *CharacterController.CharaterDirection,Color.black);
@@ -270,6 +273,7 @@ public class CharacterMoverment : MonoBehaviour
         }
         else
         {
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+2.5f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+2f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1.5f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1f),Vector2.right*CharacterController.CharaterDirection,Color.blue);

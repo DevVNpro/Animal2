@@ -36,7 +36,7 @@ public class BulletCharacter : MonoBehaviour
     {
        if (other.CompareTag("Box"))
         {
-            other.GetComponent<Rigidbody2D>().AddForce(new Vector2(25, 0), ForceMode2D.Impulse);
+            other.GetComponent<Rigidbody2D>().AddForce(new Vector2(20*_characterController.CharaterDirection, 0), ForceMode2D.Impulse);
         }
         if (other.CompareTag("Ground")|| other.CompareTag("Box")|| other.CompareTag("Enemy")|| other.CompareTag("Wall"))
         {

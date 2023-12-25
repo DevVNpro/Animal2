@@ -19,6 +19,7 @@ public class GamePlayPanel : MonoBehaviour
     [SerializeField] private Button hpButton;
     [SerializeField] private Button bomButton;
     [SerializeField] private Button bulletButton;
+    private bool stopTime;
 
     
 
@@ -40,26 +41,36 @@ public class GamePlayPanel : MonoBehaviour
         {
             MoveStarToUI(vector);
         }).AddTo(this);
+        Rxmanager.PlayWin.Subscribe((tmp) =>
+        {
+            stopTime = true;
+        }).AddTo(this);
+        Rxmanager.UseShield.Subscribe((tmp) =>
+        {
+            StartCoroutine(AnimShieldUI());
+        }).AddTo(this);
     }
 
     #region CountDownTime
     private void Update()
     {
-        Debug.Log(starImage[0].anchoredPosition);
         CountDownTime();
     }
 
     private void CountDownTime()
     {
-        if (countTime >= 0)
+        if (!stopTime)
         {
-            countTime -= Time.deltaTime;
-            timeCount.text = Mathf.FloorToInt(countTime).ToString()+'s';
-        }
-        else
-        {
-            Rxmanager.PlayerDie.OnNext(true);
+            if (countTime >= 0)
+            {
+                countTime -= Time.deltaTime;
+                timeCount.text = Mathf.FloorToInt(countTime).ToString() + 's';
+            }
+            else
+            {
+                Rxmanager.PlayerDie.OnNext(true);
 
+            }
         }
     }
 

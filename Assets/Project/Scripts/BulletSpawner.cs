@@ -43,12 +43,9 @@ public class BulletSpawner : MonoBehaviour
 
     public void Shoot()
     {
-        if (!isShot && transform.parent.GetComponent<CharacterMoverment>().CanShot == true)
-        {
-            _pool.Get();
-            isShot = true;
-        }
-
+        _pool.Get();
+        isShot = true;
+        
     }
 
     public BulletCharacter CreateBullet()
