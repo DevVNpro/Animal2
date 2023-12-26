@@ -13,6 +13,7 @@ TagManager:
   - Wall
   - Coin
   - Crash
+  - Rope
   layers:
   - Default
   - TransparentFX

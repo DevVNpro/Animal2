@@ -19,6 +19,7 @@ public class Platform : MonoBehaviour
             {
                 if (other.gameObject.GetComponent<CharacterMoverment>().isGround && other.gameObject.transform.position.y > transform.position.y)
                 {
+                other.gameObject.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.None;
                     other.gameObject.transform.SetParent(transform);
                     child = other.gameObject.transform;
                 }
@@ -41,7 +42,8 @@ public class Platform : MonoBehaviour
         {
             if (other.collider.CompareTag("Player"))
             {
-                other.gameObject.transform.SetParent(null);
+            other.gameObject.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.Extrapolate;
+            other.gameObject.transform.SetParent(null);
                 child = null;
             }
         }
