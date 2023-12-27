@@ -145,7 +145,7 @@ public class CharacterController : MonoBehaviour
 
                     #region MoveAndIdle
 
-                    if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround)
+                    if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround )
                     {
                         if (_characterMoverment.isBrige)
                         {
@@ -240,7 +240,6 @@ public class CharacterController : MonoBehaviour
     #region Force
     public void AddForce(Vector2 vecterForce, Vector2 vectorOrigin)
     {
-        Debug.Log("AddLuc");
         _characterMoverment.AddForceTouch(vecterForce, vectorOrigin);
     }
 
@@ -248,6 +247,7 @@ public class CharacterController : MonoBehaviour
     {
         isDead = true;
         transform.GetComponent<CapsuleCollider2D>().enabled = false;
+        transform.GetComponent<CircleCollider2D>().enabled = false;
     }
     #endregion
     
