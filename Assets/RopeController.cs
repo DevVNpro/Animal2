@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
-
+using UniRx;
 public class RopeController : MonoBehaviour
 {
 
     [Header("Properties")]
-    public float swingForce= 45f;
+    public float swingForce= 60f;
     public float timeDelay = 0.1f;
     public bool onRope = false;
     public float direction;
@@ -15,6 +15,7 @@ public class RopeController : MonoBehaviour
     public bool leftFall;
     public float Anchorright;
     public float Anchorleft;
+    public float timeSpam=0.5f;
 
     [Header("reference")]
     public AnimationReferenceAsset animSwing;
@@ -28,17 +29,21 @@ public class RopeController : MonoBehaviour
         Anchorleft = transformRope.position.x - 1;
         transformCharacter = transform;
         characterController = transform.gameObject.GetComponent<CharacterController>();
+        Rxmanager.PlayerDie.Subscribe((tmp) =>
+        {
+            StartCoroutine(OffRope());
+        }).AddTo(this);
 
     }
     private void Update()
     {
-     //   direction = Input.GetAxisRaw("Horizontal");
         if (onRope)
         {
+            timeSpam -= Time.deltaTime;
             characterAnimation.PlayAnimation(animSwing, true, 1f);
             characterController.enabled = false;
 #if  UNITY_EDITOR
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W)&& timeSpam <=0)
             {
                 StartCoroutine(OffRope());
             }
@@ -87,7 +92,7 @@ public class RopeController : MonoBehaviour
                     
                     if (transformRope.GetComponent<Rigidbody2D>().velocity.y < 1f && rightFall)
                     {
-                   //     transformCharacter.position = new Vector2(transformRope.position.x + 1.5f,
+                      //     transformCharacter.position = new Vector2(transformRope.position.x + 1.5f,
                    //         transformRope.position.y - 2.5f);
                     //    transform.localScale = new Vector2(-1, 1); //trai
                     Debug.Log("sssssssssssssssssssssssssssssss");
@@ -135,25 +140,21 @@ public class RopeController : MonoBehaviour
                     }
                 }
             }
-
             transformRope.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * swingForce);
         }
-
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Rope"))
         {
             onRope = true;
-            collision.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            transformRope.GetComponent<Rigidbody2D>().AddForce(Vector2.right  * swingForce*2);
-            leftFall = true;
+
         }
     }
     IEnumerator OffRope()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        timeSpam = 0.5f;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         onRope = false;
         characterController.enabled = true;
         yield return new  WaitForSeconds(timeDelay);
@@ -193,7 +194,7 @@ public class RopeController : MonoBehaviour
 
     public void jumpRope()
     {
-        if (onRope)
+        if (onRope&& timeSpam <=0)
         {
             StartCoroutine(OffRope());
         }

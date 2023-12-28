@@ -32,13 +32,12 @@ public class CharacterAnimation : MonoBehaviour
 
     public void PlayAnimationShot(AnimationReferenceAsset animationReferenceAsset,bool loop)
     {
-     //   index = _characterController.state;
         Spine.TrackEntry animationEntry = _skeletonAnimation.state.AddAnimation(1, animationReferenceAsset, loop, 0);
         animationEntry.Complete += AnimationEntry_Complete;
     }
 
     private void AnimationEntry_Complete(Spine.TrackEntry trackEntry) 
     {
-      //  _skeletonAnimation.skeleton.SetSkin(_characterController.AnimationReferenceAsset[index].ToString());
+        _skeletonAnimation.state.ClearTrack(1);
     }
 }

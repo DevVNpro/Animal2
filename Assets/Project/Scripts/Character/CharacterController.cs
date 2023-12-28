@@ -18,11 +18,13 @@ public class CharacterController : MonoBehaviour
 
     [Header("Ref")] public CharacterAnimation _characterAnimation;
     public CharacterMoverment _characterMoverment;
+    public CharacterController characterController;
     public CharacterHealth characterHealth;
     public BulletSpawner BulletSpawner;
     public AnimationReferenceAsset[] AnimationReferenceAsset;
     private void Awake()
     {
+        characterController = this;
         Rxmanager.PlayWin.Subscribe((value)=>
         {
             isWin = value;
@@ -145,7 +147,8 @@ public class CharacterController : MonoBehaviour
 
                     #region MoveAndIdle
 
-                    if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround )
+                    if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround   &&  _characterMoverment.xValue != 0)
+                        
                     {
                         if (_characterMoverment.isBrige)
                         {
@@ -158,7 +161,7 @@ public class CharacterController : MonoBehaviour
 
                         }
                     }
-                    else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround)
+                    else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround &&  _characterMoverment.xValue != 0)
                     {
          
                         if (_characterMoverment.isBrige)
@@ -286,9 +289,9 @@ public class CharacterController : MonoBehaviour
 
     public void Shoot()
     {
-        if (_characterMoverment.CanShot && !BulletSpawner.isShot)
+        if (_characterMoverment.CanShot && !BulletSpawner.isShot && characterController.enabled)
         {
-         //   _characterAnimation.PlayAnimationShot(AnimationReferenceAsset[9],false);
+            _characterAnimation.PlayAnimationShot(AnimationReferenceAsset[9],false);
             BulletSpawner.Shoot();
 
         }
