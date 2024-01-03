@@ -22,6 +22,9 @@ public class CharacterController : MonoBehaviour
     public CharacterHealth characterHealth;
     public BulletSpawner BulletSpawner;
     public AnimationReferenceAsset[] AnimationReferenceAsset;
+
+    
+    
     private void Awake()
     {
         characterController = this;
@@ -56,23 +59,19 @@ public class CharacterController : MonoBehaviour
         }
 #endif
 #if !UNITY_EDITOR
-                if (holdButtonRight)
+        if (holdButtonRight)
         {
             _characterMoverment.xValue = 1;
             _characterMoverment.MoveRight(); 
         }
-        else
-        {
-            _characterMoverment.xValue = 0;
-        }
-        if (holdButtonLeft)
+       else if (holdButtonLeft)
         {
             _characterMoverment.xValue = -1;
             _characterMoverment.MoveLeft();
-
         }
         else
         {
+
             _characterMoverment.xValue = 0;
         }
 #endif
@@ -80,6 +79,7 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
+
 #if UNITY_EDITOR
         Jump();
 #endif
@@ -147,25 +147,11 @@ public class CharacterController : MonoBehaviour
 
                     #region MoveAndIdle
 
-                    if (_characterMoverment.rigidbody2d.velocity.x > 2f && _characterMoverment.isGround   &&  _characterMoverment.xValue != 0)
-                        
+                    if ( Mathf.Abs(_characterMoverment.rigidbody2d.velocity.x) > 2f && _characterMoverment.isGround && !(_characterMoverment.xValue ==0))
+
                     {
                         if (_characterMoverment.isBrige)
-                        {
-                            state = (int)MovermentState.running;
-
-                        }
-                        else if (Mathf.Abs(_characterMoverment.rigidbody2d.velocity.y) < 3f)
-                        {
-                            state = (int)MovermentState.running;
-
-                        }
-                    }
-                    else if (_characterMoverment.rigidbody2d.velocity.x < -2f && _characterMoverment.isGround &&  _characterMoverment.xValue != 0)
-                    {
-         
-                        if (_characterMoverment.isBrige)
-                        {
+                        {                        
                             state = (int)MovermentState.running;
 
                         }

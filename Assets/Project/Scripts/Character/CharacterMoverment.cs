@@ -35,7 +35,6 @@ public class CharacterMoverment : MonoBehaviour
 
     [Header("Referent")]
     public Rigidbody2D rigidbody2d;
-
     public CharacterController CharacterController;
 
     private void Awake()
@@ -47,6 +46,7 @@ public class CharacterMoverment : MonoBehaviour
 
     void Update()
     {
+
         CheckBufferTime();
         CheckCoyoteTime();
         CheckGround();
@@ -57,20 +57,7 @@ public class CharacterMoverment : MonoBehaviour
         ReseteffectMoveByforce();
 #if UNITY_EDITOR
         xValue = Input.GetAxisRaw("Horizontal");
-        if (xValue == 1)
-        {
-            CharacterController.holdButtonRight = true;
-        }
-        else if (xValue == -1)
-        {
-            CharacterController.holdButtonLeft = true;
-        }
-        else
-        {
-            CharacterController.holdButtonLeft = false;
-            CharacterController.holdButtonRight = false;
 
-        }
 #endif
     }
 
@@ -175,6 +162,7 @@ public class CharacterMoverment : MonoBehaviour
         transform.localScale = new Vector3(1,1,1);
         if ((!isGround && isWall)||(isWall&& CharacterController.holdButtonRight&&!isPushBox)) return;
         rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
+        
 
         
     }
