@@ -282,6 +282,16 @@ public class CharacterController : MonoBehaviour
 
         }
     }
+
+    public void Jump(bool active = false)
+    {
+        if (characterController.enabled)
+        {
+            Debug.Log("Jump");
+            _characterMoverment.Jump(active);
+
+        }
+    }
 #endregion
 }
 public enum MovermentState { idle, running, jumping, falling, Wait1, Wait2, PushBox,dead,swing,attack,Win }

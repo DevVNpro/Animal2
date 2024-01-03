@@ -7,7 +7,7 @@ public class RopeController : MonoBehaviour
 {
 
     [Header("Properties")]
-    public float swingForce= 60f;
+    public float swingForce= 80f;
     public float timeDelay = 0.1f;
     public bool onRope = false;
     public float direction;
@@ -64,6 +64,7 @@ public class RopeController : MonoBehaviour
                 transformCharacter.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
                 transform.localScale = new Vector2(-1, 1);
             }
+            /*
             else
             {
                 if (transformRope.position.x >Anchorright)
@@ -140,6 +141,7 @@ public class RopeController : MonoBehaviour
                     }
                 }
             }
+            */
             transformRope.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * swingForce);
         }
     }
@@ -153,6 +155,7 @@ public class RopeController : MonoBehaviour
     }
     IEnumerator OffRope()
     {
+        if (!onRope) yield return null;
         timeSpam = 0.5f;
         GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         onRope = false;

@@ -14,7 +14,7 @@ public class ObjectGach : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.transform.CompareTag("Player") && (transform.position.y - other.transform.position.y > 3.3f))
+        if (other.transform.CompareTag("Player") && (transform.position.y - other.transform.position.y > 3f))
         {
             foreach (var crack in cracks)
             {

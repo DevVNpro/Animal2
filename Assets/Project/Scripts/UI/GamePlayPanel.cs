@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine;
 using UniRx;
 using UnityEngine.UI;
+using  UnityEngine.SceneManagement;
 
 public class GamePlayPanel : MonoBehaviour
 { [Header("HpPlayerUI")]
@@ -18,7 +19,7 @@ public class GamePlayPanel : MonoBehaviour
     [SerializeField] private Button shieldButton;
     [SerializeField] private Button hpButton;
     [SerializeField] private Button bomButton;
-    [SerializeField] private Button bulletButton;
+    [SerializeField] private Button settingButton;
     private bool stopTime;
 
     
@@ -31,7 +32,8 @@ public class GamePlayPanel : MonoBehaviour
         shieldButton.onClick.AddListener(UseShieldButton);
         hpButton.onClick.AddListener(UseHpButton);
         bomButton.onClick.AddListener(UseBom);
-
+        settingButton.onClick.AddListener(ResetLevel);
+        
         //RX
         Rxmanager.DeDuctHpPlayer.Subscribe((deduct) =>
         {
@@ -138,7 +140,7 @@ public class GamePlayPanel : MonoBehaviour
             {
                 GameObject starUI = Instantiate(star, vector, transform.rotation, parentStar.transform);
                 RectTransform starUIRectTransform = starUI.GetComponent<RectTransform>();
-                starUIRectTransform.DOAnchorPos(new Vector2(starImage[i].anchoredPosition.x, starImage[i].anchoredPosition.y), 1f).SetEase(Ease.Linear).OnComplete(()=>
+                starUIRectTransform.DOAnchorPos3D(new Vector3(starImage[i].anchoredPosition.x, starImage[i].anchoredPosition.y,0f), 1f).SetEase(Ease.Linear).OnComplete(()=>
                 {
                     starImage[i].gameObject.SetActive(false);
                  });
@@ -167,4 +169,9 @@ public class GamePlayPanel : MonoBehaviour
     }
 
     #endregion
+
+    private void ResetLevel()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

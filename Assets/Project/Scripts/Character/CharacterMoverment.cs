@@ -57,6 +57,20 @@ public class CharacterMoverment : MonoBehaviour
         ReseteffectMoveByforce();
 #if UNITY_EDITOR
         xValue = Input.GetAxisRaw("Horizontal");
+        if (xValue == 1)
+        {
+            CharacterController.holdButtonRight = true;
+        }
+        else if (xValue == -1)
+        {
+            CharacterController.holdButtonLeft = true;
+        }
+        else
+        {
+            CharacterController.holdButtonLeft = false;
+            CharacterController.holdButtonRight = false;
+
+        }
 
 #endif
     }
