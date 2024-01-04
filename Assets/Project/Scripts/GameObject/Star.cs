@@ -14,6 +14,7 @@ public class Star : MonoBehaviour
         {
             Rxmanager.PickStar.OnNext(transform.position);
             gameObject.SetActive(false);
+            Rxmanager.CollectStar.OnNext(true);
         }
     }
 }

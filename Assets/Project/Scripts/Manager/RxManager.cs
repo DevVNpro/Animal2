@@ -16,6 +16,8 @@ public abstract class Rxmanager
     public  static  readonly  Subject<bool> SwitchTrap = new Subject<bool>();
     public  static readonly  Subject<bool> LockCharater = new Subject<bool>();
     public  static readonly  Subject<bool> FreeCharater = new Subject<bool>();
+    public  static  readonly  Subject<bool> CollectCoin = new Subject<bool>();
+    public  static  readonly  Subject<bool> CollectStar = new Subject<bool>();
     #endregion
     #region UI
     public static readonly Subject<int> DeDuctHpPlayer = new Subject<int>();

@@ -235,8 +235,9 @@ public class CharacterController : MonoBehaviour
     public void StopPhysics()
     {
         isDead = true;
-        transform.GetComponent<CapsuleCollider2D>().enabled = false;
-        transform.GetComponent<CircleCollider2D>().enabled = false;
+        transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        Debug.Log("Tat colider");
+       // transform.GetComponent<CircleCollider2D>().enabled = false;
     }
     #endregion
     

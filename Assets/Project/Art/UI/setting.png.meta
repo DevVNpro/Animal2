@@ -1,0 +1,714 @@
+fileFormatVersion: 2
+guid: bf30d552cd674cd42a79cbdfec8d7f1d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8568005151626139212
+    second: bar
+  - first:
+      213: 4907110420754137600
+    second: fill
+  - first:
+      213: 1674512232541923712
+    second: Layer 14 copy
+  - first:
+      213: 5804004237474404469
+    second: Layer 6
+  - first:
+      213: -2244064423448490865
+    second: Layer 7
+  - first:
+      213: -6810279448610506461
+    second: Layer 9
+  - first:
+      213: -1441399181021274220
+    second: moc
+  - first:
+      213: 1924795777002717030
+    second: Rounded Rectangle 3
+  - first:
+      213: 2308424125875831988
+    second: Settings
+  - first:
+      213: -8940868739686701469
+    second: trang 2
+  - first:
+      213: 8528553128873044056
+    second: board
+  - first:
+      213: 5581880105241435816
+    second: bgm
+  - first:
+      213: -4842749953106206859
+    second: sfx
+  - first:
+      213: -7759959041873540004
+    second: BEAMISH
+  - first:
+      213: 890213575562779254
+    second: chia doi sach
+  - first:
+      213: -7462686976529515099
+    second: CONOR
+  - first:
+      213: -4619768460563771165
+    second: dau unlock
+  - first:
+      213: -6949923667533856077
+    second: Equipment
+  - first:
+      213: -8433328891584255873
+    second: ghim
+  - first:
+      213: -4944640275725604077
+    second: JOE
+  - first:
+      213: 4990438686963507238
+    second: khung trang
+  - first:
+      213: -6237589347164312097
+    second: Kuroki
+  - first:
+      213: 8464627282614862601
+    second: lock
+  - first:
+      213: -6899074038752244137
+    second: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  - first:
+      213: 4614288724732527520
+    second: pic 1
+  - first:
+      213: -1643705681810025564
+    second: pic 3
+  - first:
+      213: -2159629489591032884
+    second: sach
+  - first:
+      213: -1441123730156778109
+    second: Sam
+  - first:
+      213: 3570268577723146921
+    second: sam_weapon
+  - first:
+      213: 4867134954650277556
+    second: Select
+  - first:
+      213: 723857918280279797
+    second: Selected
+  - first:
+      213: -8945705187354957565
+    second: shadow character
+  - first:
+      213: -6343323262341185901
+    second: Staff list
+  - first:
+      213: 3090713630157921253
+    second: Story
+  - first:
+      213: -480250040729634322
+    second: border
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bar
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 375
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b96b97b5b4581980800000000000000
+      internalID: -8568005151626139212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bgm
+      rect:
+        serializedVersion: 2
+        x: 1974
+        y: 1709
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae5cb3b162d67d40800000000000000
+      internalID: 5581880105241435816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: board
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 402
+        width: 1016
+        height: 833
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858268e62e18b5670800000000000000
+      internalID: 8528553128873044056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: border
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1487
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee971f6e12fc559f0800000000000000
+      internalID: -480250040729634322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dau unlock
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 828
+        width: 400
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e01b8bcf0943efb0800000000000000
+      internalID: -4619768460563771165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1628
+        width: 148
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b280942f39ec8f90800000000000000
+      internalID: -6949923667533856077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fill
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 314
+        width: 371
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0020baebdee891440800000000000000
+      internalID: 4907110420754137600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghim
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1468
+        width: 54
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78e4170e0cc6fa80800000000000000
+      internalID: -8433328891584255873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: khung trang
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 233
+        width: 335
+        height: 593
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620a3d99b89914540800000000000000
+      internalID: 4990438686963507238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 301
+        width: 548
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cc243eb4b7bd0e0800000000000000
+      internalID: -2244064423448490865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Layer 9
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1437
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3297d648ce60d71a0800000000000000
+      internalID: -6810279448610506461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lock
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 1950
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903c6508aa5687570800000000000000
+      internalID: 8464627282614862601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic 1
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1764
+        width: 189
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3c5c8c52f390040800000000000000
+      internalID: 4614288724732527520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sach
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1237
+        width: 1813
+        height: 811
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3e772eb647702e0800000000000000
+      internalID: -2159629489591032884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Select
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1672
+        width: 149
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b611dd34798b8340800000000000000
+      internalID: 4867134954650277556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Selected
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 2006
+        width: 203
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f623f601f8ab0a00800000000000000
+      internalID: 723857918280279797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 332
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b445cd038b290020800000000000000
+      internalID: 2308424125875831988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sfx
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1615
+        width: 63
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f901d53981bccb0800000000000000
+      internalID: -4842749953106206859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shadow character
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1716
+        width: 157
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309a65a47887ad380800000000000000
+      internalID: -8945705187354957565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Staff list
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 289
+        width: 237
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e7eace91df7f7a0800000000000000
+      internalID: -6343323262341185901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Story
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 1664
+        width: 82
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb550cdbab64ea20800000000000000
+      internalID: 3090713630157921253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Equipment: -6949923667533856077
+      Layer 7: -2244064423448490865
+      Layer 9: -6810279448610506461
+      Select: 4867134954650277556
+      Selected: 723857918280279797
+      Settings: 2308424125875831988
+      Staff list: -6343323262341185901
+      Story: 3090713630157921253
+      bar: -8568005151626139212
+      bgm: 5581880105241435816
+      board: 8528553128873044056
+      border: -480250040729634322
+      dau unlock: -4619768460563771165
+      fill: 4907110420754137600
+      ghim: -8433328891584255873
+      khung trang: 4990438686963507238
+      lock: 8464627282614862601
+      pic 1: 4614288724732527520
+      sach: -2159629489591032884
+      sfx: -4842749953106206859
+      shadow character: -8945705187354957565
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

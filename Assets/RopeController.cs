@@ -7,7 +7,7 @@ public class RopeController : MonoBehaviour
 {
 
     [Header("Properties")]
-    public float swingForce= 80f;
+    public float swingForce= 200f;
     public float timeDelay = 0.1f;
     public bool onRope = false;
     public float direction;
@@ -149,13 +149,16 @@ public class RopeController : MonoBehaviour
     {
         if (collision.CompareTag("Rope"))
         {
-            onRope = true;
+            transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+                onRope = true;
 
         }
     }
     IEnumerator OffRope()
     {
         if (!onRope) yield return null;
+        Debug.Log("Nhay neeeeeeeeeeeeee");
+        transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
         timeSpam = 0.5f;
         GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         onRope = false;

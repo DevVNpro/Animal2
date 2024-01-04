@@ -1,0 +1,1422 @@
+fileFormatVersion: 2
+guid: bc29bcab6c8dd4b43900a23e88a8d1bc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4975377841965543032
+    second: 1h
+  - first:
+      213: -5937743544681751919
+    second: 30m
+  - first:
+      213: -3377746598005180122
+    second: 3h
+  - first:
+      213: -3883834113526756410
+    second: Activate
+  - first:
+      213: 1269941861628389833
+    second: binh mau max
+  - first:
+      213: -189373100177132267
+    second: bomb copy
+  - first:
+      213: 2744070030162422870
+    second: button green
+  - first:
+      213: -4937799242134460900
+    second: coin
+  - first:
+      213: -3961087335425750441
+    second: coin copy
+  - first:
+      213: 3745119748454601568
+    second: coin100
+  - first:
+      213: 5953700811063879293
+    second: coin200
+  - first:
+      213: -4543420528078940343
+    second: coin50
+  - first:
+      213: 8944006599797358572
+    second: day no xanh
+  - first:
+      213: 1696719909874182387
+    second: Elite milestones
+  - first:
+      213: -1242479609407347755
+    second: Free
+  - first:
+      213: 7528825445569218791
+    second: Gem copy
+  - first:
+      213: 2828934356100039957
+    second: Golden  Ticket
+  - first:
+      213: 4596716002876471847
+    second: Golden Ticket
+  - first:
+      213: -8411694617196797062
+    second: Heart
+  - first:
+      213: -334117559657960175
+    second: heart infinity
+  - first:
+      213: 137197257266348542
+    second: hop dan max copy
+  - first:
+      213: -174701075010476169
+    second: light
+  - first:
+      213: 8464627282614862601
+    second: lock
+  - first:
+      213: -992473845449978191
+    second: Mailbox
+  - first:
+      213: 5265752537178895864
+    second: o1
+  - first:
+      213: -8877285710654346790
+    second: o9
+  - first:
+      213: -551489540353672738
+    second: Rounded Rectangle 2
+  - first:
+      213: 1924795777002717030
+    second: Rounded Rectangle 3
+  - first:
+      213: -7356290194936238831
+    second: sao1
+  - first:
+      213: 2165056038353468477
+    second: shield copy
+  - first:
+      213: -5369274952420647104
+    second: shield copy 2
+  - first:
+      213: 3802091392676919337
+    second: star
+  - first:
+      213: 2591044727951958646
+    second: ticket big
+  - first:
+      213: 3838097708256638715
+    second: ticket Free
+  - first:
+      213: -3713592881269880072
+    second: ticket golden
+  - first:
+      213: 5263362923830990951
+    second: Time left 10days 021727
+  - first:
+      213: -381948464263079102
+    second: vach5
+  - first:
+      213: -2901064087741459024
+    second: x10
+  - first:
+      213: -8295627059305631069
+    second: x10 copy
+  - first:
+      213: 8222200262538868514
+    second: x100
+  - first:
+      213: -7924171122287118425
+    second: x1000
+  - first:
+      213: -6715531495586219312
+    second: x2
+  - first:
+      213: -1916021418242954611
+    second: x200
+  - first:
+      213: -3095510671026066902
+    second: x5
+  - first:
+      213: -717912716533789074
+    second: x50
+  - first:
+      213: 1740081451411088082
+    second: x500
+  - first:
+      213: 5600508686461005004
+    second: x60
+  - first:
+      213: 5350985718620885096
+    second: x70
+  - first:
+      213: 3696099630465284070
+    second: x70 copy
+  - first:
+      213: 1366835003706159603
+    second: x70 copy 2
+  - first:
+      213: 8126068755732742386
+    second: x700
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1h
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 1391
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ea4bd59c71c0540800000000000000
+      internalID: 4975377841965543032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30m
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1949
+        width: 57
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a10e3a4b5e89da0800000000000000
+      internalID: -5937743544681751919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3h
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 1357
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629fd9c7d55df11d0800000000000000
+      internalID: -3377746598005180122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Activate
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1428
+        width: 116
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb81b08379d91ac0800000000000000
+      internalID: -3883834113526756410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: binh mau max
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1828
+        width: 70
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c922cb056dbf9110800000000000000
+      internalID: 1269941861628389833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomb copy
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 1623
+        width: 89
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5157de13b263f5df0800000000000000
+      internalID: -189373100177132267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button green
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 22
+        width: 159
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c60aa5725e41620800000000000000
+      internalID: 2744070030162422870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1346
+        width: 86
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16e16830c9697bb0800000000000000
+      internalID: -4937799242134460900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin copy
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 1140
+        width: 209
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a46af1e046709c0800000000000000
+      internalID: -3961087335425750441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin100
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 1699
+        width: 85
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063dfe7919659f330800000000000000
+      internalID: 3745119748454601568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin200
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 4
+        width: 85
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76ea66f75bcf9250800000000000000
+      internalID: 5953700811063879293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin50
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 4
+        width: 85
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94713ae0a1782f0c0800000000000000
+      internalID: -4543420528078940343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: day no xanh
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1175
+        width: 1488
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cefbba97d9e7f1c70800000000000000
+      internalID: 8944006599797358572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elite milestones
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1985
+        width: 490
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f82267b4c5fb8710800000000000000
+      internalID: 1696719909874182387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Free
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1754
+        width: 69
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3eb90d063d1cee0800000000000000
+      internalID: -1242479609407347755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gem copy
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 1815
+        width: 80
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e843137ad2cb7860800000000000000
+      internalID: 7528825445569218791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden  Ticket
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 1540
+        width: 103
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515cd3cfec4624720800000000000000
+      internalID: 2828934356100039957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golden Ticket
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 1104
+        width: 200
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a3ec4a9d0dacf30800000000000000
+      internalID: 4596716002876471847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 14
+        width: 75
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a736bee0058a34b80800000000000000
+      internalID: -8411694617196797062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart infinity
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1880
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ded5789d9fc5bf0800000000000000
+      internalID: -334117559657960175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hop dan max copy
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 1458
+        width: 87
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1c487bd2c67e100800000000000000
+      internalID: 137197257266348542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: light
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1385
+        width: 398
+        height: 537
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7772f124c46539df0800000000000000
+      internalID: -174701075010476169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lock
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1499
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903c6508aa5687570800000000000000
+      internalID: 8464627282614862601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mailbox
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 86
+        width: 299
+        height: 713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be8611cb460a32f0800000000000000
+      internalID: -992473845449978191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: o1
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 663
+        width: 158
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5f8ad8806b31940800000000000000
+      internalID: 5265752537178895864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: o9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 902
+        width: 158
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9ebc61eab8dc480800000000000000
+      internalID: -8877285710654346790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rounded Rectangle 2
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 801
+        width: 306
+        height: 457
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed930e95f27b858f0800000000000000
+      internalID: -551489540353672738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rounded Rectangle 3
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1153
+        width: 1008
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f3b69af8f36ba10800000000000000
+      internalID: 1924795777002717030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sao1
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1458
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11de2220b0539e990800000000000000
+      internalID: -7356290194936238831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shield copy
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1089
+        width: 77
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c7fd4fef2db0e10800000000000000
+      internalID: 2165056038353468477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shield copy 2
+      rect:
+        serializedVersion: 2
+        x: 1959
+        y: 764
+        width: 75
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f909fd0e08c75b0800000000000000
+      internalID: -5369274952420647104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 243
+        width: 277
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928f3103afdb3c430800000000000000
+      internalID: 3802091392676919337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ticket big
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1260
+        width: 340
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672a9beb37d35f320800000000000000
+      internalID: 2591044727951958646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ticket Free
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 977
+        width: 192
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6b0e1d789a34530800000000000000
+      internalID: 3838097708256638715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ticket golden
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 850
+        width: 192
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa4d7f23faa67cc0800000000000000
+      internalID: -3713592881269880072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time left 10days 021727
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1924
+        width: 420
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76858e651b83b0940800000000000000
+      internalID: 5263362923830990951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vach5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 868
+        width: 692
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24bd71935eb03baf0800000000000000
+      internalID: -381948464263079102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x10
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1555
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5178b25995db7d0800000000000000
+      internalID: -2901064087741459024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x10 copy
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1588
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a238f4442300ec80800000000000000
+      internalID: -8295627059305631069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x100
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 2016
+        width: 64
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227b0c0639f1b1270800000000000000
+      internalID: 8222200262538868514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x1000
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 1781
+        width: 80
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7faac2950b70290800000000000000
+      internalID: -7924171122287118425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x2
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 1425
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dab2a76fa3adc2a0800000000000000
+      internalID: -6715531495586219312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x200
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1721
+        width: 69
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8aa69febace865e0800000000000000
+      internalID: -1916021418242954611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x5
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 1392
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a6f0702798a05d0800000000000000
+      internalID: -3095510671026066902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x50
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1654
+        width: 51
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e844f10367906f0800000000000000
+      internalID: -717912716533789074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x500
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1795
+        width: 70
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2aa975cd2062810800000000000000
+      internalID: 1740081451411088082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x60
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 1918
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc6ff14af009bd40800000000000000
+      internalID: 5600508686461005004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x70
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1688
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860169c0925824a40800000000000000
+      internalID: 5350985718620885096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x70 copy
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1621
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7f558f70f2b4330800000000000000
+      internalID: 3696099630465284070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x70 copy 2
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1983
+        width: 64
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1b97ea139f7f210800000000000000
+      internalID: 1366835003706159603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x700
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 1952
+        width: 68
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0c9d5ca7895c070800000000000000
+      internalID: 8126068755732742386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      1h: 4975377841965543032
+      30m: -5937743544681751919
+      3h: -3377746598005180122
+      Activate: -3883834113526756410
+      Elite milestones: 1696719909874182387
+      Free: -1242479609407347755
+      Gem copy: 7528825445569218791
+      Golden  Ticket: 2828934356100039957
+      Golden Ticket: 4596716002876471847
+      Heart: -8411694617196797062
+      Mailbox: -992473845449978191
+      Rounded Rectangle 2: -551489540353672738
+      Rounded Rectangle 3: 1924795777002717030
+      Time left 10days 021727: 5263362923830990951
+      binh mau max: 1269941861628389833
+      bomb copy: -189373100177132267
+      button green: 2744070030162422870
+      coin: -4937799242134460900
+      coin copy: -3961087335425750441
+      coin100: 3745119748454601568
+      coin200: 5953700811063879293
+      coin50: -4543420528078940343
+      day no xanh: 8944006599797358572
+      heart infinity: -334117559657960175
+      hop dan max copy: 137197257266348542
+      light: -174701075010476169
+      lock: 8464627282614862601
+      o1: 5265752537178895864
+      o9: -8877285710654346790
+      sao1: -7356290194936238831
+      shield copy: 2165056038353468477
+      shield copy 2: -5369274952420647104
+      star: 3802091392676919337
+      ticket Free: 3838097708256638715
+      ticket big: 2591044727951958646
+      ticket golden: -3713592881269880072
+      vach5: -381948464263079102
+      x10: -2901064087741459024
+      x10 copy: -8295627059305631069
+      x100: 8222200262538868514
+      x1000: -7924171122287118425
+      x2: -6715531495586219312
+      x200: -1916021418242954611
+      x5: -3095510671026066902
+      x50: -717912716533789074
+      x500: 1740081451411088082
+      x60: 5600508686461005004
+      x70: 5350985718620885096
+      x70 copy: 3696099630465284070
+      x70 copy 2: 1366835003706159603
+      x700: 8126068755732742386
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

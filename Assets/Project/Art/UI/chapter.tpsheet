@@ -1,0 +1,32 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:3c16709c3a66cd4f36678c8cf1a1fa73:c2ee3d333ce3466c2574848607eed30f:ee34009f46e0821a83e923624275725f$
+#
+:format=40300
+:texture=chapter.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+1030;105;11;93;44; 0.5;0.5; 0;0;0;0
+bia;0;1273;1656;775; 0.5;0.5; 0;0;0;0
+button yellow small;105;57;106;110; 0.5;0.5; 0;0;0;0
+Chapter 01;368;2;298;71; 0.5;0.5; 0;0;0;0
+ghim;368;75;132;92; 0.5;0.5; 0;0;0;0
+GO;213;61;153;106; 0.5;0.5; 0;0;0;0
+gradient;1352;475;676;753; 0.5;0.5; 0;0;0;0
+k1;983;575;337;399; 0.5;0.5; 0;0;0;0
+k2;1658;1640;368;408; 0.5;0.5; 0;0;0;0
+khungtranh;1658;1230;368;408; 0.5;0.5; 0;0;0;0
+kinhlup;983;976;367;295; 0.5;0.5; 0;0;0;0
+kungtranh;983;174;337;399; 0.5;0.5; 0;0;0;0
+loading;117;1246;25;25; 0.5;0.5; 0;0;0;0
+loading1 copy;2028;2028;20;20; 0.5;0.5; 0;0;0;0
+lock;0;42;103;125; 0.5;0.5; 0;0;0;0
+lop phu nhe;0;169;981;1059; 0.5;0.5; 0;0;0;0
+Newbie;0;1234;115;37; 0.5;0.5; 0;0;0;0

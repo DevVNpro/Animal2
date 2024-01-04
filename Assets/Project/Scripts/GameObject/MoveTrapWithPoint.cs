@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class MoveTrapWithPoint : MonoBehaviour
     [Header("Properties")]
     [SerializeField] private float moveTime;
     [SerializeField] private float delayTime = 0.1f;
+    private Tween tween;
 
     public Ease Ease;
     
@@ -34,7 +36,7 @@ public class MoveTrapWithPoint : MonoBehaviour
         
         for(int i =0 ; i< listPoint.Capacity; i++)
         {
-            transform.DOMove(listPoint[i].transform.position, moveTime).SetEase(Ease); 
+            tween =  transform.DOMove(listPoint[i].transform.position, moveTime).SetEase(Ease); 
             yield return  new WaitForSeconds(moveTime);
             yield return  new WaitForSeconds(delayTime);
             if (listPoint.Capacity == i + 1)
@@ -44,5 +46,8 @@ public class MoveTrapWithPoint : MonoBehaviour
         }
     }
 
-
+    private void OnDisable()
+    {
+        tween.Kill();
+    }
 }

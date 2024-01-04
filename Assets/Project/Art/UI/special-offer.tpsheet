@@ -1,0 +1,34 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:46d2e54635707af7d8b0b37e47f56b35:9ddfbdd3f206262d0dd4c841a7a41462:f00531401648b64661c965f180ffd004$
+#
+:format=40300
+:texture=special-offer.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=KeepTransparentPixels
+
+balloon;1213;1831;716;216; 0.5;0.5; 0;0;0;0
+ban;1;1917;1210;130; 0.5;0.5; 0;0;0;0
+bubble;1042;444;451;531; 0.5;0.5; 0;0;0;0
+button green big;1676;1506;281;108; 0.5;0.5; 0;0;0;0
+clock;1931;1797;79;80; 0.5;0.5; 0;0;0;0
+day no;1;1846;1164;69; 0.5;0.5; 0;0;0;0
+day2;1042;977;991;60; 0.5;0.5; 0;0;0;0
+Gems;1829;1685;202;110; 0.5;0.5; 0;0;0;0
+heart;1931;1970;99;77; 0.5;0.5; 0;0;0;0
+hop dan max;1931;1879;95;89; 0.5;0.5; 0;0;0;0
+khung dong ho;1676;1375;198;68; 0.5;0.5; 0;0;0;0
+nen trong;1;397;1039;640; 0.5;0.5; 0;0;0;0
+ribbon;1173;1733;654;96; 0.5;0.5; 0;0;0;0
+Special Offer;1676;1616;364;67; 0.5;0.5; 0;0;0;0
+thanh brown;1676;1445;200;59; 0.5;0.5; 0;0;0;0
+trang 2 copy;1;1039;1090;805; 0.5;0.5; 0;0;0;0
+trang nho;1093;1324;581;407; 0.5;0.5; 0;0;0;0
+trang nho2;1093;1061;483;261; 0.5;0.5; 0;0;0;0
+X;1093;1760;78;84; 0.5;0.5; 0;0;0;0

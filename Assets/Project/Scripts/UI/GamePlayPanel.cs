@@ -21,11 +21,12 @@ public class GamePlayPanel : MonoBehaviour
     [SerializeField] private Button bomButton;
     [SerializeField] private Button settingButton;
     private bool stopTime;
+    private Tween tween;
 
     
 
     [SerializeField] private TextMeshProUGUI timeCount;
-    private float countTime = 200;
+    public static float countTime = 200;
     private void Awake()
     {
         //AddEvent
@@ -140,7 +141,7 @@ public class GamePlayPanel : MonoBehaviour
             {
                 GameObject starUI = Instantiate(star, vector, transform.rotation, parentStar.transform);
                 RectTransform starUIRectTransform = starUI.GetComponent<RectTransform>();
-                starUIRectTransform.DOAnchorPos3D(new Vector3(starImage[i].anchoredPosition.x, starImage[i].anchoredPosition.y,0f), 1f).SetEase(Ease.Linear).OnComplete(()=>
+               tween = starUIRectTransform.DOAnchorPos3D(new Vector3(starImage[i].anchoredPosition.x, starImage[i].anchoredPosition.y,0f), 1f).SetEase(Ease.Linear).OnComplete(()=>
                 {
                     starImage[i].gameObject.SetActive(false);
                  });
@@ -173,5 +174,10 @@ public class GamePlayPanel : MonoBehaviour
     private void ResetLevel()
     {
         SceneManager.LoadScene(0);
+    }
+
+    private void OnDisable()
+    {
+        tween.Kill();
     }
 }

@@ -1,0 +1,42 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:0a4382e15f0797694854e417cc1be7a3:e643e6030aad4396dc0689753bffbf19:aaa7872adb46b834ddaf9f41c0356d36$
+#
+:format=40300
+:texture=starter-pack.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+balloon;1213;1831;716;216; 0.5;0.5; 0;0;0;0
+ban;1;1917;1210;130; 0.5;0.5; 0;0;0;0
+binh mau max;1768;1636;53;95; 0.5;0.5; 0;0;0;0
+bomb;1093;1664;90;91; 0.5;0.5; 0;0;0;0
+button green big;1578;934;281;108; 0.5;0.5; 0;0;0;0
+clock;1093;1493;79;80; 0.5;0.5; 0;0;0;0
+coinday1;1931;1941;112;106; 0.5;0.5; 0;0;0;0
+day no;1;1846;1164;69; 0.5;0.5; 0;0;0;0
+day2;1042;774;991;60; 0.5;0.5; 0;0;0;0
+Gem;1931;1851;109;88; 0.5;0.5; 0;0;0;0
+Gems;1843;1662;202;110; 0.5;0.5; 0;0;0;0
+heart;1931;1774;94;75; 0.5;0.5; 0;0;0;0
+hop dan max;1093;1757;92;87; 0.5;0.5; 0;0;0;0
+khung dong ho;1823;1592;198;68; 0.5;0.5; 0;0;0;0
+nen trong;1;397;1039;640; 0.5;0.5; 0;0;0;0
+ribbon;1187;1733;654;96; 0.5;0.5; 0;0;0;0
+Rounded Rectangle 18 copy 3;1768;1431;153;159; 0.5;0.5; 0;0;0;0
+Rounded Rectangle 18 copy 4;1768;1270;153;159; 0.5;0.5; 0;0;0;0
+Rounded Rectangle 18 copy 5;1;175;472;220; 0.5;0.5; 0;0;0;0
+Rounded Rectangle 18;1768;1109;153;159; 0.5;0.5; 0;0;0;0
+sam_left_hand;1042;220;365;552; 0.5;0.5; 0;0;0;0
+shield;1093;1575;82;87; 0.5;0.5; 0;0;0;0
+Starter pack;1578;1044;338;63; 0.5;0.5; 0;0;0;0
+trang 2 copy;1;1039;1090;805; 0.5;0.5; 0;0;0;0
+trang nho;1185;1242;581;489; 0.5;0.5; 0;0;0;0
+trang nho2;1093;836;483;404; 0.5;0.5; 0;0;0;0
+X;1093;1407;78;84; 0.5;0.5; 0;0;0;0

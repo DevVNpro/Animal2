@@ -19,6 +19,7 @@ public class CinematicPro2D : MonoBehaviour
    {
       if (other.CompareTag("Player") && !check)
       {
+         Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
          check = true;
          ProCamera2D.GetComponent<ProCamera2DCinematics>().Play();
       }

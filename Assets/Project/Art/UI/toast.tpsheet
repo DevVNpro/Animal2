@@ -1,0 +1,24 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:3f38f82caca65372510cd68a5cb0acaf:2a15ee1086ca81c99318b17c213c99ca:fc3072664779b6efcf69b9cbee98faaf$
+#
+:format=40300
+:texture=toast.png
+:size=1024x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=KeepTransparentPixels
+
+ads;874;1865;104;72; 0.5;0.5; 0;0;0;0
+button green big;725;1939;281;108; 0.5;0.5; 0;0;0;0
+coinday1;725;1799;147;138; 0.5;0.5; 0;0;0;0
+giohang;954;1792;67;71; 0.5;0.5; 0;0;0;0
+Group_1 (1);1;549;388;312; 0.5;0.5; 0;0;0;0
+out_of_money (1);641;1269;356;251; 0.5;0.5; 0;0;0;0
+phaogiay;1;1522;722;525; 0.5;0.5; 0;0;0;0
+phongbi;1;863;638;657; 0.5;0.5; 0;0;0;0
+X;874;1779;78;84; 0.5;0.5; 0;0;0;0
