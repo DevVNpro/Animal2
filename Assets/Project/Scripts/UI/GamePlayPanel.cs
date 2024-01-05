@@ -26,9 +26,10 @@ public class GamePlayPanel : MonoBehaviour
     
 
     [SerializeField] private TextMeshProUGUI timeCount;
-    public static float countTime = 200;
+    public static float countTime;
     private void Awake()
     {
+        countTime = 200;
         //AddEvent
         shieldButton.onClick.AddListener(UseShieldButton);
         hpButton.onClick.AddListener(UseHpButton);

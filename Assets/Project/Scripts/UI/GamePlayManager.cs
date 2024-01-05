@@ -15,11 +15,25 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] private AnimationReferenceAsset animIdleWhenLock;
     [ReadOnly(true)] public bool PlayerWin;
     [ReadOnly(true)] public bool Playerlose;
-    public static int sumStar = 0;
-    public static int sumCoin = 0;
+    public static int sumStar;
+    public static int sumCoin;
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+           
+                Debug.Break();
+           
+        }
+
+
+    }
+
     private void Awake()
     {
-
+        sumStar = 0;
+        sumCoin = 0;
         Rxmanager.CollectCoin.Subscribe((b)=>
         {
             SaveCoinCollect();
@@ -42,6 +56,7 @@ public class GamePlayManager : MonoBehaviour
     public void SaveStarCollect()
     {
         sumStar += 1;
+        Debug.Log("sumStar :"+ sumStar);
     }
     public void SaveCoinCollect()
     {

@@ -13,8 +13,11 @@ public class SlideObject : MonoBehaviour
 
    private void OnCollisionEnter2D(Collision2D other)
    {
-      if (other.gameObject.CompareTag("Player") && Mathf.Abs(other.gameObject.transform.position.y - transform.position.y)>0.53f)
+      if (other.gameObject.CompareTag("Player") && (transform.position.y - other.transform.position.y < -0.54f))
       {
+         Debug.Log("other.gameObject.transform.position.y:" +other.gameObject.transform.position.y );
+         Debug.Log(" transform.position.y:" + transform.position.y );
+
          Onslide = true;
          _characterController = other.gameObject.GetComponent<CharacterController>();
          _characterMoverment = other.gameObject.GetComponent<CharacterMoverment>();
@@ -26,7 +29,7 @@ public class SlideObject : MonoBehaviour
 
    private void OnCollisionStay2D(Collision2D other)
    {
-      if (other.gameObject.CompareTag("Player")  && Mathf.Abs(other.gameObject.transform.position.y - transform.position.y)>0.53f)
+      if (other.gameObject.CompareTag("Player")&& (transform.position.y - other.transform.position.y < -0.54f))
       {
          if (Input.GetKeyDown(KeyCode.W))
          {
@@ -40,8 +43,18 @@ public class SlideObject : MonoBehaviour
    }
    private void OnCollisionExit2D(Collision2D other)
    {
+      if (other.gameObject.CompareTag("Player"))
+      {
+         StartCoroutine(ActiveMove());
+      }
+   }
+
+   IEnumerator ActiveMove()
+   {
+      yield return  new WaitForSeconds(0.1f);
       Onslide = false;
       _characterController.enabled = true;
+      
    }
 
    #region Control
@@ -50,6 +63,7 @@ public class SlideObject : MonoBehaviour
    {
       if (Onslide)
       {
+         Debug.Log("JumpSlide");
          _characterController.enabled = true;
          _characterController.Jump(active);
       }

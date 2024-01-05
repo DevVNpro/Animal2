@@ -7,7 +7,7 @@ public class RopeController : MonoBehaviour
 {
 
     [Header("Properties")]
-    public float swingForce= 200f;
+    public float swingForce= 250f;
     public float timeDelay = 0.1f;
     public bool onRope = false;
     public float direction;
@@ -31,19 +31,24 @@ public class RopeController : MonoBehaviour
         characterController = transform.gameObject.GetComponent<CharacterController>();
         Rxmanager.PlayerDie.Subscribe((tmp) =>
         {
-            StartCoroutine(OffRope());
+            if (onRope)
+            {
+                Debug.Log("DieOnRope");
+                StartCoroutine(OffRope());
+            }
         }).AddTo(this);
 
     }
     private void Update()
     {
-        if (onRope)
+        timeSpam -= Time.deltaTime;
+
+        if (onRope&& timeSpam <=0)
         {
-            timeSpam -= Time.deltaTime;
             characterAnimation.PlayAnimation(animSwing, true, 1f);
             characterController.enabled = false;
 #if  UNITY_EDITOR
-            if (Input.GetKey(KeyCode.W)&& timeSpam <=0)
+            if (Input.GetKeyDown(KeyCode.W)&& timeSpam <=0)
             {
                 StartCoroutine(OffRope());
             }
@@ -142,13 +147,14 @@ public class RopeController : MonoBehaviour
                 }
             }
             */
-            transformRope.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * swingForce);
+            transformRope.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * swingForce*2);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Rope"))
+        if (collision.CompareTag("Rope")&& timeSpam <=0)
         {
+            Debug.Log("False Collider2d");
             transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 onRope = true;
 
@@ -158,11 +164,15 @@ public class RopeController : MonoBehaviour
     {
         if (!onRope) yield return null;
         Debug.Log("Nhay neeeeeeeeeeeeee");
-        transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-        timeSpam = 0.5f;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+     //   Debug.Break();
         onRope = false;
         characterController.enabled = true;
+        transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+     //   transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+        timeSpam = 0.5f;
+       GetComponent<Rigidbody2D>().velocity = new Vector2(0,20);
+       // onRope = false;
+      //  characterController.enabled = true;
         yield return new  WaitForSeconds(timeDelay);
             
     }
@@ -200,7 +210,7 @@ public class RopeController : MonoBehaviour
 
     public void jumpRope()
     {
-        if (onRope&& timeSpam <=0)
+        if (onRope)
         {
             StartCoroutine(OffRope());
         }

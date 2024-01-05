@@ -229,6 +229,7 @@ public class CharacterController : MonoBehaviour
     #region Force
     public void AddForce(Vector2 vecterForce, Vector2 vectorOrigin)
     {
+        
         _characterMoverment.AddForceTouch(vecterForce, vectorOrigin);
     }
 
@@ -288,7 +289,6 @@ public class CharacterController : MonoBehaviour
     {
         if (characterController.enabled)
         {
-            Debug.Log("Jump");
             _characterMoverment.Jump(active);
 
         }

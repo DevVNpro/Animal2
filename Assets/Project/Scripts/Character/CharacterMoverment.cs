@@ -183,6 +183,8 @@ public class CharacterMoverment : MonoBehaviour
 
     public void Jump(bool active = false)
     {
+        Debug.Log("JumpCharacter");
+
         if (active)
         {
             coyoteTimeCounter = 0;

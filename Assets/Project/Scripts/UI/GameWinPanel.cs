@@ -29,6 +29,7 @@ public class GameWinPanel : MonoBehaviour
         UpdateTextTotal();
         #region UpdateStar
         var starCount = GamePlayManager.sumStar;
+        Debug.Log("StarCount :" + starCount);
         for(int  i = 0; i<starCount; i++)
         {
             starImages[i].SetActive(true);
