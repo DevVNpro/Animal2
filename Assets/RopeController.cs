@@ -8,7 +8,7 @@ public class RopeController : MonoBehaviour
 
     [Header("Properties")]
     public float swingForce= 250f;
-    public float timeDelay = 0.1f;
+   // public float timeDelay = 0.1f;
     public bool onRope = false;
     public float direction;
     public bool rightFall;
@@ -19,21 +19,16 @@ public class RopeController : MonoBehaviour
 
     [Header("reference")]
     public AnimationReferenceAsset animSwing;
-    public Transform transformRope;
+    private Transform transformRope;
     public CharacterAnimation characterAnimation;
     private CharacterController characterController;
-    private Transform transformCharacter;
     private void Start()
     {
-        Anchorright = transformRope.position.x + 2;
-        Anchorleft = transformRope.position.x - 1;
-        transformCharacter = transform;
         characterController = transform.gameObject.GetComponent<CharacterController>();
         Rxmanager.PlayerDie.Subscribe((tmp) =>
         {
             if (onRope)
             {
-                Debug.Log("DieOnRope");
                 StartCoroutine(OffRope());
             }
         }).AddTo(this);
@@ -41,6 +36,8 @@ public class RopeController : MonoBehaviour
     }
     private void Update()
     {
+
+
         timeSpam -= Time.deltaTime;
 
         if (onRope&& timeSpam <=0)
@@ -57,16 +54,16 @@ public class RopeController : MonoBehaviour
             if (!rightFall && !leftFall)
             {
                 transform.localScale = new Vector2(1, 1);
-                transformCharacter.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
+                transform.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
             }
             if (direction == 1)
             {
                 transform.localScale = new Vector2(1, 1);
-                transformCharacter.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
+                transform.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
             }
             else if (direction == -1)
             {
-                transformCharacter.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
+                transform.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
                 transform.localScale = new Vector2(-1, 1);
             }
             /*
@@ -154,8 +151,11 @@ public class RopeController : MonoBehaviour
     {
         if (collision.CompareTag("Rope")&& timeSpam <=0)
         {
-            Debug.Log("False Collider2d");
-            transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+            transformRope = collision.transform;
+            characterController._characterMoverment.SetKinematicBody();
+            characterController._characterMoverment.TurnOffColider();
+        //    transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        //    transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 onRope = true;
 
         }
@@ -163,18 +163,15 @@ public class RopeController : MonoBehaviour
     IEnumerator OffRope()
     {
         if (!onRope) yield return null;
-        Debug.Log("Nhay neeeeeeeeeeeeee");
-     //   Debug.Break();
+        characterController._characterMoverment.SetDynamicBody();
+        characterController._characterMoverment.TurnOnColider();
+      //  transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+     //   transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
         onRope = false;
         characterController.enabled = true;
-        transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-     //   transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-        timeSpam = 0.5f;
-       GetComponent<Rigidbody2D>().velocity = new Vector2(0,20);
-       // onRope = false;
-      //  characterController.enabled = true;
-        yield return new  WaitForSeconds(timeDelay);
-            
+        timeSpam = 0.6f;
+       GetComponent<Rigidbody2D>().velocity = new Vector2(0,23);
+        yield return null;     
     }
 
     #region Control

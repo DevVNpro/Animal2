@@ -6,13 +6,7 @@ using UniRx;
 
 public class BoosterManager : MonoBehaviour
 {
-    [Header("Properties")]
-    [SerializeField] private float timeUseShield;
-    [SerializeField] private float timeUseBom;
-    [SerializeField] private float timeUseBullet;
-
-    
-    
+        
     [Header("Ref")] 
     [SerializeField] private GameObject shieldBooster;
     [SerializeField] private GameObject bomBooster;
@@ -21,23 +15,23 @@ public class BoosterManager : MonoBehaviour
 
     private void Awake()
     {
-        Rxmanager.UseShield.Subscribe((tmp) =>
+        Rxmanager.UseShield.Subscribe((time) =>
         {
-            StartCoroutine(ActiveShield());
+            StartCoroutine(ActiveShield(time));
         }).AddTo(this);
         Rxmanager.UseHealth.Subscribe((tmp) =>
         {
             StartCoroutine(ActiveHp());
         }).AddTo(this);
-        Rxmanager.UseBom.Subscribe((tmp) => {
-            StartCoroutine(ActiveBom());
+        Rxmanager.UseBom.Subscribe((time) => {
+            StartCoroutine(ActiveBom(time));
         }).AddTo(this);
     }
 
-    IEnumerator ActiveShield()
+    IEnumerator ActiveShield(int time)
     {
         shieldBooster.gameObject.SetActive(true);
-        yield return new WaitForSeconds(timeUseShield);
+        yield return new WaitForSeconds(time);
         shieldBooster.gameObject.SetActive(false);
     }
 
@@ -46,10 +40,10 @@ public class BoosterManager : MonoBehaviour
         _characterHealth.AddHealth();
         yield return  new WaitForSeconds(0.1f);
     }
-    IEnumerator ActiveBom()
+    IEnumerator ActiveBom(int time)
     {
         bomBooster.gameObject.SetActive(true);
-        yield return new WaitForSeconds(timeUseBom);
+        yield return new WaitForSeconds(time);
         bomBooster.gameObject.SetActive(false);
     }    
     

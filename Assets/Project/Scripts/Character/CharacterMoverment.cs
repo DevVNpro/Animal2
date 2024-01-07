@@ -289,9 +289,26 @@ public class CharacterMoverment : MonoBehaviour
     #endregion
 
     #region OtherPhysic2d
+    public void SetKinematicBody()
+    {
+        rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
+        rigidbody2d.velocity = new Vector2(0, 0);
 
+    }
+    public void SetDynamicBody()
+    {
+        rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
+    }
+    public void TurnOnColider()
+    {
+        transform.GetComponent<CapsuleCollider2D>().enabled = true;
+    }
+    public void TurnOffColider()
+    {
+        transform.GetComponent<CapsuleCollider2D>().enabled = false;
+    }
 
 
     #endregion
-    
+
 }

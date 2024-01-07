@@ -16,10 +16,19 @@ public class GamePlayPanel : MonoBehaviour
     [SerializeField] private GameObject star;
     [SerializeField] private GameObject parentStar;
 
+    [Header("BoosterButton")]
     [SerializeField] private Button shieldButton;
     [SerializeField] private Button hpButton;
     [SerializeField] private Button bomButton;
+    [SerializeField] private Button BulletButton;
     [SerializeField] private Button settingButton;
+    [Header("BoosterDisplay")]
+    [SerializeField] private GameObject displayShield;
+    [SerializeField] private GameObject displaybom;
+    [SerializeField] private GameObject displayBullet;
+
+    [Header("other")]
+    public int timeUseBooster;
     private bool stopTime;
     private Tween tween;
 
@@ -32,6 +41,8 @@ public class GamePlayPanel : MonoBehaviour
         countTime = 200;
         //AddEvent
         shieldButton.onClick.AddListener(UseShieldButton);
+        BulletButton.onClick.AddListener(UseBulletButton);
+
         hpButton.onClick.AddListener(UseHpButton);
         bomButton.onClick.AddListener(UseBom);
         settingButton.onClick.AddListener(ResetLevel);
@@ -118,20 +129,28 @@ public class GamePlayPanel : MonoBehaviour
     #region Shield
     private void UseShieldButton()
      {
-         Rxmanager.UseShield.OnNext(true);
+         Rxmanager.UseShield.OnNext(timeUseBooster);
          StartCoroutine(AnimShieldUI());
      }
 
      private IEnumerator AnimShieldUI()
      {
-         shieldButton.gameObject.GetComponent<Image>().color = new Color(0.8f,0.8f,0.8f);
-         shieldButton.interactable = false;
-        yield return  new WaitForSeconds(7f);
+        displayShield.SetActive(true);
+        int timeCount = 0;
+        DOVirtual.Float(timeCount, 1, timeUseBooster, (timeCount) =>
+          {
+
+              displayShield.transform.GetChild(1).GetComponent<Image>().fillAmount = timeCount;
+          });
+        shieldButton.gameObject.GetComponent<Image>().color = new Color(0.8f,0.8f,0.8f);
+        shieldButton.interactable = false;
+        yield return  new WaitForSeconds(timeUseBooster);
         shieldButton.gameObject.GetComponent<Image>().color = new Color(1f,1f,1f);
         shieldButton.interactable = true;
+        displayShield.SetActive(false);
 
-         
-     }
+
+    }
     #endregion
     #region Star
     private void MoveStarToUI(Vector2 vector)
@@ -156,18 +175,48 @@ public class GamePlayPanel : MonoBehaviour
     #region Bom
     private void UseBom()
     {
-        Rxmanager.UseBom.OnNext(true);
+        Rxmanager.UseBom.OnNext(timeUseBooster);
         StartCoroutine(AnimBomUI());
     }
     private IEnumerator AnimBomUI()
     {
+        displaybom.SetActive(true);
+        int timeCount = 0;
+        DOVirtual.Float(timeCount, 1, timeUseBooster, (timeCount) =>
+        {
+
+            displaybom.transform.GetChild(1).GetComponent<Image>().fillAmount = timeCount;
+        });
         bomButton.gameObject.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
         bomButton.interactable = false;
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(timeUseBooster);
         bomButton.gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f);
         bomButton.interactable = true;
+        displaybom.SetActive(false);
+    }
 
+    #endregion
+    #region Bullet
+    private void UseBulletButton()
+    {
+        StartCoroutine(AnimBulletUI());
 
+    }
+    IEnumerator AnimBulletUI()
+    {
+        displayBullet.SetActive(true);
+        int timeCount = 0;
+        DOVirtual.Float(timeCount, 1, timeUseBooster, (timeCount) =>
+        {
+
+            displayBullet.transform.GetChild(1).GetComponent<Image>().fillAmount = timeCount;
+        });
+        BulletButton.gameObject.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
+        BulletButton.interactable = false;
+        yield return new WaitForSeconds(timeUseBooster);
+        BulletButton.gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f);
+        BulletButton.interactable = true;
+        displayBullet.SetActive(false);
     }
 
     #endregion

@@ -15,7 +15,7 @@ public class OnTouchDamageByColision : OntouchDamge
         }
     }
 
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Player"))
@@ -32,6 +32,7 @@ public class OnTouchDamageByColision : OntouchDamge
             transform.GetComponent<Collider2D>().isTrigger = false;
         }
     }
+    */
 
     private void OnTriggerStay2D(Collider2D other)
     {
