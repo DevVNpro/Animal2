@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Tools;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,18 +12,23 @@ public class Character : MonoBehaviour
     public Attack attack;
     public Health health;
     public Animator animator;
+    public AIBrain AiBrain;
     [Header("Option")] 
     public bool MoveHorizontal;
     public bool JumpHorizontal;
     public bool Fly;
-
     
+
+
     private void Start()
     {
         moverment.GetReferenceCharacter(this);
         health.GetReferenceCharacter(this);
         attack.GetReferenceCharacter(this);
         animator.GetReferenceCharacter(this);
+        AiBrain.Init(this);
+        AiBrain.ActiveBrain();
+        AiBrain.ResetBrain();
     }
 
     public void Dead()

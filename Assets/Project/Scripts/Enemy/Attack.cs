@@ -10,14 +10,9 @@ public class Attack : MonoBehaviour
     {
         this.character = character;
     }
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+     public void DeductHpPlayer(GameObject player,int value)
+     {
+         player.GetComponent<CharacterHealth>().DeductHealth(value);
+     }
 }

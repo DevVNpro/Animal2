@@ -9,14 +9,12 @@ public class CharacterAnimation : MonoBehaviour
     [Header("Ref")]
     private SkeletonAnimation _skeletonAnimation;
 
-    private CharacterController _characterController;
      [SerializeField]private string animName;
      public int index;
     
     private void Awake()
     {
         _skeletonAnimation = transform.GetComponent<SkeletonAnimation>();
-        _characterController = transform.GetComponent<CharacterController>();
     }
 
  
