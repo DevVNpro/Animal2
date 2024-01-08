@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
 using UniRx;
+using Sirenix.OdinInspector;
 public class RopeController : MonoBehaviour
 {
 
@@ -16,6 +17,7 @@ public class RopeController : MonoBehaviour
     public float Anchorright;
     public float Anchorleft;
     public float timeSpam=0.5f;
+    public int lastDiriction=0;
 
     [Header("reference")]
     public AnimationReferenceAsset animSwing;
@@ -49,101 +51,36 @@ public class RopeController : MonoBehaviour
             {
                 StartCoroutine(OffRope());
             }
+
             direction = Input.GetAxisRaw("Horizontal");
+
 #endif            
-            if (!rightFall && !leftFall)
-            {
-                transform.localScale = new Vector2(1, 1);
-                transform.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
-            }
+   
             if (direction == 1)
             {
                 transform.localScale = new Vector2(1, 1);
                 transform.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
+                lastDiriction = -1;
             }
             else if (direction == -1)
             {
                 transform.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
                 transform.localScale = new Vector2(-1, 1);
+                lastDiriction = 1;
             }
-            /*
             else
             {
-                if (transformRope.position.x >Anchorright)
+                if (lastDiriction == 1 || lastDiriction == 0)
                 {
-                    if(transformRope.GetComponent<Rigidbody2D>().velocity.y > 1f )
-                    {
-                        transformCharacter.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
-                        transform.localScale = new Vector2(1, 1);//phai
-                        rightFall = true;
-                        leftFall = false;
-
-                    }
-                    else if(!leftFall)
-                    {
-                        transformCharacter.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
-                       transform.localScale = new Vector2(-1, 1);//trai
-                    }
-                    else if (leftFall)
-                    {
-                        transformCharacter.position = new Vector2(transformRope.position.x- 1.5f , transformRope.position.y - 2.5f);
-                    }
-
-                }
-                else if (transformRope.position.x < Anchorleft)
-                {
-                    
-                    if (transformRope.GetComponent<Rigidbody2D>().velocity.y < 1f && rightFall)
-                    {
-                      //     transformCharacter.position = new Vector2(transformRope.position.x + 1.5f,
-                   //         transformRope.position.y - 2.5f);
-                    //    transform.localScale = new Vector2(-1, 1); //trai
-                    Debug.Log("sssssssssssssssssssssssssssssss");
-
-                    }
-                    else
-                    {
-                        rightFall = false;
-                        leftFall = true;
-
-                    }
-
-                    if (transformRope.GetComponent<Rigidbody2D>().velocity.y > 1f && leftFall)
-                    {
-                        transformCharacter.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
-                        transform.localScale = new Vector2(-1, 1); 
-                        rightFall = false;
-                        leftFall = true;
-
-                        
-                    }
-                  
-
-                if (transformRope.GetComponent<Rigidbody2D>().velocity.y < 1f && !rightFall)
-                    {
-                        transformCharacter.position = new Vector2(transformRope.position.x -1.5f, transformRope.position.y - 2.5f);
-                        transform.localScale = new Vector2(1, 1); //phai
-                    }
-             
-            
+                    transform.localScale = new Vector2(1, 1);
+                    transform.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
                 }
                 else
                 {
-                    if (rightFall )
-                    {
-                        
-                        transformCharacter.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
-                        transform.localScale = new Vector2(-1, 1);
-                    }
-
-                    if (leftFall)
-                    {
-                        transformCharacter.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
-                        transform.localScale = new Vector2(1, 1);
-                    }
+                    transform.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
+                    transform.localScale = new Vector2(-1, 1);
                 }
             }
-            */
             transformRope.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * swingForce*2);
         }
     }
@@ -154,19 +91,16 @@ public class RopeController : MonoBehaviour
             transformRope = collision.transform;
             characterController._characterMoverment.SetKinematicBody();
             characterController._characterMoverment.TurnOffColider();
-        //    transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-        //    transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-                onRope = true;
+            onRope = true;
 
         }
     }
     IEnumerator OffRope()
     {
         if (!onRope) yield return null;
+    
         characterController._characterMoverment.SetDynamicBody();
         characterController._characterMoverment.TurnOnColider();
-      //  transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-     //   transform.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
         onRope = false;
         characterController.enabled = true;
         timeSpam = 0.6f;
@@ -188,6 +122,7 @@ public class RopeController : MonoBehaviour
                 direction = 0;
 
             }
+        
         }
     }
     public void Left(bool hold = false)
@@ -201,7 +136,9 @@ public class RopeController : MonoBehaviour
             else
             {
                 direction = 0;
+
             }
+      
         }
     }
 
