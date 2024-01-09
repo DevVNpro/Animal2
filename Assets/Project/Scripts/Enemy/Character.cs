@@ -33,6 +33,14 @@ public class Character : MonoBehaviour
 
     public void Dead()
     {
-        Debug.Log("CharacterDead");
+        StartCoroutine(DeadDeactive());
+    }
+    IEnumerator DeadDeactive()
+    {
+        moverment.collider2D.enabled = false;
+        moverment.AddForceDrop();
+        AiBrain.DeActiveBrain();
+        yield return new WaitForSeconds(3);
+        gameObject.SetActive(false);
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private int maxHp;
-    private int currentHp;
+    public int maxHp;
+    public int currentHp;
     public Character character;
 
     public void GetReferenceCharacter(Character character)

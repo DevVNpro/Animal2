@@ -42,6 +42,10 @@ public class BulletCharacter : MonoBehaviour
         {
             _pool.Release(this);
         }
+        if (other.CompareTag("Enemy"))
+        {
+            other.GetComponent<Health>().DeductCharacterHp(1);
+        }
 
     }
 

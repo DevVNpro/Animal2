@@ -32,6 +32,11 @@ public class Moverment : MonoBehaviour
     {
         Debug.DrawRay(transform.position+ new Vector3(1f*(int) characterDirection,0,0f), Vector2.down * 2, Color.red,0f);
     }
+    public void AddForceDrop()
+    {
+        rigidbody2D.AddForce(new Vector2(0, 8f));
+        rigidbody2D.gravityScale = 10;
+    }
 
     public void MoveHorizontal()
     {
@@ -43,10 +48,14 @@ public class Moverment : MonoBehaviour
             if ((int)characterDirection == -1)
             {
                 characterDirection = CharacterDirection.Right;
+                transform.localScale = new Vector3(1, 1, 1);
+
             }
             else if ((int) characterDirection == 1)
             {
                 characterDirection = CharacterDirection.Left;
+                transform.localScale = new Vector3(-1, 1, 1);
+
 
             }
         }
