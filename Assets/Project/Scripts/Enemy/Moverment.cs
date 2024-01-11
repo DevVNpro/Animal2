@@ -34,34 +34,41 @@ public class Moverment : MonoBehaviour
     }
     public void AddForceDrop()
     {
-        rigidbody2D.AddForce(new Vector2(0, 8f));
+        rigidbody2D.AddForce(new Vector2(0, 20f));
         rigidbody2D.gravityScale = 10;
     }
 
     public void MoveHorizontal()
     {
-        character.animator.PlayAnimation(character.animator.animationReferenceAssets[0],true,1);
         rigidbody2D.velocity = new Vector2(3*(int)characterDirection,0);
-        bool Ray = Physics2D.Raycast(transform.position + new Vector3(1 * (int) characterDirection, 0f, 0f), Vector2.down, 1f, LayerMaskGround);
-        if (!Ray)
+    }
+
+    public void StopPatrol()
+    {
+        rigidbody2D.velocity = new Vector2(0,0);
+    }
+     public bool CheckChangeDirection()
+    {
+        bool ray = Physics2D.Raycast(transform.position + new Vector3(1 * (int) characterDirection, 0f, 0f), Vector2.down, 2f, LayerMaskGround);
+        if (!ray)
         {
             if ((int)characterDirection == -1)
             {
+                Debug.Log("left");
+
                 characterDirection = CharacterDirection.Right;
                 transform.localScale = new Vector3(1, 1, 1);
-
+                return true;
             }
-            else if ((int) characterDirection == 1)
+            if ((int) characterDirection == 1)
             {
+                Debug.Log("right");
                 characterDirection = CharacterDirection.Left;
                 transform.localScale = new Vector3(-1, 1, 1);
-
-
+                return true;
             }
         }
-    }
-        public bool CheckChangeDirection()
-    {
+
         return false;
     }
 }

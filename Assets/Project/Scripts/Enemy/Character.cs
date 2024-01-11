@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using MoreMountains.Tools;
 using Unity.VisualScripting;
 using UnityEngine;
+using DG.Tweening;
+using Sequence = DG.Tweening.Sequence;
 
 public class Character : MonoBehaviour
 {
     [Header("References")]
     public Moverment moverment;
     public Attack attack;
+    public BulletSpawnerDragon bulletSpawnerDragon;
     public Health health;
     public Animator animator;
     public AIBrain AiBrain;
@@ -26,6 +29,7 @@ public class Character : MonoBehaviour
         health.GetReferenceCharacter(this);
         attack.GetReferenceCharacter(this);
         animator.GetReferenceCharacter(this);
+        bulletSpawnerDragon.GetReferenceCharacter(this);
         AiBrain.Init(this);
         AiBrain.ActiveBrain();
         AiBrain.ResetBrain();
@@ -38,9 +42,13 @@ public class Character : MonoBehaviour
     IEnumerator DeadDeactive()
     {
         moverment.collider2D.enabled = false;
-        moverment.AddForceDrop();
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMoveY(transform.position.y + 2f,0.2f).SetEase(Ease.OutSine));
+        sequence.Append(transform.DOMoveY(transform.position.y -15f,0.7f).SetEase(Ease.InSine)).OnComplete(() =>
+        {
+            transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        });
         AiBrain.DeActiveBrain();
-        yield return new WaitForSeconds(3);
-        gameObject.SetActive(false);
+        yield return null;
     }
 }

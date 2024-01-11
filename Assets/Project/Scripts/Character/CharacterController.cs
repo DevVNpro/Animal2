@@ -282,7 +282,7 @@ public class CharacterController : MonoBehaviour
         if (_characterMoverment.CanShot && !BulletSpawner.isShot && characterController.enabled)
         {
             _characterAnimation.PlayAnimationShot(AnimationReferenceAsset[9],false);
-            BulletSpawner.Shoot();
+            BulletSpawner.shot();
 
         }
     }

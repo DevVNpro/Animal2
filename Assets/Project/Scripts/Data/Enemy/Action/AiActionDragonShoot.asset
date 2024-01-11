@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c0f7334367449cabc52aff124fac7c, type: 3}
-  m_Name: WaitForXSecond
+  m_Script: {fileID: 11500000, guid: 8b333f8206e3c8145898f13df453682a, type: 3}
+  m_Name: AiActionDragonShoot
   m_EditorClassIdentifier: 
-  time: 2
-  random: 0
-  min: 0
-  max: 0

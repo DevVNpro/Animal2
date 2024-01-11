@@ -16,5 +16,40 @@ MonoBehaviour:
   - StateName: Patrol
     Actions:
     - {fileID: 11400000, guid: aeee2f0b05a493c4c943d9f264114058, type: 2}
-    Transitions: []
+    Transitions:
+    - transitionType: 1
+      Decisions:
+      - {fileID: 11400000, guid: bafa5f576431fad40a24c9e7a0889e21, type: 2}
+      TrueState: CheckPlayer
+      FalseState: 
+    - transitionType: 1
+      Decisions:
+      - {fileID: 11400000, guid: 21e2b2c172f58314596747d437da32cf, type: 2}
+      TrueState: Attack
+      FalseState: 
+    EnteredStateCount: 0
+  - StateName: CheckPlayer
+    Actions:
+    - {fileID: 11400000, guid: 9dd68ea4d0dbbe14299a41c5799f2922, type: 2}
+    Transitions:
+    - transitionType: 1
+      Decisions:
+      - {fileID: 11400000, guid: 21e2b2c172f58314596747d437da32cf, type: 2}
+      TrueState: Attack
+      FalseState: 
+    - transitionType: 0
+      Decisions:
+      - {fileID: 11400000, guid: f9b947b9278417342948fe17f41425ed, type: 2}
+      TrueState: Patrol
+      FalseState: 
+    EnteredStateCount: 0
+  - StateName: Attack
+    Actions:
+    - {fileID: 11400000, guid: c02afdbb59fe86548a6e139e3e44bb28, type: 2}
+    Transitions:
+    - transitionType: 1
+      Decisions:
+      - {fileID: 11400000, guid: f9b947b9278417342948fe17f41425ed, type: 2}
+      TrueState: Patrol
+      FalseState: 
     EnteredStateCount: 0

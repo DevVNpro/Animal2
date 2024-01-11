@@ -35,10 +35,12 @@ public class OntouchDamge : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                Debug.Log("OntouchPlayer0");
                 characterController = other.gameObject.GetComponent<CharacterController>();
                 characterController.AddForce(vertorForce, new Vector2(vectorOrigin.transform.position.x, vectorOrigin.transform.position.y));
                 characterController.DeductHelth(damage);
                 Rxmanager.DeDuctHpPlayer.OnNext(damage);
+                Debug.Log("OntouchPlayer1");
                 if (ontouchDamges.Count > 0)
                 {
                     foreach (var onTouchDamage in ontouchDamges)

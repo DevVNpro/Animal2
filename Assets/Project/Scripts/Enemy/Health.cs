@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
     public virtual void DeductCharacterHp(int values)
     {
         currentHp -= values;
+        Debug.Log("Minus 1 hp enemy");
         if(currentHp <=0 ) character.Dead();
     }
 

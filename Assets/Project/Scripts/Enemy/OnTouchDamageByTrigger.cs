@@ -13,4 +13,6 @@ public class OnTouchDamageByTrigger : OntouchDamge
             TakeDameOnTouch(other.gameObject,damage);
         }
     }
+
+   
 }

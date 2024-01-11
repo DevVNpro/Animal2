@@ -9,12 +9,15 @@ public class BulletSpawner : MonoBehaviour
     [SerializeField] private float timeSpamBullet;
     [SerializeField] private float timeSpamBulletCount;
     public bool isShot;
-    
-    
     [SerializeField] private BulletCharacter _bulletCharacter;
     [SerializeField] private Transform tranformWeapon;
     private ObjectPool<BulletCharacter> _pool;
-
+    public Character characterBullet;
+    public void GetReferenceCharacter(Character character)
+    {
+        characterBullet = character;
+    }
+ 
     private void Awake()
     {
        _pool = new ObjectPool<BulletCharacter>(CreateBullet,OnTakeBulletFromPool,OnReturnBulletFromPool,OnDestoyBullet);
@@ -22,12 +25,6 @@ public class BulletSpawner : MonoBehaviour
     }
     private void Update()
     {
-#if  UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Shoot();
-        }
-#endif
 
         if (isShot)
         {
@@ -41,7 +38,7 @@ public class BulletSpawner : MonoBehaviour
         }
     }
 
-    public void Shoot()
+    public void shot()
     {
         _pool.Get();
         isShot = true;
@@ -51,6 +48,7 @@ public class BulletSpawner : MonoBehaviour
     public BulletCharacter CreateBullet()
     {
         BulletCharacter bulletCharacter = Instantiate(_bulletCharacter, tranformWeapon.position, tranformWeapon.rotation);
+        bulletCharacter.SetBulletSpawner(this);
         bulletCharacter.SetPool(_pool);
         return bulletCharacter;
     }

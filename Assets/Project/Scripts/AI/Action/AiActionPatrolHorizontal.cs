@@ -9,13 +9,14 @@ public class AiActionPatrolHorizontal : AIAction
 {
     public override void PerformAction(AIBrain _brain)
     {
+        _brain.Player.animator.PlayAnimation(_brain.Player.animator.animationReferenceAssets[0],true,1);
         _brain.Player.moverment.MoveHorizontal();
 
     }
 
     public override void OnEnterState(AIBrain _brain)
     {
-        Debug.Log("EnterState");
+        Debug.Log("EnterPatrolHorizontal");
     }
 
     public override void OnExitState(AIBrain _brain)
