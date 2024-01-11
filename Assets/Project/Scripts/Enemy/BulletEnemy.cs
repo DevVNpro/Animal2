@@ -38,12 +38,17 @@ public class BulletEnemy : BulletCharacter
         Debug.Log(other.name);
         if (other.CompareTag("Player"))
         {
-            
-            Rxmanager.DeDuctHpPlayer.OnNext(damage);
-            other.GetComponent<CharacterHealth>().DeductHealth(damage);
-            
+            if (!(other.transform.Find("ShieldSoftBlue").gameObject.activeSelf))
+            {
+                Rxmanager.DeDuctHpPlayer.OnNext(damage);
+                other.GetComponent<CharacterHealth>().DeductHealth(damage);
+                other.GetComponent<CharacterMoverment>().AddForceTouch(new Vector2(8,0),transform.position);
+            }
         }
-        _pool.Release(this); 
+        if(other.gameObject.layer == LayerMask.NameToLayer("Ground") || other.CompareTag("Player"))
+        {
+            _pool.Release(this);
+        }
 
     }
     

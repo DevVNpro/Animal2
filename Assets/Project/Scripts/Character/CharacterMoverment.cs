@@ -207,13 +207,11 @@ public class CharacterMoverment : MonoBehaviour
         {
             effectMoveByForce = true;
             rigidbody2d.AddForce(new Vector2(Math.Abs(vectorFore.x),vectorFore.y),ForceMode2D.Impulse);
-            Debug.Log("Add Force Right");
         }
         else if(transform.position.x < vectorOrigin.x)
         {
             effectMoveByForce = true;
             rigidbody2d.AddForce(new Vector2(-Math.Abs(vectorFore.x), vectorFore.y), ForceMode2D.Impulse);
-            Debug.Log("Add Force Left");
             
         }
 

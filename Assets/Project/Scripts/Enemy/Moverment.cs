@@ -58,17 +58,17 @@ public class Moverment : MonoBehaviour
 
                 characterDirection = CharacterDirection.Right;
                 transform.localScale = new Vector3(1, 1, 1);
-                return true;
+                return false;
             }
             if ((int) characterDirection == 1)
             {
                 Debug.Log("right");
                 characterDirection = CharacterDirection.Left;
                 transform.localScale = new Vector3(-1, 1, 1);
-                return true;
+                return false;
             }
         }
 
-        return false;
+        return true;
     }
 }

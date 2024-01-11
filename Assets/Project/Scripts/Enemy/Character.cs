@@ -46,7 +46,7 @@ public class Character : MonoBehaviour
         sequence.Append(transform.DOMoveY(transform.position.y + 2f,0.2f).SetEase(Ease.OutSine));
         sequence.Append(transform.DOMoveY(transform.position.y -15f,0.7f).SetEase(Ease.InSine)).OnComplete(() =>
         {
-            transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            gameObject.SetActive(false);
         });
         AiBrain.DeActiveBrain();
         yield return null;
