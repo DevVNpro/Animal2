@@ -33,6 +33,7 @@ public class OntouchDamge : MonoBehaviour
         }
         if (countTime >= timeDelay)
         {
+            SoundManager.Intance.PlayTouchEnemy();
             if (other.gameObject.CompareTag("Player"))
             {
                 Debug.Log("OntouchPlayer0");

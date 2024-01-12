@@ -16,6 +16,7 @@ public class ObjectGach : MonoBehaviour
     {
         if (other.transform.CompareTag("Player") && (transform.position.y - other.transform.position.y > 3f))
         {
+            SoundManager.Intance.PlayVfxBrick();
             foreach (var crack in cracks)
             {
                 crack.SetActive(true);

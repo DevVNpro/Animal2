@@ -13,6 +13,8 @@ public class Attack : MonoBehaviour
     [Header("BulletProperty")] [SerializeField]
     private float countTimeSpam = 1;
 
+    [SerializeField] private float distanceCheckPlayer;
+
     [SerializeField] private float timeSpam = 1;
     private bool shot;
      public void GetReferenceCharacter(Character character)
@@ -37,7 +39,7 @@ public class Attack : MonoBehaviour
 
      public bool CheckPlayerInZoneHorizontal()
      {
-          checkCanAttackBoxHorizontal = Physics2D.BoxCast(new Vector2(transform.position.x + 3.5f * (int) character.moverment.characterDirection,transform.position.y),new Vector2(6,1),0f ,new Vector2(1, 1),0.1f,LayerCanAttack);
+          checkCanAttackBoxHorizontal = Physics2D.BoxCast(new Vector2(transform.position.x + distanceCheckPlayer * (int) character.moverment.characterDirection,transform.position.y),new Vector2(6,1),0f ,new Vector2(1, 1),0.1f,LayerCanAttack);
           return checkCanAttackBoxHorizontal;
      }
 
@@ -63,12 +65,12 @@ public class Attack : MonoBehaviour
          if (checkCanAttackBoxHorizontal)
          {
             Gizmos.color = new Color(1,0,0,0.5f);
-            Gizmos.DrawCube(new Vector2(transform.position.x + 3.5f* (int) character.moverment.characterDirection,transform.position.y), new Vector2(6,1));
+            Gizmos.DrawCube(new Vector2(transform.position.x + distanceCheckPlayer* (int) character.moverment.characterDirection,transform.position.y), new Vector2(6,1));
          }
          else
          {
             Gizmos.color = new Color(1,1,0,0.5f);
-             Gizmos.DrawCube(new Vector2(transform.position.x + 3.5f* (int) character.moverment.characterDirection,transform.position.y), new Vector2(6,1));
+             Gizmos.DrawCube(new Vector2(transform.position.x + distanceCheckPlayer* (int) character.moverment.characterDirection,transform.position.y), new Vector2(6,1));
          }
      }
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5658830793679604428}
   - component: {fileID: 4801924745870497962}
   - component: {fileID: 7114095949852380078}
+  - component: {fileID: 7771094072697120652}
   m_Layer: 16
   m_Name: ThungGo
   m_TagString: Box
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.028907895}
+  m_Offset: {x: 0.011158943, y: -0.017749071}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -161,7 +162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.86, y: 2.542184}
+  m_Size: {x: 1.8525639, y: 2.5198665}
   m_EdgeRadius: 0
 --- !u!114 &7114095949852380078
 MonoBehaviour:
@@ -181,6 +182,24 @@ MonoBehaviour:
   - {fileID: 1110277614798772387}
   - {fileID: 8509123223464290808}
   - {fileID: 4727019447310874162}
+  vector3: {x: 0, y: 0, z: 0}
+--- !u!114 &7771094072697120652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624809317460142799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67684c3235061dc46924a7eef3531eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockWay: 0
+  layerBlock:
+    serializedVersion: 2
+    m_Bits: 33088
+  sizeCheck: {x: 2, y: 2}
 --- !u!1 &1110277614798772387
 GameObject:
   m_ObjectHideFlags: 0

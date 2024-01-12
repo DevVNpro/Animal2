@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8110666161825688108}
   - component: {fileID: 4797775033121016973}
   - component: {fileID: 1701534553483837372}
+  - component: {fileID: 3523520121177153660}
   m_Layer: 16
   m_Name: HopGo
   m_TagString: Box
@@ -158,3 +159,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5704057, y: 2.5272174}
   m_EdgeRadius: 0
+--- !u!114 &3523520121177153660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290582912677544003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67684c3235061dc46924a7eef3531eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockWay: 0
+  layerBlock:
+    serializedVersion: 2
+    m_Bits: 33088
+  sizeCheck: {x: 2.54, y: 2.4}

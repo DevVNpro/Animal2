@@ -150,7 +150,6 @@ public class CharacterController : MonoBehaviour
                     #region MoveAndIdle
 
                     if ( Mathf.Abs(_characterMoverment.rigidbody2d.velocity.x) > 2f && _characterMoverment.isGround && !(_characterMoverment.xValue ==0))
-
                     {
                         if (_characterMoverment.isBrige)
                         {                        
@@ -281,6 +280,7 @@ public class CharacterController : MonoBehaviour
     {
         if (_characterMoverment.CanShot && !BulletSpawner.isShot && characterController.enabled)
         {
+            SoundManager.Intance.PlayVfxShot();
             _characterAnimation.PlayAnimationShot(AnimationReferenceAsset[9],false);
             BulletSpawner.shot();
 

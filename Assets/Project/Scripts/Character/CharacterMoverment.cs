@@ -184,7 +184,7 @@ public class CharacterMoverment : MonoBehaviour
     public void Jump(bool active = false)
     {
         Debug.Log("JumpCharacter");
-
+        
         if (active)
         {
             coyoteTimeCounter = 0;
@@ -193,6 +193,7 @@ public class CharacterMoverment : MonoBehaviour
         {
             if ( coyoteTimeCounter > 0f && !effectMoveByForce && !CharacterController.isDead && !CharacterController.isWin)
             {
+                SoundManager.Intance.PlayVfxJump();
                 rigidbody2d.velocity = (new Vector2(0, speedJump));
 
             }

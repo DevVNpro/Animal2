@@ -12,6 +12,7 @@ public class Star : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SoundManager.Intance.PlayVfxStar();
             Rxmanager.PickStar.OnNext(transform.position);
             gameObject.SetActive(false);
             Rxmanager.CollectStar.OnNext(true);

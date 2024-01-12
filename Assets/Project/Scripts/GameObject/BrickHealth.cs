@@ -13,6 +13,7 @@ public class BrickHealth : MonoBehaviour
       health -= damage;
       if (health <= 0)
       {
+         SoundManager.Intance.PlayBreakBox();
          foreach (var crack in cracks)
          {
             crack.SetActive(true);

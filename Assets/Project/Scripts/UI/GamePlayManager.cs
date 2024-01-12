@@ -56,7 +56,6 @@ public class GamePlayManager : MonoBehaviour
     public void SaveStarCollect()
     {
         sumStar += 1;
-        Debug.Log("sumStar :"+ sumStar);
     }
     public void SaveCoinCollect()
     {

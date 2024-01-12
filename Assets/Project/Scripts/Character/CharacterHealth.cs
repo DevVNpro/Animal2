@@ -23,9 +23,8 @@ public class CharacterHealth : MonoBehaviour
 
     private void Dead()
     {
+        SoundManager.Intance.PlayVfxDead();
         Rxmanager.PlayerDie.OnNext(true);
-
-
     }
 
     public int  GetHealth()
@@ -36,6 +35,7 @@ public class CharacterHealth : MonoBehaviour
 
     public void DeductHealth(int damage)
     {
+        SoundManager.Intance.PlayVfxDeducthp();
         health -= damage;
         if (health <= 0)
         {
