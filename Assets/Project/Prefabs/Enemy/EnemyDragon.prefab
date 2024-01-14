@@ -243,7 +243,6 @@ GameObject:
   - component: {fileID: 2719233302113481309}
   - component: {fileID: 5793137272219408905}
   - component: {fileID: 2092185258808481422}
-  - component: {fileID: 708264952973747929}
   m_Layer: 0
   m_Name: EnemyDragon
   m_TagString: Enemy
@@ -282,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moverment: {fileID: 5794188288380834141}
   attack: {fileID: 1708202774428468449}
+  bulletSpawnerDragon: {fileID: 0}
   health: {fileID: 7991893581435714983}
   animator: {fileID: 2719233302113481309}
   AiBrain: {fileID: 2092185258808481422}
@@ -318,6 +318,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0a104ca4d980b40bef6155f2f9178e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LayerCanAttack:
+    serializedVersion: 2
+    m_Bits: 0
+  checkCanAttackBoxHorizontal: 0
+  countTimeSpam: 1
+  distanceCheckPlayer: 0
+  timeSpam: 1
 --- !u!114 &7991893581435714983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,61 +401,3 @@ MonoBehaviour:
   TimeInThisState: 0
   ActionsFrequency: 0.03
   DecisionFrequency: 0.03
---- !u!60 &708264952973747929
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7092224379170079718}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.80048275, y: 0.6305251}
-      - {x: 0.4698038, y: 0.64068055}
-      - {x: 0.4101696, y: 1.0700083}
-      - {x: -0.15291977, y: 0.8317876}
-      - {x: -0.75590706, y: 1.1819212}
-      - {x: -0.7177868, y: 0.5163994}
-      - {x: -1.6035156, y: -0.042699188}
-      - {x: -0.71111584, y: -0.015845299}
-      - {x: -1.0822263, y: -0.5694423}
-      - {x: 0.49603236, y: -0.60002613}
-      - {x: 0.820878, y: -0.017978907}
-      - {x: 0.50814915, y: 0.19180799}
-      - {x: 0.9510565, y: 0.30901712}
-  m_UseDelaunayMesh: 0

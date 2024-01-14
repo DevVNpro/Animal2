@@ -70,7 +70,7 @@ public class Attack : MonoBehaviour
          else
          {
             Gizmos.color = new Color(1,1,0,0.5f);
-             Gizmos.DrawCube(new Vector2(transform.position.x + distanceCheckPlayer* (int) character.moverment.characterDirection,transform.position.y), new Vector2(6,1));
+          //   Gizmos.DrawCube(new Vector2(transform.position.x + distanceCheckPlayer* (int) character.moverment.characterDirection,transform.position.y), new Vector2(6,1));
          }
      }
 

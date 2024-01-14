@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
     public Health health;
     public Animator animator;
     public AIBrain AiBrain;
+    public SimpleSound simpleSound;
     [Header("Option")] 
     public bool MoveHorizontal;
     public bool JumpHorizontal;
@@ -33,6 +34,7 @@ public class Character : MonoBehaviour
         AiBrain.Init(this);
         AiBrain.ActiveBrain();
         AiBrain.ResetBrain();
+        transform.GetComponent<SimpleSound>();
     }
 
     public void Dead()

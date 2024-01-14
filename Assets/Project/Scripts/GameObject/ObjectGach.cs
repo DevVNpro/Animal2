@@ -10,13 +10,19 @@ using UniRx;
 public class ObjectGach : MonoBehaviour
 {
     public List<GameObject> cracks;
+
+    [Header("Sound")]
+    [SerializeField] private SimpleSound simpleSound;
+    [SerializeField] private AudioClip breakSound;
+
     
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.CompareTag("Player") && (transform.position.y - other.transform.position.y > 3f))
         {
-            SoundManager.Intance.PlayVfxBrick();
+            // SoundManager.Intance.PlayVfxBrick();
+            simpleSound.Play(breakSound);
             foreach (var crack in cracks)
             {
                 crack.SetActive(true);

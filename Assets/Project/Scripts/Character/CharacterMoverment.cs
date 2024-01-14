@@ -13,6 +13,9 @@ public class CharacterMoverment : MonoBehaviour
     public float coyoteTimeCounter;
     public float bufferJumpTime;
     public float bufferJumpTimeCouter;
+    public float timeSmokeRun;
+    public float timeSmokeRunCouter;
+
     [SerializeField] private float timeEffectByForce;
     public float timeEffectByForceCount;
     [SerializeField] private LayerMask layerJump;
@@ -32,13 +35,18 @@ public class CharacterMoverment : MonoBehaviour
     private bool isBlockMoverMent2;
     private bool isBlockMoverMent3;
     private bool isBlockMoverMent4;
+    bool enableSmoke = true;
+
 
     [Header("Referent")]
     public Rigidbody2D rigidbody2d;
     public CharacterController CharacterController;
+    [SerializeField] private GameObject runsmoke;
+
 
     private void Awake()
     {
+        timeSmokeRunCouter = timeSmokeRun;
         timeEffectByForceCount = timeEffectByForce;
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
         CharacterController = transform.GetComponent<CharacterController>();
@@ -55,6 +63,7 @@ public class CharacterMoverment : MonoBehaviour
         CheckBrige();
         DebuRayJump();
         ReseteffectMoveByforce();
+        CountDownTimeSmoke();
 #if UNITY_EDITOR
         xValue = Input.GetAxisRaw("Horizontal");
         if (xValue == 1)
@@ -161,13 +170,36 @@ public class CharacterMoverment : MonoBehaviour
 
     #endregion
 
+    public void CountDownTimeSmoke()
+    {
+        if (!enableSmoke)
+        {
+            timeSmokeRunCouter -= Time.deltaTime;
+            if(timeSmokeRunCouter <= 0)
+            {
+                enableSmoke = true;
+                timeSmokeRunCouter = timeSmokeRun;
+            }
+        }
+    }
+    private void IntantiateSmoke()
+    {
+        if (enableSmoke)
+        {
+            Instantiate(runsmoke, transform.position, Quaternion.EulerRotation(0f, 0f, 0f));
+            enableSmoke = false;
+
+        }
+
+    }
     #region Moverment
 
-        public void MoveLeft()
+    public void MoveLeft()
     {
         transform.localScale = new Vector3(-1,1,1);
         if ((!isGround && isWall)||(isWall&& CharacterController.holdButtonLeft&&!isPushBox)) return;
         rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
+        IntantiateSmoke();
 
     }
 
@@ -176,9 +208,11 @@ public class CharacterMoverment : MonoBehaviour
         transform.localScale = new Vector3(1,1,1);
         if ((!isGround && isWall)||(isWall&& CharacterController.holdButtonRight&&!isPushBox)) return;
         rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
-        
+        IntantiateSmoke();
 
-        
+
+
+
     }
 
     public void Jump(bool active = false)

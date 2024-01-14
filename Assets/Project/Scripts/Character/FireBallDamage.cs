@@ -8,7 +8,7 @@ public class FireBallDamage : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Health>().DeductCharacterHp(1);
+            other.GetComponent<Health>().DeductCharacterHp(3);
         }
     }
 }
