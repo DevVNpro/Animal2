@@ -58,7 +58,7 @@ public class GameWinPanel : MonoBehaviour
     public void UpdateTextTimeLeft()
     {
         var initValue = 0;
-        var timeLeft = Mathf.FloorToInt(GamePlayPanel.countTime);
+        var timeLeft = Mathf.FloorToInt(GamePlayManager.countTime);
         var initValuecoin = 0;
         var timeLeftCoin = timeLeft / 10;
         totalCoinInMap += timeLeftCoin;

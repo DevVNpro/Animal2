@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 8337281877717550404}
   m_Layer: 20
   m_Name: sam_weapon
-  m_TagString: Bullet
+  m_TagString: BulletPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edac9ee10c602345b5831bdce79fe83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bulletSpawner: {fileID: 0}
 --- !u!1001 &718574362066132353
 PrefabInstance:
   m_ObjectHideFlags: 0

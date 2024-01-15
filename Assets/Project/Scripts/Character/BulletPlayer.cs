@@ -39,10 +39,10 @@ public class BulletPlayer : BulletCharacter
         {
             other.GetComponent<Rigidbody2D>().AddForce(new Vector2(20*_characterController.CharaterDirection, 0), ForceMode2D.Impulse);
         }
-        if (other.CompareTag("Ground")|| other.CompareTag("Box")|| other.CompareTag("Enemy")|| other.CompareTag("Wall"))
+        if (other.CompareTag("Ground")|| other.CompareTag("Box")|| other.CompareTag("Enemy")||other.CompareTag("BongTim"))
         {
-            _pool.Release(this);
-        }
+           _pool.Release(this);
+       }
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<Health>().DeductCharacterHp(1);

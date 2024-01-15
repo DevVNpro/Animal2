@@ -17,21 +17,19 @@ public class GamePlayManager : MonoBehaviour
     [ReadOnly(true)] public bool Playerlose;
     public static int sumStar;
     public static int sumCoin;
+    public static float countTime;
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Q))
         {
-           
-                Debug.Break();
-           
+            Debug.Break();
         }
-
-
     }
 
     private void Awake()
     {
+        countTime = 1000;
         sumStar = 0;
         sumCoin = 0;
         Rxmanager.CollectCoin.Subscribe((b)=>

@@ -35,13 +35,17 @@ public class CharacterMoverment : MonoBehaviour
     private bool isBlockMoverMent2;
     private bool isBlockMoverMent3;
     private bool isBlockMoverMent4;
-    bool enableSmoke = true;
+    bool enableSmoke = true; 
+    bool enableFallSmoke; 
+    bool checkduplicate = true;
+
 
 
     [Header("Referent")]
     public Rigidbody2D rigidbody2d;
     public CharacterController CharacterController;
-    [SerializeField] private GameObject runsmoke;
+    [SerializeField] private GameObject runSmoke;
+    [SerializeField] private GameObject jumpSmoke;
 
 
     private void Awake()
@@ -54,7 +58,7 @@ public class CharacterMoverment : MonoBehaviour
 
     void Update()
     {
-
+        CheckFallParticle();
         CheckBufferTime();
         CheckCoyoteTime();
         CheckGround();
@@ -64,6 +68,7 @@ public class CharacterMoverment : MonoBehaviour
         DebuRayJump();
         ReseteffectMoveByforce();
         CountDownTimeSmoke();
+        IntantiateFallGround();
 #if UNITY_EDITOR
         xValue = Input.GetAxisRaw("Horizontal");
         if (xValue == 1)
@@ -134,6 +139,17 @@ public class CharacterMoverment : MonoBehaviour
     private void CheckGround()
     {
         isGround = Physics2D.BoxCast(transform.position, new Vector2(1,1), 0f, Vector2.down,0.2f,layerJump);
+        if (Mathf.Abs(rigidbody2d.velocity.y) > 5f) isGround = false;
+    }
+
+    private void CheckFallParticle()
+    {
+        enableFallSmoke = isGround;
+        if (!isGround)
+        {
+            checkduplicate = false;
+        }
+        
     }
     private void CheckBrige()
     {
@@ -169,7 +185,9 @@ public class CharacterMoverment : MonoBehaviour
     
 
     #endregion
+    
 
+    #region VfxInstantiate
     public void CountDownTimeSmoke()
     {
         if (!enableSmoke)
@@ -186,12 +204,27 @@ public class CharacterMoverment : MonoBehaviour
     {
         if (enableSmoke)
         {
-            Instantiate(runsmoke, transform.position, Quaternion.EulerRotation(0f, 0f, 0f));
+            Vector2 vector2 = new Vector2(transform.position.x,transform.position.y +0.2f);
+            Instantiate(runSmoke, vector2, Quaternion.EulerRotation(0f, 0f, 0f));
             enableSmoke = false;
 
         }
 
     }
+
+    private void IntantiateFallGround()
+    {
+        if (enableFallSmoke && !checkduplicate && !CharacterController.RopeController.onRope)
+        {
+            if(rigidbody2d.velocity.y != 0) return;
+            Vector2 vector2 = new Vector2(transform.position.x,transform.position.y -0.7f);
+            Instantiate(jumpSmoke, vector2, Quaternion.EulerRotation(0f, 0f, 0f));
+            enableFallSmoke = false;
+            checkduplicate = true;
+        }
+    }
+    #endregion
+  
     #region Moverment
 
     public void MoveLeft()
@@ -199,8 +232,11 @@ public class CharacterMoverment : MonoBehaviour
         transform.localScale = new Vector3(-1,1,1);
         if ((!isGround && isWall)||(isWall&& CharacterController.holdButtonLeft&&!isPushBox)) return;
         rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
-        IntantiateSmoke();
+        if (isGround)
+        {
+            IntantiateSmoke();
 
+        }
     }
 
     public void MoveRight()
@@ -208,10 +244,11 @@ public class CharacterMoverment : MonoBehaviour
         transform.localScale = new Vector3(1,1,1);
         if ((!isGround && isWall)||(isWall&& CharacterController.holdButtonRight&&!isPushBox)) return;
         rigidbody2d.velocity = new Vector2(xValue*speedRun,rigidbody2d.velocity.y );
-        IntantiateSmoke();
+        if (isGround)
+        {
+            IntantiateSmoke();
 
-
-
+        }
 
     }
 

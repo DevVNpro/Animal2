@@ -35,10 +35,8 @@ public class GamePlayPanel : MonoBehaviour
     
 
     [SerializeField] private TextMeshProUGUI timeCount;
-    public static float countTime;
     private void Awake()
     {
-        countTime = 200;
         //AddEvent
         shieldButton.onClick.AddListener(UseShieldButton);
         BulletButton.onClick.AddListener(UseBulletButton);
@@ -76,10 +74,10 @@ public class GamePlayPanel : MonoBehaviour
     {
         if (!stopTime)
         {
-            if (countTime >= 0)
+            if (GamePlayManager.countTime >= 0)
             {
-                countTime -= Time.deltaTime;
-                timeCount.text = Mathf.FloorToInt(countTime).ToString() + 's';
+                GamePlayManager.countTime -= Time.deltaTime;
+                timeCount.text = Mathf.FloorToInt(GamePlayManager.countTime).ToString() + 's';
             }
             else
             {

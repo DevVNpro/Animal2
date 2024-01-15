@@ -20,15 +20,13 @@ public class CharacterController : MonoBehaviour
     public CharacterMoverment _characterMoverment;
     public CharacterController characterController;
     public CharacterHealth characterHealth;
+    public RopeController RopeController;
     public BulletSpawner BulletSpawner;
     public AnimationReferenceAsset[] AnimationReferenceAsset;
-    Vector3 test;
     
     
     private void Awake()
     {
-        test = transform.GetComponent<CapsuleCollider2D>().bounds.size;
-        Debug.Log(test);
         characterController = this;
         Rxmanager.PlayWin.Subscribe((value)=>
         {
