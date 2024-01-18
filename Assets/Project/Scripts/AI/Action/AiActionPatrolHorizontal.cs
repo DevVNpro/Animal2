@@ -16,11 +16,9 @@ public class AiActionPatrolHorizontal : AIAction
 
     public override void OnEnterState(AIBrain _brain)
     {
-        Debug.Log("EnterPatrolHorizontal");
     }
 
     public override void OnExitState(AIBrain _brain)
     {
-        Debug.Log("ExitState");
     }
 }

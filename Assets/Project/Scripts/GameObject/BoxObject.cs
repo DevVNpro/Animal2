@@ -9,7 +9,12 @@ public class BoxObject : MonoBehaviour
     [SerializeField] private bool BlockWay;
     public LayerMask layerBlock;
     public Vector2 sizeCheck;
-    
+    public Rigidbody2D Rigidbody2D;
+
+    private void Awake()
+    {
+        Rigidbody2D = transform.GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -23,7 +28,7 @@ public class BoxObject : MonoBehaviour
         if (BlockWay)
         {
             gameObject.layer = 6;
-            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            Rigidbody2D.bodyType = RigidbodyType2D.Static;
         }
     }
 

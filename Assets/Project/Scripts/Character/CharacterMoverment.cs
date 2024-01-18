@@ -217,7 +217,7 @@ public class CharacterMoverment : MonoBehaviour
         if (enableFallSmoke && !checkduplicate && !CharacterController.RopeController.onRope)
         {
             if(rigidbody2d.velocity.y != 0) return;
-            Vector2 vector2 = new Vector2(transform.position.x,transform.position.y -0.7f);
+            Vector2 vector2 = new Vector2(transform.position.x,transform.position.y );
             Instantiate(jumpSmoke, vector2, Quaternion.EulerRotation(0f, 0f, 0f));
             enableFallSmoke = false;
             checkduplicate = true;
@@ -254,7 +254,6 @@ public class CharacterMoverment : MonoBehaviour
 
     public void Jump(bool active = false)
     {
-        Debug.Log("JumpCharacter");
         
         if (active)
         {
@@ -309,7 +308,6 @@ public class CharacterMoverment : MonoBehaviour
 
         if (isPushBox)
         {
-            Debug.Log("PushBox");
             Gizmos.color = new Color(1, 1, 0, 0.5f);
             Gizmos.DrawCube(new Vector2(transform.position.x,transform.position.y+1.3f), new Vector2(1.8f, 1.5f));
         }

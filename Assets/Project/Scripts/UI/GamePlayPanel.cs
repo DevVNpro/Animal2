@@ -44,7 +44,11 @@ public class GamePlayPanel : MonoBehaviour
         hpButton.onClick.AddListener(UseHpButton);
         bomButton.onClick.AddListener(UseBom);
         settingButton.onClick.AddListener(ResetLevel);
-        
+
+        Rxmanager.UseHealth.Subscribe((tmp) =>
+        {
+            AddUiHp();
+        }).AddTo(this);
         //RX
         Rxmanager.DeDuctHpPlayer.Subscribe((deduct) =>
         {
@@ -108,7 +112,7 @@ public class GamePlayPanel : MonoBehaviour
     private void UseHpButton()
     {
         Rxmanager.UseHealth.OnNext(true);
-        AddUiHp();
+    
 
     }
     private void AddUiHp()

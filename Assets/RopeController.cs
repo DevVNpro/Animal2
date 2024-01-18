@@ -9,7 +9,7 @@ public class RopeController : MonoBehaviour
 {
 
     [Header("Properties")]
-    public float swingForce= 250f;
+    public float swingForce= 270f;
    // public float timeDelay = 0.1f;
     public bool onRope = false;
     public float direction;
