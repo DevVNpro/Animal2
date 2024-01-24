@@ -196,7 +196,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 107.14
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -266,7 +266,7 @@ MonoBehaviour:
   soundbuble: {fileID: 8300000, guid: 4705ac0143d3c1e4bb148d850b004edd, type: 3}
   simpleSound: {fileID: 0}
   notReused: 0
-  circleCollider2D: {fileID: 0}
+  Collider2D: {fileID: 0}
 --- !u!114 &5104588390902429570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,9 +390,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particalBumBum: {fileID: 6947130121546723408, guid: e363e044eb18c9a4baf1b97ad11c411b, type: 3}
-  display: {fileID: 1164260156690651417}
+  animator: {fileID: 0}
   soundBreak: {fileID: 8300000, guid: adad15b3b0d331648b7794dbf24aa720, type: 3}
   soundbuble: {fileID: 8300000, guid: 4705ac0143d3c1e4bb148d850b004edd, type: 3}
   simpleSound: {fileID: 0}
-  notReused: 0
-  circleCollider2D: {fileID: 0}
+  Collider2D: {fileID: 0}
+  checkDuplicate: 0
+  useAnimator: 0

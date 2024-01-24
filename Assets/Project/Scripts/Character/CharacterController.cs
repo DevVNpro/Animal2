@@ -87,20 +87,6 @@ public class CharacterController : MonoBehaviour
         UpdateAnimation();
         CheckDirection();
     }
-
-    public void CheckDirection()
-    {
-        if (transform.localScale.x == 1)
-        {
-            CharaterDirection = (int) CharacterDirection.Right;
-        }
-        else if (transform.localScale.x == -1)
-        {
-            CharaterDirection = (int)CharacterDirection.Left;
-
-        }
-    }
-
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.W))
@@ -225,6 +211,19 @@ public class CharacterController : MonoBehaviour
         #endregion
         
     }
+    public void CheckDirection()
+    {
+        if (transform.localScale.x == 1)
+        {
+            CharaterDirection = (int) CharacterDirection.Right;
+        }
+        else if (transform.localScale.x == -1)
+        {
+            CharaterDirection = (int)CharacterDirection.Left;
+
+        }
+    }
+
     #region Force
     public void AddForce(Vector2 vecterForce, Vector2 vectorOrigin)
     {
@@ -279,7 +278,7 @@ public class CharacterController : MonoBehaviour
         if (_characterMoverment.CanShot && !BulletSpawner.isShot && characterController.enabled)
         {
             SoundManager.Intance.PlayVfxShot();
-            _characterAnimation.PlayAnimationShot(AnimationReferenceAsset[9],false);
+            _characterAnimation.PlayAnimationShoot(AnimationReferenceAsset[9],false);
             BulletSpawner.shot();
 
         }

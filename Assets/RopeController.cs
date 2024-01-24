@@ -9,14 +9,9 @@ public class RopeController : MonoBehaviour
 {
 
     [Header("Properties")]
-    public float swingForce= 270f;
-   // public float timeDelay = 0.1f;
+    public float swingForce= 350f;
     public bool onRope = false;
     public float direction;
-    public bool rightFall;
-    public bool leftFall;
-    public float Anchorright;
-    public float Anchorleft;
     public float timeSpam=0.5f;
     public int lastDiriction=0;
 
@@ -61,25 +56,33 @@ public class RopeController : MonoBehaviour
             {
                 transform.localScale = new Vector2(1, 1);
                 transform.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
-                lastDiriction = -1;
+                lastDiriction = 1;
             }
             else if (direction == -1)
             {
                 transform.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
                 transform.localScale = new Vector2(-1, 1);
-                lastDiriction = 1;
+                lastDiriction = -1;
             }
             else
             {
-                if (lastDiriction == 1 || lastDiriction == 0)
+                if (lastDiriction == 0)
                 {
                     transform.localScale = new Vector2(1, 1);
                     transform.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
                 }
                 else
                 {
-                    transform.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
-                    transform.localScale = new Vector2(-1, 1);
+                    if (lastDiriction == 1)
+                    {
+                        transform.localScale = new Vector2(1, 1);
+                        transform.position = new Vector2(transformRope.position.x - 1.5f, transformRope.position.y - 2.5f);
+                    }
+                    else if (lastDiriction == -1)
+                    {
+                        transform.position = new Vector2(transformRope.position.x + 1.5f, transformRope.position.y - 2.5f);
+                        transform.localScale = new Vector2(-1, 1);
+                    }
                 }
             }
             transformRope.GetComponent<Rigidbody2D>().AddForce(Vector2.right * direction * swingForce*2);

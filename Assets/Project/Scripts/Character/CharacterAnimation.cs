@@ -28,7 +28,7 @@ public class CharacterAnimation : MonoBehaviour
         animName = AnimationReferenceAsset.name;
     }
 
-    public void PlayAnimationShot(AnimationReferenceAsset animationReferenceAsset,bool loop)
+    public void PlayAnimationShoot(AnimationReferenceAsset animationReferenceAsset,bool loop)
     {
         Spine.TrackEntry animationEntry = _skeletonAnimation.state.AddAnimation(1, animationReferenceAsset, loop, 0);
         animationEntry.Complete += AnimationEntry_Complete;

@@ -21,26 +21,38 @@ public class ObjectGach : MonoBehaviour
     {
         if (other.transform.CompareTag("Player") && (transform.position.y - other.transform.position.y > 3f))
         {
-            // SoundManager.Intance.PlayVfxBrick();
-            simpleSound.Play(breakSound);
-            foreach (var crack in cracks)
-            {
-                crack.SetActive(true);
-                Rigidbody2D rigidbody2D = crack.GetComponent<Rigidbody2D>();
-                rigidbody2D.gravityScale = 2;
-                rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
-                int randomNumbery = Random.Range(5, 9);
-                int randomNumberx = Random.Range(-3, 4);
-                rigidbody2D.velocity = (new Vector2(randomNumberx, randomNumbery));
-
-            }
-            Rxmanager.ShakeCameraBrick.OnNext(true);
-            transform.GetComponent<Collider2D>().enabled = false;
-            transform.GetComponent<SpriteRenderer>().enabled = false;
-            StartCoroutine(Disableobject());
+            OnActiveBreak();
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("BulletPlayer"))
+        {
+            OnActiveBreak();
+            other.GetComponent<BulletCharacter>()._pool.Release(other.GetComponent<BulletCharacter>());
+        }
+    }
+
+    private void OnActiveBreak()
+    {
+        simpleSound.Play(breakSound);
+        foreach (var crack in cracks)
+        {
+            crack.SetActive(true);
+            Rigidbody2D rigidbody2D = crack.GetComponent<Rigidbody2D>();
+            rigidbody2D.gravityScale = 2;
+            rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+            int randomNumbery = Random.Range(5, 9);
+            int randomNumberx = Random.Range(-3, 4);
+            rigidbody2D.velocity = (new Vector2(randomNumberx, randomNumbery));
+
+        }
+        Rxmanager.ShakeCameraBrick.OnNext(true);
+        transform.GetComponent<Collider2D>().enabled = false;
+        transform.GetComponent<SpriteRenderer>().enabled = false;
+        StartCoroutine(Disableobject());
+    }
 
     IEnumerator Disableobject()
     {

@@ -8,9 +8,10 @@ public class CinematicPro2D : MonoBehaviour
 {
    [SerializeField] private ProCamera2D ProCamera2D;
    public bool check = false;
-
+   private const string KeyFisrtPlay = "KeyFisrtPlay";
    private void Start()
    {
+      if(PlayerPrefs.HasKey(KeyFisrtPlay)) gameObject.SetActive(false);
       ProCamera2D.GetComponent<ProCamera2DCinematics>().OnCinematicStarted.AddListener(LockCharacter);
       ProCamera2D.GetComponent<ProCamera2DCinematics>().OnCinematicFinished.AddListener(FreeCharacter);
    }
@@ -19,9 +20,10 @@ public class CinematicPro2D : MonoBehaviour
    {
       if (other.CompareTag("Player") && !check)
       {
-         Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+         PlayerPrefs.SetInt(KeyFisrtPlay,0);
          check = true;
          ProCamera2D.GetComponent<ProCamera2DCinematics>().Play();
+         
       }
    }
 

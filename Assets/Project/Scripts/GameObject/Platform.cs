@@ -5,6 +5,7 @@ public class Platform : MonoBehaviour
     {
         [SerializeField] private bool fixedRotation;
         private Vector3 fixedLocalEulerAngles = new Vector3(0,0,0);
+        private Rigidbody2D rigidbody2D;
         private Transform child;
 
         private void Update()
@@ -17,9 +18,10 @@ public class Platform : MonoBehaviour
         {
             if (other.collider.CompareTag("Player"))
             {
+               rigidbody2D = other.gameObject.GetComponent<Rigidbody2D>();
                 if (other.gameObject.GetComponent<CharacterMoverment>().isGround && other.gameObject.transform.position.y > transform.position.y)
                 {
-                other.gameObject.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.None;
+                   rigidbody2D.interpolation = RigidbodyInterpolation2D.None;
                     other.gameObject.transform.SetParent(transform);
                     child = other.gameObject.transform;
                 }
@@ -32,6 +34,7 @@ public class Platform : MonoBehaviour
             {
                 if (other.gameObject.GetComponent<CharacterMoverment>().isGround && other.gameObject.transform.position.y > transform.position.y)
                 {
+                 rigidbody2D.interpolation = RigidbodyInterpolation2D.None;
                     other.gameObject.transform.SetParent(transform);
                     child = other.gameObject.transform;
                 }
@@ -42,7 +45,7 @@ public class Platform : MonoBehaviour
         {
             if (other.collider.CompareTag("Player"))
             {
-            other.gameObject.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.Extrapolate;
+            other.gameObject.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.Interpolate;
             other.gameObject.transform.SetParent(null);
                 child = null;
             }

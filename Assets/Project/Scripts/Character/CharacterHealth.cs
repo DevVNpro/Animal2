@@ -14,7 +14,6 @@ public class CharacterHealth : MonoBehaviour
     private void Awake()
     {
         health = 3;
-        Debug.Log("Health :" + health);
         Rxmanager.PlayerDie.Subscribe(tmp =>
         {
             characterController.StopPhysics();

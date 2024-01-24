@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class MoveTrapWithPoint : MonoBehaviour
+public class MoveObjectWithPoint : MonoBehaviour
 {
     [Header("Properties")]
     [SerializeField] private float moveTime;

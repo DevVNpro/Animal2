@@ -13,12 +13,12 @@ public class ObjectBong : MonoBehaviour
     [SerializeField] private SimpleSound simpleSound;
     
     public bool notReused;
-    [SerializeField] private CircleCollider2D circleCollider2D;
+    [SerializeField] private Collider2D Collider2D;
 
     private void Awake()
     {
         simpleSound = transform.GetComponent<SimpleSound>();
-        circleCollider2D = transform.GetComponent<CircleCollider2D>(); 
+        Collider2D = transform.GetComponent<Collider2D>(); 
 
     }
 
@@ -32,8 +32,8 @@ public class ObjectBong : MonoBehaviour
 
     IEnumerator CountDownBreake()
     {
-        simpleSound.Play(soundbuble);
-        simpleSound.Play(soundBreak);
+        if(soundBreak!= null)  {simpleSound.Play(soundBreak);}
+        if(soundbuble!= null) {  simpleSound.Play(soundbuble);}
         Instantiate(particalBumBum, transform.position, Quaternion.Euler(0f, 0f, 0f));
         if (notReused)
         {
@@ -44,10 +44,10 @@ public class ObjectBong : MonoBehaviour
         else
         {
             transform.DOScale(new Vector3(0f, 0f, 0f), 0.3f).SetEase(Ease.InOutBack);
-            circleCollider2D.enabled = false;
+            Collider2D.enabled = false;
             yield return  new WaitForSeconds(3);
             transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetEase(Ease.InOutBack);
-            circleCollider2D.enabled = true;
+            Collider2D.enabled = true;
 
 
         }

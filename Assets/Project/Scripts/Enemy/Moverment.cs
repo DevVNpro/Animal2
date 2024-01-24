@@ -54,7 +54,6 @@ public class Moverment : MonoBehaviour
         {
             if ((int)characterDirection == -1)
             {
-                Debug.Log("left");
 
                 characterDirection = CharacterDirection.Right;
                 transform.localScale = new Vector3(1, 1, 1);
@@ -62,7 +61,6 @@ public class Moverment : MonoBehaviour
             }
             if ((int) characterDirection == 1)
             {
-                Debug.Log("right");
                 characterDirection = CharacterDirection.Left;
                 transform.localScale = new Vector3(-1, 1, 1);
                 return false;

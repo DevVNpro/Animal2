@@ -195,7 +195,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 107.14
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -265,7 +265,7 @@ MonoBehaviour:
   soundbuble: {fileID: 8300000, guid: 4705ac0143d3c1e4bb148d850b004edd, type: 3}
   simpleSound: {fileID: 0}
   notReused: 1
-  circleCollider2D: {fileID: 0}
+  Collider2D: {fileID: 0}
 --- !u!114 &1906334286116187805
 MonoBehaviour:
   m_ObjectHideFlags: 0

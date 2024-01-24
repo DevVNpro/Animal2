@@ -66,6 +66,10 @@ public class GamePlayPanel : MonoBehaviour
         {
             StartCoroutine(AnimShieldUI());
         }).AddTo(this);
+        Rxmanager.UseBom.Subscribe((tpm) =>
+        {
+            StartCoroutine(AnimBomUI());
+        }).AddTo(this);
     }
 
     #region CountDownTime

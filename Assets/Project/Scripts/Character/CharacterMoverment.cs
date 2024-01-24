@@ -35,6 +35,7 @@ public class CharacterMoverment : MonoBehaviour
     private bool isBlockMoverMent2;
     private bool isBlockMoverMent3;
     private bool isBlockMoverMent4;
+    private bool isBlockMoverMent5;
     bool enableSmoke = true; 
     bool enableFallSmoke; 
     bool checkduplicate = true;
@@ -65,7 +66,7 @@ public class CharacterMoverment : MonoBehaviour
         CheckBox();
         CheckWall();
         CheckBrige();
-        DebuRayJump();
+       DebuRayJump();
         ReseteffectMoveByforce();
         CountDownTimeSmoke();
         IntantiateFallGround();
@@ -178,8 +179,9 @@ public class CharacterMoverment : MonoBehaviour
         isBlockMoverMent1 = Physics2D.Raycast(new Vector2(position.x, position.y+2f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
         isBlockMoverMent2 = Physics2D.Raycast(new Vector2(position.x, position.y+1.5f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
         isBlockMoverMent3 = Physics2D.Raycast(new Vector2(position.x, position.y+1f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
-        isBlockMoverMent4 = Physics2D.Raycast(new Vector2(position.x, position.y+0.1f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
-        isWall = (isBlockMoverMent0||isBlockMoverMent1 || isBlockMoverMent2 || isBlockMoverMent3 || isBlockMoverMent4);
+        isBlockMoverMent4 = Physics2D.Raycast(new Vector2(position.x, position.y+0.5f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
+        isBlockMoverMent5 = Physics2D.Raycast(new Vector2(position.x, position.y+0.1f), Vector2.right *CharacterController.CharaterDirection,1, layerWall);
+        isWall = (isBlockMoverMent0||isBlockMoverMent1 || isBlockMoverMent2 || isBlockMoverMent3 || isBlockMoverMent4||isBlockMoverMent5);
         //    BoxCast(new Vector2(position.x, position.y + 1.7f), new Vector2(2f, 3f), 0f, Vector2.one, 0f, layerWall);
     }
     
@@ -330,6 +332,7 @@ public class CharacterMoverment : MonoBehaviour
       //  }
      
     }
+  
 
     private void DebuRayJump()
     {
@@ -339,6 +342,7 @@ public class CharacterMoverment : MonoBehaviour
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+2f),Vector2.right *CharacterController.CharaterDirection,Color.black);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1.5f),Vector2.right *CharacterController.CharaterDirection,Color.black);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1f),Vector2.right *CharacterController.CharaterDirection,Color.black);
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+0.5f),Vector2.right*CharacterController.CharaterDirection,Color.black);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+0.1f),Vector2.right*CharacterController.CharaterDirection,Color.black);
 
 
@@ -349,10 +353,12 @@ public class CharacterMoverment : MonoBehaviour
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+2f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1.5f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+1f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
+            Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+0.5f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
             Debug.DrawRay(new Vector2(transform.position.x, transform.position.y+0.1f),Vector2.right*CharacterController.CharaterDirection,Color.blue);
 
         }
     }
+
     
     #endregion
 
